@@ -1,0 +1,1081 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  NHS Digital Buying Catalogue
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+
+{% block beforeContent %}
+  {{ nhsdNav({
+      "showNav": "true",
+      "primaryLinks": [
+        {
+          "label" : ""
+        },
+        {
+          'label' : 'Support'
+        }
+      ]
+  })}}
+
+  {{ breadcrumb({
+  items: [
+    {
+      href: "/buyer-browse",
+      text: "Home"
+    }
+  ],
+  href: "browse",
+  text: "Browse Solutions"
+  }) }}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://beta.nhs.uk/service-manual/styles-components-patterns/layout -->
+{% block content %}
+<div class="nhsuk-grid-row buyer-browse">
+<!-- Change the page title here -->
+  <div class="nhsuk-grid-column-full nhsuk-u-margin-top-9">
+    <h2>
+      Buying catalogue Solution results
+    </h2>
+
+    <p>
+      Displaying 200 Solutions
+    </p>
+
+    <div class="nhsuk-grid-column-full save">
+      <button class="nhsuk-button" type="submit">
+        Save and continue
+      </button>
+    </div>
+  </div>
+
+  <div class="nhsuk-grid-column-one-quarter">
+    <h4>Refine Solution results</h4>
+    <div>
+      <button class="nhsuk-button nhsuk-button--secondary" id="foundation-match" type="submit">
+        Foundation match only
+      </button>
+    </div>
+    <div>
+      <button class="nhsuk-button nhsuk-button--secondary" type="submit" id="apply-filters">
+        Apply filters
+      </button>
+    </div>
+
+    <p><a href="browse">Reset filters</a></p>
+
+    <details class="nhsuk-details nhsuk-expander">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          Foundation capabilities
+        </span>
+      </summary>
+      <div class="nhsuk-details__text" id="foundation-capabilities">
+        {{ checkboxes({
+          "idPrefix": "foundation-capabilities",
+          "name": "foundation-capabilities",
+          "items": [
+            {
+              "value": "appointments-management-citizen",
+              "text": "Appointments Management - Citizen"
+            },
+            {
+              "value": "referral-management",
+              "text": "Referral Management"
+            },
+            {
+              "value": "resource-management",
+              "text": "Resource Management"
+            },
+            {
+              "value": "patient-information-maintenance",
+              "text": "Patient Information Maintenance"
+            },
+            {
+              "value": "prescribing",
+              "text": "Prescribing"
+            },
+            {
+              "value": "recording-consultations",
+              "text": "Recording Consultations"
+            }
+          ]
+        }) }}
+      </div>
+    </details>
+    <details class="nhsuk-details nhsuk-expander">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          Citizen
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        {{ checkboxes({
+          "idPrefix": "citizen-capabilities",
+          "name": "non-foundation-capabilities",
+          "items": [
+            {
+              "value": "appointments-management-citizen",
+              "text": "Appointments Management - Citizen"
+            },
+            {
+              "value": "communicate-with-practise-citizen",
+              "text": "Communicate With Practice - Citizen"
+            },
+            {
+              "value": "prescription-ordering-citizen",
+              "text": "Prescription Ordering - Citizen"
+            },
+            {
+              "value": "view-record-citizen",
+              "text": "View Record - Citizen"
+            },
+            {
+              "value": "personal-health-budget",
+              "text": "Personal Health Budget"
+            }
+          ]
+        }) }}
+      </div>
+    </details>
+    <details class="nhsuk-details nhsuk-expander">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          Cross Organisation
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        {{ checkboxes({
+          "idPrefix": "cross-organisation-capabilities",
+          "name": "non-foundation-capabilities",
+          "items": [
+            {
+              "value": "cross-organisation-appointment-booking",
+              "text": "Cross Organisation Appointment Booking"
+            },
+            {
+              "value": "cross-organisation-workforce-management",
+              "text": "Cross Organisation Workforce Management"
+            },
+            {
+              "value": "econsultations-pro-to-pro",
+              "text": "e-Consultations (Professional to Professional)"
+            },
+            {
+              "value": "communication-management",
+              "text": "Communication Management"
+            }
+          ]
+        }) }}
+      </div>
+    </details>
+    <details class="nhsuk-details nhsuk-expander">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          Communicating With Patients
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        {{ checkboxes({
+          "idPrefix": "communicating-with-patients-capabilities",
+          "name": "non-foundation-capabilities",
+          "items": [
+            {
+              "value": "econsultations-patient-to-pro",
+              "text": "e-Consultations (Patient/Service User to Professional)"
+            },
+            {
+              "value": "communication-management",
+              "text": "Communication Management"
+            },
+            {
+              "value": "telecare",
+              "text": "Telecare"
+            },
+            {
+              "value": "telehealth",
+              "text": "Telehealth"
+            }
+          ]
+        }) }}
+        <div class="productivtiy">
+          <p>Productivity Solution tag</p>
+
+          {{ checkboxes({
+            "idPrefix": "communicating-with-patients-productivity",
+            "name": "non-foundation-capabilities",
+            "items": [
+              {
+                "value": "remote-monitoring",
+                "text": "# Remote Monitoring"
+              }
+            ]
+          }) }}
+        </div>
+      </div>
+    </details>
+    <details class="nhsuk-details nhsuk-expander">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          Social Care
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        {{ checkboxes({
+          "idPrefix": "social-care-capabilities",
+          "name": "non-foundation-capabilities",
+          "items": [
+            {
+              "value": "care-homes",
+              "text": "Care Homes"
+            },
+            {
+              "value": "social-prescribing",
+              "text": "Social Prescribing"
+            },
+            {
+              "value": "shared-care-plans",
+              "text": "Shared Care Plans"
+            },
+            {
+              "value": "personal-health-budget",
+              "text": "Personal Health Budget"
+            },
+            {
+              "value": "domiciliary-care",
+              "text": "Domiciliary Care"
+            }
+          ]
+        }) }}
+      </div>
+    </details>
+    <details class="nhsuk-details nhsuk-expander">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          Prescribing and Dispensing
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        {{ checkboxes({
+          "idPrefix": "prescribing-and-dispensing-capabilities",
+          "name": "non-foundation-capabilities",
+          "items": [
+            {
+              "value": "prescribing",
+              "text": "Prescribing"
+            },
+            {
+              "value": "prescription-order-citizen",
+              "text": "Prescription Order - Citizen"
+            },
+            {
+              "value": "social-prescribing",
+              "text": "Social Prescribing"
+            },
+            {
+              "value": "medicines-verification",
+              "text": "Medicines Verification"
+            },
+            {
+              "value": "dispensing",
+              "text": "Dispensing"
+            },
+            {
+              "value": "medicines-optimisation",
+              "text": "Medicines Optimisation"
+            }
+          ]
+        }) }}
+      </div>
+    </details>
+    <details class="nhsuk-details nhsuk-expander">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          Clinical
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        {{ checkboxes({
+          "idPrefix": "clinical-capabilities",
+          "name": "non-foundation-capabilities",
+          "items": [
+            {
+              "value": "risk-stratification",
+              "text": "Risk Stratification"
+            },
+            {
+              "value": "recording-consultations",
+              "text": "Recording Consultations"
+            },
+            {
+              "value": "clinical-decisions-support",
+              "text": "Clinical Decisions Support"
+            },
+            {
+              "value": "econsultations-pro-to-pro",
+              "text": "e-Consultations (Professional to Professional)"
+            },
+            {
+              "value": "digital-diagnostics",
+              "text": "Digital Diagnostics"
+            },
+            {
+              "value": "population-health-management",
+              "text": "Population Health Management"
+            },
+            {
+              "value": "medicines-optimisation",
+              "text": "Medicines Optimisation"
+            },
+            {
+              "value": "medicines-verification",
+              "text": "Medicines Verification"
+            },
+            {
+              "value": "unified-care-record",
+              "text": "Unified Care Record"
+            },
+            {
+              "value": "patient-information-maintenance",
+              "text": "Patient Information Maintenance"
+            },
+            {
+              "value": "workflow",
+              "text": "Workflow"
+            }
+          ]
+        }) }}
+        <div class="productivtiy">
+          <p>Productivity Solution tag</p>
+
+          {{ checkboxes({
+            "idPrefix": "clinical-capabilities",
+            "name": "non-foundation-capabilities",
+            "items": [
+              {
+                "value": "physiotherapy",
+                "text": "# Physiotherapy"
+              }
+            ]
+          }) }}
+        </div>
+      </div>
+
+    </details>
+    <details class="nhsuk-details nhsuk-expander">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          Practice Management
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        {{ checkboxes({
+          "idPrefix": "practise-management-capabilities",
+          "name": "non-foundation-capabilities",
+          "items": [
+            {
+              "value": "reporting",
+              "text": "Reporting"
+            },
+            {
+              "value": "scanning",
+              "text": "Scanning"
+            },
+            {
+              "value": "resource-management",
+              "text": "Resource Management"
+            },
+            {
+              "value": "data-analytics",
+              "text": "Data Analytics for Integrated and Federated Care"
+            },
+            {
+              "value": "gp-extracts-verification",
+              "text": "GP Extracts Verification"
+            },
+            {
+              "value": "unstructured-data-extraction",
+              "text": "Unstructured Data Extraction"
+            },
+            {
+              "value": "caseload-management",
+              "text": "Caseload Management"
+            }
+          ]
+        }) }}
+
+        <div class="productivtiy">
+          <p>Productivity Solution tag</p>
+
+          {{ checkboxes({
+            "idPrefix": "practise-management-capabilities",
+            "name": "non-foundation-capabilities",
+            "items": [
+              {
+                "value": "gp-billing",
+                "text": "# GP Billing"
+              },
+                {
+                  "value": "voice-recognition",
+                  "text": "# Voice Recognition"
+                }
+            ]
+          }) }}
+        </div>
+      </div>
+    </details>
+    <details class="nhsuk-details nhsuk-expander">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          Productivity
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+
+        {{ checkboxes({
+          "idPrefix": "productivity",
+          "name": "non-foundation-capabilities",
+          "items": [
+            {
+              "value": "productivity",
+              "text": "Productivity"
+            }
+          ]
+        }) }}
+
+        <div class="productivtiy">
+          <p>Productivity Solution tag</p>
+
+          {{ checkboxes({
+            "idPrefix": "productivity-capabilities",
+            "name": "non-foundation-capabilities",
+            "items": [
+              {
+                "value": "gp-billing",
+                "text": "# GP Billing"
+              },
+              {
+                "value": "remote-monitoring",
+                "text": "# Remote Monitoring"
+              },
+              {
+                "value": "voice-recognition",
+                "text": "# Voice Recognition"
+              },
+              {
+                "value": "sms-services",
+                "text": "# SMS Services"
+              },
+              {
+                "value": "physiotherapy",
+                "text": "# Physiotherapy"
+              }
+            ]
+          }) }}
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <div class="nhsuk-grid-column-three-quarters">
+        <div class="nhsuk-grid-column-full">
+
+          <p class="no-results">No results found</p>
+
+          <div class="nhsuk-care-card__content solution-one">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <h3><a href="marketing-page">SystemOne</a></h3>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <h3>£1600 / per patient</h3>
+              </div>
+            </div>
+            <p>This is a short description of the Solution.<br>
+            <a href="marketing-page">Learn more</a></p>
+
+            <h4>Capabilities <span class="matched">matched</span> by Solution</h4>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <ul>
+                  <li>Patient Information Maintenance</li>
+                  <li>Prescribing</li>
+                </ul>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <ul>
+                  <li>Recording Consultations</li>
+                </ul>
+              </div>
+            </div>
+
+            <h4>Capabilities <span class="matched">matched</span> by Additional Services</h4>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <ul>
+                  <li>e-Consultations (Patients/Service User to Professional)</li>
+                  <li>Medicines Verification</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="nhsuk-care-card__content nhsuk-u-margin-top-2 solution-two">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <h3><a href="marketing-page">Foundation Solution</a></h3>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <h3>£1.60 / per patient</h3>
+              </div>
+            </div>
+
+            <p>This is a short description of the Solution.<br>
+            <a href="marketing-page">Learn more</a></p>
+
+            <h4>Foundation Capabilities</h4>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <ul>
+                  <li>Appointments Management - Citizen</li>
+                  <li>Referral Management</li>
+                  <li>Resource Management</li>
+                </ul>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <ul>
+                  <li>Patient Information Maintenance</li>
+                  <li>Prescribing</li>
+                  <li>Recording Consultations</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="nhsuk-care-card__content nhsuk-u-margin-top-2 solution-three">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <h3><a href="marketing-page">Social Care System</a></h3>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <h3>£1,000 / per patient</h3>
+              </div>
+            </div>
+            <p>This is a short description of the Solution.<br>
+            <a href="marketing-page">Learn more</a></p>
+
+            <h4>Capabilities <span class="matched">matched</span> by Solution</h4>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <ul>
+                  <li>Telecare</li>
+                  <li>Care Homes</li>
+                  <li>Scanning</li>
+                </ul>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+              </div>
+            </div>
+          </div>
+
+          <div class="nhsuk-care-card__content nhsuk-u-margin-top-2 solution-eight">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <h3><a href="marketing-page">Productivity Solution</a></h3>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <h3>£16 / per patient</h3>
+              </div>
+            </div>
+
+            <p>This is a short description of the Solution.<br>
+            <a href="marketing-page">Learn more</a></p>
+
+            <h4>Capabilities <span class="matched">matched</span> by Solution</h4>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <ul>
+                  <li>Productivity</li>
+                </ul>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+              </div>
+            </div>
+          </div>
+
+          <div class="nhsuk-care-card__content nhsuk-u-margin-top-2 solution-seventeen">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <h3><a href="marketing-page">Care Homes Solution</a></h3>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <h3>£500 / per patient</h3>
+              </div>
+            </div>
+            <p>This is a short description of the Solution.<br>
+            <a href="marketing-page">Learn more</a></p>
+
+            <h4>Capabilities <span class="matched">matched</span> by Solution</h4>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <ul>
+                  <li>Care Homes</li>
+                </ul>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+              </div>
+            </div>
+          </div>
+
+          <div class="nhsuk-care-card__content nhsuk-u-margin-top-2 solution-eighteen">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <h3><a href="marketing-page">SolutionCare</a></h3>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <h3>£100 / per patient</h3>
+              </div>
+            </div>
+            <p>This is a short description of the Solution.<br>
+            <a href="marketing-page">Learn more</a></p>
+
+            <h4>Capabilities by Solution</h4>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <ul>
+                  <li>Scanning</li>
+                </ul>
+              </div>
+            </div>
+
+            <h4>Capabilities <span class="matched">matched</span> by Additional Services</h4>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <ul>
+                  <li>Care Homes</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="nhsuk-care-card__content nhsuk-u-margin-top-2 solution-four">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <h3><a href="marketing-page">System Prescriptions</a></h3>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <h3>£200 / per patient</h3>
+              </div>
+            </div>
+            <p>This is a short description of the Solution.<br>
+            <a href="marketing-page">Learn more</a></p>
+
+            <h4>Capabilities <span class="matched">matched</span> by Solution</h4>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <ul>
+                  <li>Prescribing</li>
+                </ul>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+              </div>
+            </div>
+          </div>
+
+          <div class="nhsuk-care-card__content nhsuk-u-margin-top-2 solution-eleven">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <h3><a href="marketing-page">GP Billing</a></h3>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <h3>£3.00 / per patient</h3>
+              </div>
+            </div>
+
+            <p>This is a short description of the Solution.<br>
+            <a href="marketing-page">Learn more</a></p>
+
+            <h4>Capabilities <span class="matched">matched</span> by Solution</h4>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <ul>
+                  <li># GP Billing</li>
+                </ul>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+              </div>
+            </div>
+          </div>
+
+          <div class="nhsuk-care-card__content nhsuk-u-margin-top-2 solution-eighteen">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <h3><a href="marketing-page">SolutionCare</a></h3>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <h3>£100 / per patient</h3>
+              </div>
+            </div>
+            <p>This is a short description of the Solution.<br>
+            <a href="marketing-page">Learn more</a></p>
+
+            <h4>Capabilities by Solution</h4>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <ul>
+                  <li>Patient Information Maintenance</li>
+                  <li>Prescribing</li>
+                </ul>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <ul>
+                  <li>Recording Consultations</li>
+                </ul>
+              </div>
+            </div>
+
+            <h4>Capabilities <span class="matched">matched</span> by Additional Services</h4>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <ul>
+                  <li>Care Homes</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="nhsuk-care-card__content nhsuk-u-margin-top-2 solution-five">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <h3><a href="marketing-page">System Dipensing</a></h3>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <h3>£12 / per patient</h3>
+              </div>
+            </div>
+            <p>This is a short description of the Solution.<br>
+            <a href="marketing-page">Learn more</a></p>
+
+            <h4>Capabilities <span class="matched">matched</span> by Solution</h4>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <ul>
+                  <li>Prescribing</li>
+                  <li>Prescription Order Citizen</li>
+                  <li>Social Prescribing</li>
+                </ul>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <ul>
+                  <li>Medicines Optimisation</li>
+                  <li>Dispensing</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="nhsuk-care-card__content nhsuk-u-margin-top-2 solution-twelve">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <h3><a href="marketing-page">Remote Monitoring</a></h3>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <h3>£25 / per patient</h3>
+              </div>
+            </div>
+
+            <p>This is a short description of the Solution.<br>
+            <a href="marketing-page">Learn more</a></p>
+
+            <h4>Capabilities <span class="matched">matched</span> by Solution</h4>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <ul>
+                  <li># Remote Monitoring</li>
+                </ul>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+              </div>
+            </div>
+          </div>
+
+          <div class="nhsuk-care-card__content nhsuk-u-margin-top-2 solution-thirteen">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <h3><a href="marketing-page">Voice Recognition</a></h3>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <h3>£90 / per patient</h3>
+              </div>
+            </div>
+
+            <p>This is a short description of the Solution.<br>
+            <a href="marketing-page">Learn more</a></p>
+
+            <h4>Capabilities <span class="matched">matched</span> by Solution</h4>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <ul>
+                  <li># Voice Recognition</li>
+                </ul>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+              </div>
+            </div>
+          </div>
+
+          <div class="nhsuk-care-card__content nhsuk-u-margin-top-2 solution-six">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <h3><a href="marketing-page">Foundation Solution, 2.0</a></h3>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <h3>£2,000 / per patient</h3>
+              </div>
+            </div>
+
+            <p>This is a short description of the Solution.<br>
+            <a href="marketing-page">Learn more</a></p>
+
+            <h4>Foundation Capabilities</h4>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <ul>
+                  <li>Appointments Management - Citizen</li>
+                  <li>Referral Management</li>
+                  <li>Resource Management</li>
+                </ul>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <ul>
+                  <li>Patient Information Maintenance</li>
+                  <li>Prescribing</li>
+                  <li>Recording Consultations</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="nhsuk-care-card__content nhsuk-u-margin-top-2 solution-seven">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <h3><a href="marketing-page">SMS Solution</a></h3>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <h3>£11 / per patient</h3>
+              </div>
+            </div>
+
+            <p>This is a short description of the Solution.<br>
+            <a href="marketing-page">Learn more</a></p>
+
+            <h4>Capabilities <span class="matched">matched</span> by Solution</h4>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <ul>
+                  <li># SMS Services</li>
+                </ul>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+              </div>
+            </div>
+          </div>
+
+          <div class="nhsuk-care-card__content nhsuk-u-margin-top-2 solution-nineteen">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <h3><a href="marketing-page">Social Solution</a></h3>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <h3>£1,200 / per patient</h3>
+              </div>
+            </div>
+            <p>This is a short description of the Solution.<br>
+            <a href="marketing-page">Learn more</a></p>
+
+            <h4>Capabilities <span class="matched">matched</span> by Solution</h4>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <ul>
+                  <li>Care Homes</li>
+                </ul>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+              </div>
+            </div>
+          </div>
+
+          <div class="nhsuk-care-card__content nhsuk-u-margin-top-2 solution-nine">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <h3><a href="marketing-page">Solution Foundation</a></h3>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <h3>£900 / per patient</h3>
+              </div>
+            </div>
+
+            <p>This is a short description of the Solution.<br>
+            <a href="marketing-page">Learn more</a></p>
+
+            <h4>Foundation Capabilities</h4>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <ul>
+                  <li>Appointments Management - Citizen</li>
+                  <li>Referral Management</li>
+                  <li>Resource Management</li>
+                </ul>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <ul>
+                  <li>Patient Information Maintenance</li>
+                  <li>Prescribing</li>
+                  <li>Recording Consultations</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="nhsuk-care-card__content nhsuk-u-margin-top-2 solution-ten">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <h3><a href="marketing-page">System Messages</a></h3>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <h3>£1 / per patient</h3>
+              </div>
+            </div>
+
+            <p>This is a short description of the Solution.<br>
+            <a href="marketing-page">Learn more</a></p>
+
+            <h4>Capabilities <span class="matched">matched</span> by Solution</h4>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <ul>
+                  <li># SMS Services</li>
+                </ul>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+              </div>
+            </div>
+          </div>
+
+          <div class="nhsuk-care-card__content nhsuk-u-margin-top-2 solution-fourteen">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <h3><a href="marketing-page">Physiotherapy</a></h3>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <h3>£40 / per patient</h3>
+              </div>
+            </div>
+
+            <p>This is a short description of the Solution.<br>
+            <a href="marketing-page">Learn more</a></p>
+
+            <h4>Capabilities <span class="matched">matched</span> by Solution</h4>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <ul>
+                  <li># Physiotherapy</li>
+                </ul>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+              </div>
+            </div>
+          </div>
+
+          <div class="nhsuk-care-card__content nhsuk-u-margin-top-2 solution-twenty">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <h3><a href="marketing-page">Care System</a></h3>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <h3>£20 / per patient</h3>
+              </div>
+            </div>
+            <p>This is a short description of the Solution.<br>
+            <a href="marketing-page">Learn more</a></p>
+
+            <h4>Capabilities <span class="matched">matched</span> by Solution</h4>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <ul>
+                  <li>Care Homes</li>
+                </ul>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+              </div>
+            </div>
+          </div>
+
+          <div class="nhsuk-care-card__content nhsuk-u-margin-top-2 solution-fifteen">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <h3><a href="marketing-page">Text System, 1.0</a></h3>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <h3>£80 / per patient</h3>
+              </div>
+            </div>
+            <p>This is a short description of the Solution.<br>
+            <a href="marketing-page">Learn more</a></p>
+
+            <h4>Capabilities <span class="matched">matched</span> by Solution</h4>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <ul>
+                  <li># SMS Services</li>
+                </ul>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+              </div>
+            </div>
+          </div>
+
+          <div class="nhsuk-care-card__content nhsuk-u-margin-top-2 solution-sixteen">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <h3><a href="marketing-page">Message System, 2.0</a></h3>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <h3>£4 / per patient</h3>
+              </div>
+            </div>
+            <p>This is a short description of the Solution.<br>
+            <a href="marketing-page">Learn more</a></p>
+
+            <h4>Capabilities <span class="matched">matched</span> by Solution</h4>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <ul>
+                  <li># SMS Services</li>
+                </ul>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}

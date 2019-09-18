@@ -1,0 +1,287 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  NHS Digital Buying Catalogue
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{{ nhsdNav({
+    "showNav": "true",
+    "primaryLinks": [
+      {
+        "label" : "[Solution_Name], 1.0"
+      },
+      {
+        'url' : '/',
+        'label' : 'Support'
+      }
+    ]
+})}}
+  {{ breadcrumb({
+  items: [
+    {
+      href: "/",
+      text: "My Solutions"
+    },
+    {
+      href: "/",
+      text: "Adding a Solution"
+    },
+    {
+      href: "all-sections",
+      text: "All sections"
+    }
+  ],
+    href: "native-desktop",
+    text: "Native desktop"
+    }) }}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://beta.nhs.uk/service-manual/styles-components-patterns/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row nhsuk-u-padding-bottom-6 build-marketing-page nhsuk-u-margin-top-9">
+    <div class="nhsuk-grid-column-three-quarters">
+
+      <!-- Change the page title here -->
+      <h2>
+        Native desktop - memory, storage, processing and aspect ratio
+      </h2>
+
+      <h4 class="nhsuk-body-l">Answer the following questions about your desktop Solution</h4>
+
+      <p class="nhsuk-body-l">
+        This information will be visible to buyers on your Solution page.
+      </p>
+      <p class="nhsuk-body-l">
+        <b>*indicates required field.</b>
+      </p>
+    </div>
+
+    <div class="nhsuk-grid-column-three-quarters">
+      {{ select({
+        "id": "select-1",
+        "name": "select-1",
+        "label": {
+          "html": "<b>Select the minimum memory requirement for your Solution to function?*</b>"
+        },
+        "hint": {
+          "text": "Please select below the minimum memory requirement."
+        },
+        "items": [
+          {
+            "value": 1,
+            "text": "256MB"
+          },
+          {
+            "value": 2,
+            "text": "512MB",
+            "selected": true
+          },
+          {
+            "value": 3,
+            "text": "1GB"
+          },
+          {
+            "value": 4,
+            "text": "2GB"
+          },
+          {
+            "value": 5,
+            "text": "4GB"
+          },
+          {
+            "value": 6,
+            "text": "8GB"
+          },
+          {
+            "value": 7,
+            "text": "16GB"
+          }
+        ]
+      }) }}
+
+        {{ govukCharacterCount({
+           name: "system-description",
+           id: "system-description",
+           maxlength: 300,
+           label: {
+             html: "<b>Descripton of storage requirements*</b>"
+           },
+           hint: {
+             text: "Add further information about the storage requirements needed for your Solution to function."
+           }
+         }) }}
+
+           {{ govukCharacterCount({
+              name: "system-description",
+              id: "system-description",
+              maxlength: 300,
+              label: {
+                html: "<b>Minimum necessary CPU power*</b>"
+              },
+              hint: {
+                text: "Add further information about the minimum CPU power required for your Solution to function."
+              }
+            }) }}
+
+            {{ select({
+              "id": "select-2",
+              "name": "select-2",
+              "label": {
+                "html": "<b>Select the recommended desktop aspect ratio and screen resolution?</b>"
+              },
+              "hint": {
+                "text": "Please select below the minimum resolution required for your Solution to function on desktop."
+              },
+              "items": [
+                {
+                  "value": 1,
+                  "text": "16:9 - 640 x 360"
+                },
+                {
+                  "value": 2,
+                  "text": "4:3 - 800 x 600",
+                  "selected": true
+                },
+                {
+                  "value": 3,
+                  "text": "4:3 - 1024 x 768"
+                },
+                {
+                  "value": 4,
+                  "text": "16:9 - 1280 x 720"
+                },
+                {
+                  "value": 5,
+                  "text": "16:10 - 1280 x 800"
+                },
+                {
+                  "value": 6,
+                  "text": "5:4 - 1280 x 1024"
+                },
+                {
+                  "value": 7,
+                  "text": "16:9 - 1360 x 768"
+                },
+                {
+                  "value": 8,
+                  "text": "16:9 - 1366 x 768"
+                },
+                {
+                  "value": 9,
+                  "text": "16:10 - 1440 x 900"
+                },
+                {
+                  "value": 10,
+                  "text": "16:9 - 1536 x 864"
+                },
+                {
+                  "value": 11,
+                  "text": "16:9 - 1600 x 900"
+                },
+                {
+                  "value": 12,
+                  "text": "16:10 - 1680 x 1050"
+                },
+                {
+                  "value": 13,
+                  "text": "16:9 - 1920 x 1080"
+                },
+                {
+                  "value": 14,
+                  "text": "16:10 - 1920 x 1200"
+                },
+                {
+                  "value": 15,
+                  "text": "16:9 - 2048 x 1152"
+                },
+                {
+                  "value": 16,
+                  "text": "21:9 - 2560 x 1080"
+                },
+                {
+                  "value": 17,
+                  "text": "16:9 - 2560 x 1440"
+                },
+                {
+                  "value": 18,
+                  "text": "21:9 - 3440 x 1440"
+                },
+                {
+                  "value": 19,
+                  "text": "16:9 - 3840 x 2160"
+                }
+              ]
+            }) }}
+      </div>
+
+      <div class="nhsuk-grid-column-three-quarters nhsuk-u-margin-top-4">
+        {{ button({
+          "href": "native-desktop",
+          "text": "Save and return"
+        }) }}
+
+        {{ backLink({
+          "href": "all-sections",
+          "text": "Return to all sections"
+        }) }}
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}
+
+
+{% block afterContent %}
+{{ nhsdFooter({
+  "list": "nhsuk-footer__list--three-columns",
+  "list1": [
+    {
+      "URL": "/",
+      "label": "About the Buying Catalogue"
+    },
+    {
+      "URL": "/",
+      "label": "Process overview"
+    },
+    {
+      "URL": "/",
+      "label": "Supplier checklist"
+    }
+  ],
+  "list2": [
+    {
+      "URL": "/",
+      "label": "Catalogue submissions"
+    },
+    {
+      "URL": "/",
+      "label": "NHS Digital service desk"
+    }
+  ],
+  "list3": [
+    {
+      "URL": "/",
+      "label": "NHS Digital"
+    },
+    {
+      "URL": "/",
+      "label": "Capabilities and Standards Model"
+    }
+  ]
+})}}
+{% endblock %}

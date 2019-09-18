@@ -1,0 +1,32 @@
+// Import NHS.UK frontend library
+@import 'node_modules/nhsuk-frontend/packages/nhsuk';
+
+// Import GOV.UK frontend library
+@import "node_modules/govuk-frontend/govuk/all";
+
+// Components that are not in the NHS.UK frontend library
+@import 'components/panel-confirmation';
+@import 'components/related-nav';
+@import 'components/nhsd-header';
+@import 'components/nhsd-footer';
+@import 'components/marketing-page';
+@import 'components/build-marketing-page';
+@import 'components/marketing-page';
+@import 'components/landing-page';
+@import 'components/buyer-browse';
+
+///////////////////////////////////////////
+// Add your custom CSS/Sass styles below...
+///////////////////////////////////////////
+
+.nhsuk-main-wrapper {
+  padding: 0;
+}
+
+.nhsuk-footer {
+  .nhsuk-width-container {
+    max-width: 100%;
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+}

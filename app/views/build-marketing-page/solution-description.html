@@ -1,0 +1,164 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  NHS Digital Buying Catalogue
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{{ nhsdNav({
+    "showNav": "true",
+    "primaryLinks": [
+      {
+        "label" : "[Solution_Name], 1.0"
+      },
+      {
+        'url' : '/',
+        'label' : 'Support'
+      }
+    ]
+})}}
+  {{ breadcrumb({
+  items: [
+    {
+      href: "/",
+      text: "My Solutions"
+    },
+    {
+      href: "/",
+      text: "Adding a Solution"
+    }
+  ],
+    href: "all-sections",
+    text: "All sections"
+    }) }}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://beta.nhs.uk/service-manual/styles-components-patterns/layout -->
+{% block content %}
+<div class="nhsuk-grid-row nhsuk-u-margin-bottom-6 build-marketing-page nhsuk-u-margin-top-9">
+  <div class="nhsuk-grid-column-three-quarters">
+
+    <!-- Change the page title here -->
+    <h2>
+      Solution description
+    </h2>
+
+    <h4 class="nhsuk-body-l">Add further detail about your Solution to provide the buyer with more information.</h4>
+
+    <p class="nhsuk-body-l">
+      This information will be visible to buyers on your Solution page but it will not affect search ranking.
+    </p>
+    <p class="nhsuk-body-l">
+      <b>*indicates required field.</b>
+    </p>
+  </div>
+
+  <div class="nhsuk-grid-column-three-quarters">
+  {{ govukCharacterCount({
+     name: "summary",
+     id: "summary",
+     maxlength: 300,
+     label: {
+       html: "<b>Summarise your Solution*</b>"
+     },
+     hint: {
+       html: "Your text from Stage 1, Solution registration has been automatically inserted but can be edited."
+     },
+     value: "Really Kool Document Manager is one of the most popular document management suites in the UK. Our system is designed to be a complete document management solution that focuses on usability and clinical safety."
+   }) }}
+
+   {{ govukCharacterCount({
+      name: "about-solution",
+      id: "about-solution",
+      maxlength: 1000,
+      rows: 10,
+      label: {
+        html: "<b>Write a description about your Solution</b>"
+      },
+      hint: {
+        text: "This description will give the buyer more insight into your Solution and the qualities it can provide."
+      }
+    }) }}
+
+    {{ input({
+      "label": {
+        "html": "<b>Enter a link to more Solution information</b>"
+      },
+        "hint": {
+        "html": "Buyers will be directed to an external link"
+      },
+        "id": "about-solution-url",
+      "name": "about-solution-url"
+    }) }}
+
+  </div>
+
+  <div class="nhsuk-grid-column-three-quarters">
+    {{ button({
+      "href": "all-sections",
+      "text": "Save and return to all sections"
+    }) }}
+
+    {{ backLink({
+      "href": "all-sections",
+      "text": "Return to all sections"
+    }) }}
+
+  <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}
+
+{% block afterContent %}
+{{ nhsdFooter({
+  "list": "nhsuk-footer__list--three-columns",
+  "list1": [
+    {
+      "URL": "/",
+      "label": "About the Buying Catalogue"
+    },
+    {
+      "URL": "/",
+      "label": "Process overview"
+    },
+    {
+      "URL": "/",
+      "label": "Supplier checklist"
+    }
+  ],
+  "list2": [
+    {
+      "URL": "/",
+      "label": "Catalogue submissions"
+    },
+    {
+      "URL": "/",
+      "label": "NHS Digital service desk"
+    }
+  ],
+  "list3": [
+    {
+      "URL": "/",
+      "label": "NHS Digital"
+    },
+    {
+      "URL": "/",
+      "label": "Capabilities and Standards Model"
+    }
+  ]
+})}}
+{% endblock %}

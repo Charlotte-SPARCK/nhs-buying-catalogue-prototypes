@@ -1,0 +1,160 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  NHS Digital Buying Catalogue
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{{ nhsdNav({
+    "showNav": "true",
+    "primaryLinks": [
+      {
+        "label" : "[Solution_Name], 1.0"
+      },
+      {
+        'url' : '/',
+        'label' : 'Support'
+      }
+    ]
+})}}
+  {{ breadcrumb({
+  items: [
+    {
+      href: "/",
+      text: "My Solutions"
+    },
+    {
+      href: "/",
+      text: "Adding a Solution"
+    }
+  ],
+    href: "all-sections",
+    text: "All sections"
+    }) }}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://beta.nhs.uk/service-manual/styles-components-patterns/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row nhsuk-u-padding-bottom-4 build-marketing-page nhsuk-u-margin-top-9">
+    <div class="nhsuk-grid-column-three-quarters">
+
+      <!-- Change the page title here -->
+      <h2>
+        Roadmap
+      </h2>
+
+      <h4 class="nhsuk-body-l">Add a product roadmap and/or your progress against the Standards Roadmap.</h4>
+
+      <p class="nhsuk-body-l">
+        Your roadmap will be displayed on your Solution page  and visible to buyers.
+      </p>
+    </div>
+
+    <div class="nhsuk-grid-column-three-quarters">
+      {{ govukFileUpload({
+        id: "file-upload-2",
+        name: "file-upload-2",
+        label: {
+          "html": "<b>Roadmap diagram</b>"
+        },
+        hint: {
+          "text": "Upload a diagram of your Roadmap to show a visual representation of your progress"
+        }
+      }) }}
+
+      {{ hint({
+          "text": "During private beta, file upload times may be slow. Thank you for your patience."
+      }) }}
+
+      {{ details({
+        "text": "Help - Which file types are allowed? ",
+        "HTML": "
+        <p>Only the following file types are accepted:</p>
+        <p>.png, .jpg, .jpeg and single page PDF documents</p>
+        "
+      }) }}
+
+      {{ govukCharacterCount({
+         name: "roadmap",
+         id: "roadmap",
+         maxlength: 1000,
+         rows: 17,
+         label: {
+           html: "<b>Roadmap description</b>"
+         },
+         hint: {
+           html: "This description will give the buyer more insight into your Solution and the qualitites it can provide. For example:<br><br> <i>&quot;We plan to deliver a task management function by Autumn 2019. We are also going to achieve the updated Document Management Standard ahead of schedule in August 2019.&quot;</i>"
+         }
+       }) }}
+    </div>
+
+    <div class="nhsuk-grid-column-three-quarters">
+      {{ button({
+        "href": "all-sections",
+        "text": "Save and return to all sections"
+      }) }}
+
+      {{ backLink({
+        "href": "all-sections",
+        "text": "Return to all sections"
+      }) }}
+
+    <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}
+
+
+{% block afterContent %}
+{{ nhsdFooter({
+  "list": "nhsuk-footer__list--three-columns",
+  "list1": [
+    {
+      "URL": "/",
+      "label": "About the Buying Catalogue"
+    },
+    {
+      "URL": "/",
+      "label": "Process overview"
+    },
+    {
+      "URL": "/",
+      "label": "Supplier checklist"
+    }
+  ],
+  "list2": [
+    {
+      "URL": "/",
+      "label": "Catalogue submissions"
+    },
+    {
+      "URL": "/",
+      "label": "NHS Digital service desk"
+    }
+  ],
+  "list3": [
+    {
+      "URL": "/",
+      "label": "NHS Digital"
+    },
+    {
+      "URL": "/",
+      "label": "Capabilities and Standards Model"
+    }
+  ]
+})}}
+{% endblock %}

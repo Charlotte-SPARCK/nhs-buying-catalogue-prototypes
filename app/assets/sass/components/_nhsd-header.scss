@@ -1,0 +1,14 @@
+.nhsuk-header {
+    background-color: $color_nhsuk-white;
+}
+
+.nhsuk-header__navigation {
+  max-width: 100%;
+}
+
+nav {
+  .nhsuk-width-container {
+    max-width: 100%;
+    margin: 0 32px;
+  }
+}

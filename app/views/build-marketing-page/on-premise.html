@@ -1,0 +1,183 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  NHS Digital Buying Catalogue
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{{ nhsdNav({
+    "showNav": "true",
+    "primaryLinks": [
+      {
+        "label" : "[Solution_Name], 1.0"
+      },
+      {
+        'url' : '/',
+        'label' : 'Support'
+      }
+    ]
+})}}
+  {{ breadcrumb({
+  items: [
+    {
+      href: "/",
+      text: "My Solutions"
+    },
+    {
+      href: "/",
+      text: "Adding a Solution"
+    }
+  ],
+    href: "all-sections",
+    text: "All sections"
+    }) }}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://beta.nhs.uk/service-manual/styles-components-patterns/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row nhsuk-u-padding-bottom-4 build-marketing-page nhsuk-u-margin-top-9">
+    <div class="nhsuk-grid-column-three-quarters">
+
+      <!-- Change the page title here -->
+      <h2>
+        On premise
+      </h2>
+
+      <h4 class="nhsuk-body-l">Answer the following questions about on premise hosting</h4>
+
+      <p class="nhsuk-body-l">
+        This information is displayed on the Marketing page for buyers to view.
+      </p>
+    </div>
+
+    <div class="nhsuk-grid-column-three-quarters">
+      {{ govukCharacterCount({
+         name: "requirement-summary",
+         id: "requirement-summary",
+         maxlength: 500,
+         rows: 8,
+         label: {
+           html: "<b>Summarise your requirements</b>"
+         },
+         hint: {
+           text: "Add a description of your Solutions on premise hosting requirements"
+         }
+       }) }}
+
+       {{ input({
+         "label": {
+           "html": "<b>Enter a link to more on premise hosting information</b>"
+         },
+           "hint": {
+           "html": "<p>Buyers will be directed to an external link</p>"
+         },
+           "id": "hosting-url",
+           "name": "hosting-url"
+       }) }}
+
+       {{ govukCharacterCount({
+          name: "data-center-model",
+          id: "data-center-model",
+          maxlength: 1000,
+          rows: 16,
+          label: {
+            html: "<b>Describe your data centre hosting model</b>"
+          },
+          hint: {
+            text: "Add an overview of the data center hosting model for your Solution"
+          }
+        }) }}
+
+       {{ radios({
+          "idPrefix": "hscn",
+          "name": "hscn",
+          "fieldset": {
+            "legend": {
+              "html": "<b>Does the system have HSCN/N3 connectivity?</b>"
+            }
+          },
+          "hint": {
+            "text": "Select whether the Solution requires a HSCN connection to function."
+          },
+          "items": [
+            {
+              "value": "yes",
+              "text": "Yes"
+            },
+            {
+              "value": "no",
+              "text": "No"
+            }
+          ]
+        }) }}
+
+    </div>
+    <div class="nhsuk-grid-column-three-quarters nhsuk-u-margin-top-4">
+      {{ button({
+        "href": "all-sections",
+        "text": "Save and return to all sections"
+      }) }}
+
+      {{ backLink({
+        "href": "all-sections",
+        "text": "Return to all sections"
+      }) }}
+
+    <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}
+
+{% block afterContent %}
+{{ nhsdFooter({
+  "list": "nhsuk-footer__list--three-columns",
+  "list1": [
+    {
+      "URL": "/",
+      "label": "About the Buying Catalogue"
+    },
+    {
+      "URL": "/",
+      "label": "Process overview"
+    },
+    {
+      "URL": "/",
+      "label": "Supplier checklist"
+    }
+  ],
+  "list2": [
+    {
+      "URL": "/",
+      "label": "Catalogue submissions"
+    },
+    {
+      "URL": "/",
+      "label": "NHS Digital service desk"
+    }
+  ],
+  "list3": [
+    {
+      "URL": "/",
+      "label": "NHS Digital"
+    },
+    {
+      "URL": "/",
+      "label": "Capabilities and Standards Model"
+    }
+  ]
+})}}
+{% endblock %}

@@ -1,0 +1,140 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  NHS Digital Buying Catalogue
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{{ nhsdNav({
+    "showNav": "true",
+    "primaryLinks": [
+      {
+        "label" : "[Solution_Name], 1.0"
+      },
+      {
+        'url' : '/',
+        'label' : 'Support'
+      }
+    ]
+})}}
+  {{ breadcrumb({
+  items: [
+    {
+      href: "/",
+      text: "My Solutions"
+    },
+    {
+      href: "/",
+      text: "Adding a Solution"
+    },
+    {
+      href: "all-sections",
+      text: "All sections"
+    }
+  ],
+    href: "native-desktop",
+    text: "Native desktop"
+    }) }}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://beta.nhs.uk/service-manual/styles-components-patterns/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row nhsuk-u-padding-bottom-6 build-marketing-page nhsuk-u-margin-top-9">
+    <div class="nhsuk-grid-column-three-quarters">
+
+      <!-- Change the page title here -->
+      <h2>
+        Native desktop - additional information
+      </h2>
+
+      <h4 class="nhsuk-body-l">Answer the following questions about your desktop Solution</h4>
+
+      <p class="nhsuk-body-l">
+        This information will be visible to buyers on your Solution page.
+      </p>
+    </div>
+
+    <div class="nhsuk-grid-column-three-quarters">
+      {{ govukCharacterCount({
+         name: "additional-information",
+         id: "additional-information",
+         maxlength: 500,
+         rows: 8,
+         label: {
+           html: "<b>Do you have any additional native desktop application information?</b>"
+         },
+         hint: {
+           text: "Add any additional information or requirements your Solution needs to function."
+         }
+       }) }}
+      </div>
+
+      <div class="nhsuk-grid-column-three-quarters">
+        {{ button({
+          "href": "native-desktop",
+          "text": "Save and return"
+        }) }}
+
+        {{ backLink({
+          "href": "all-sections",
+          "text": "Return to all sections"
+        }) }}
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}
+
+{% block afterContent %}
+{{ nhsdFooter({
+  "list": "nhsuk-footer__list--three-columns",
+  "list1": [
+    {
+      "URL": "/",
+      "label": "About the Buying Catalogue"
+    },
+    {
+      "URL": "/",
+      "label": "Process overview"
+    },
+    {
+      "URL": "/",
+      "label": "Supplier checklist"
+    }
+  ],
+  "list2": [
+    {
+      "URL": "/",
+      "label": "Catalogue submissions"
+    },
+    {
+      "URL": "/",
+      "label": "NHS Digital service desk"
+    }
+  ],
+  "list3": [
+    {
+      "URL": "/",
+      "label": "NHS Digital"
+    },
+    {
+      "URL": "/",
+      "label": "Capabilities and Standards Model"
+    }
+  ]
+})}}
+{% endblock %}

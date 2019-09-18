@@ -1,0 +1,53 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  NHS Digital Buying Catalogue
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://beta.nhs.uk/service-manual/styles-components-patterns/layout -->
+{% block content %}
+<div class="log-in nhsuk-u-padding-top-7 nhsuk-u-padding-bottom-7">
+  <div class="nhsuk-width-container-fluid {{ containerClasses }}">
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-full box">
+        <div class="logo">
+          <img src="images/nhsd-logo2.png" />
+          <p>NHS Digital Buying Catalogue Beta Prototype</p>
+        </div>
+        <div class="nhsuk-white">
+          <div class="inputs">
+            <input placeholder="yours@example.co.uk"></input>
+            <input placeholder="your password" type="password"></input>
+            <a href="/">Don't remember your password?</a>
+          </div>
+        </div>
+        <a href="https://buyer-browse.herokuapp.com/">
+        <div class="log-in-cta">
+          <p>LOG IN <span><svg aria-hidden="true" focusable="false" class="icon-text" width="8px" height="12px" viewBox="0 0 8 12" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Web/Submit/Active" transform="translate(-148.000000, -32.000000)" fill="#FFFFFF"><polygon id="Shape" points="148 33.4 149.4 32 155.4 38 149.4 44 148 42.6 152.6 38"></polygon></g></g></svg></span></p>
+
+        </div>
+        </a>
+        </div>
+      </div>
+      <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}

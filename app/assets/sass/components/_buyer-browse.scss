@@ -1,0 +1,272 @@
+.buyer-browse {
+  .nhsuk-width-container {
+    max-width: 100%;
+  }
+
+  .nhsuk-details {
+    summary {
+      color: $color_nhsuk-blue;
+
+      span {
+        text-decoration: underline;
+      }
+    }
+  }
+
+
+  .nhsuk-table__cell {
+    width: 50%;
+    vertical-align: top;
+  }
+
+  td {
+    vertical-align: top;
+    width: 50%;
+  }
+
+  .log-in {
+    background-color: $color_nhsuk-blue;
+    top: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .box {
+    background-color: $color_nhsuk-grey-4;
+    border-radius: 6px;
+    padding: 0;
+    width: 313px;
+    margin: 0 auto;
+
+    .logo {
+      text-align: center;
+
+      img {
+        width: 74px;
+        padding: 20px 0;
+      }
+    }
+
+    p {
+      font-size: 22px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      padding: 0 20px;
+    }
+
+    .nhsuk-white {
+      height: auto;
+
+      .inputs {
+        padding: 20px;
+        text-align: center;
+        margin: auto;
+
+        input {
+          width: 100%;
+          padding: 10px;
+          margin: 10px 0;
+        }
+
+        a {
+          font-size: 13px;
+          color: $color_nhsuk-black;
+          text-decoration: none;
+        }
+      }
+    }
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
+    .log-in-cta {
+      background-color: $color_nhsuk-green;
+      margin: 0 auto;
+      text-align: center;
+
+      p {
+        margin: 0 auto;
+        padding: 20px;
+        color: $color_nhsuk-white;
+        font-size: 16px;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .nhsuk-main-wrapper {
+    padding: 0;
+  }
+
+  .nhsuk-header__content {
+    padding-top: 30px;
+  }
+
+  .nhsuk-footer__list {
+    padding-right:100px;
+  }
+
+  .welcome-banner {
+    background-color: $color_nhsuk-blue;
+
+    h1 {
+      color: $color_nhsuk-white;
+
+      span {
+        color: $color_nhsuk-grey-3;
+      }
+    }
+
+    p {
+      color: $color_nhsuk-white;
+    }
+  }
+
+  .nhsuk-blue {
+    background-color: $color_nhsuk-blue;
+  }
+
+  .nhsuk-white {
+    background-color: $color_nhsuk-white;
+    height: 129px;
+  }
+
+  .nhsuk-cards {
+    .nhsuk-card {
+      padding-left: 30px;
+      padding-right: 30px;
+
+      a {
+        text-decoration: none;
+        font-weight: bold;
+        color: $color_nhsuk-blue;
+
+        &:hover {
+          box-shadow: none;
+        }
+      }
+
+
+
+      h3 {
+        color: $color_nhsuk-white;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      img {
+        height: 125px;
+      }
+
+      .icon {
+        text-align: right;
+      }
+    }
+  }
+
+
+  .productivtiy {
+    border-top: 2px solid $color_nhsuk-grey-5;
+
+    p {
+      font-size: 16px;
+      padding-top: 20px;
+    }
+  }
+
+  .no-results {
+    margin-top: 50px;
+    font-style: italic;
+    display: none;
+  }
+
+  .matched {
+    display: none;
+  }
+
+  .save {
+    margin: 0 auto;
+    text-align: right;
+  }
+
+  h5 {
+    margin-top: 60px;
+  }
+
+  #client-type-section-1 {
+    display: none;
+  }
+  #client-type-section-2 {
+    display: none;
+  }
+  #client-type-section-3 {
+    display: none;
+  }
+
+  #content {
+    float: right;
+  }
+
+  .sticky {
+    position: fixed;
+    top: 10px;
+    width: 33.3333%;
+  }
+
+  .nhsuk-table__body {
+    width: 50%;
+    vertical-align: top;
+  }
+
+  .nhsuk-table__cell {
+    width: 50%;
+  }
+
+  .govuk-hint {
+    padding-bottom:10px;
+  }
+
+  .nhsuk-hint {
+    padding-bottom:10px;
+  }
+
+  .govuk-label {
+    font-family: "Frutiger W01", Helvetica, Arial, sans-serif;
+  }
+
+  .govuk-hint {
+    font-family: "Frutiger W01", Helvetica, Arial, sans-serif;
+    color: $color_nhsuk-grey-1;
+  }
+
+  .govuk-textarea {
+    border-color: $color_nhsuk-blue
+  }
+
+  .govuk-textarea:focus {
+    box-shadow: none;
+  }
+
+  .nhsuk-input {
+    border-color: $color_nhsuk-blue;
+  }
+
+  .govuk-file-upload:focus {
+    box-shadow: none;
+    outline: none;
+  }
+
+  .govuk-file-upload:focus-within {
+    box-shadow: none;
+    outline: none;
+  }
+}

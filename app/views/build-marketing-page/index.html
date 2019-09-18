@@ -1,0 +1,151 @@
+<!-- Import custom components -->
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  NHS Digital Buying Catalogue
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{{ nhsdNav({
+    "showNav": "true",
+    "primaryLinks": [
+      {
+        "label" : "Really Kool Document Manager, 1.0"
+      },
+      {
+        'url' : '/',
+        'label' : 'Support'
+      }
+    ]
+})}}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://beta.nhs.uk/service-manual/styles-components-patterns/layout -->
+{% block content %}
+<div class="nhsuk-width-container build-marketing-page nhsuk-u-margin-top-9">
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- Change the page title here -->
+      <h2>
+        Adding a Solution
+      </h2>
+
+      <p>
+        Continue adding your Solution below.
+      </p>
+
+
+      {{ stages({
+        "steps": [
+          {
+            "status": "complete",
+            "title": "Provide basic details and select Capabilities",
+            "action": "Complete",
+            "stageURL": "/",
+            "label": "View",
+            "name": "Solution details",
+            "narrative": "Provide Solution name, description, and contacts. Then select your Solution's Capabilities to progress to the next steps"
+          },
+          {
+            "status": "complete",
+            "title": "Provide evidence for your Solution's Capabilities",
+            "action": "Complete",
+            "stageURL": "/",
+            "label": "View",
+            "name": "Capabilities assessment",
+            "narrative": "Provide evidence that shows how your Solution meets each of the Capabilities selected. We will assess whether or not your Solution meets the Capabilities"
+          },
+          {
+            "status": "complete",
+            "title": "Provide evidence for your Solution's Standards",
+            "action": "Complete",
+            "stageURL": "/",
+            "label": "View",
+            "name": "Standards compliance",
+            "narrative": "Provide evidence that shows how your Solution meets the requirements in each Standard. We will evaluate your Solution for compliance with each Standard"
+          },
+          {
+            "status": "unavailable",
+            "title": "Build your Solution page",
+            "action": "Not started",
+            "stageURL": "/build-marketing-page/all-sections",
+            "label": "Start",
+            "name": "Solution detail",
+            "narrative": "Provide information to help buyers evaluate your Solution. We will moderate the information added. Then publish your Solution page"
+          }
+        ]
+      }) }}
+
+      {{ details({
+        "text": "Help - Where can I find guidance on adding a solution?",
+        "HTML": "
+        <p>Follow the links below for guidance on each stage of <a>adding a Solution</a>.</p>
+        <ul>
+          <li><a>Stage 1 - Solution details</a></li>
+          <li><a>Stage 2 - Capabilities assessment</a></li>
+          <li><a>Stage 3 - Standards compliance</a></li>
+          <li><a>Stage 4 - Solution page (what buyers will see)</a></li>
+        </ul>
+        "
+      }) }}
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block afterContent %}
+{{ nhsdFooter({
+  "list": "nhsuk-footer__list--three-columns",
+  "list1": [
+    {
+      "URL": "/",
+      "label": "About the Buying Catalogue"
+    },
+    {
+      "URL": "/",
+      "label": "Process overview"
+    },
+    {
+      "URL": "/",
+      "label": "Supplier checklist"
+    }
+  ],
+  "list2": [
+    {
+      "URL": "/",
+      "label": "Catalogue submissions"
+    },
+    {
+      "URL": "/",
+      "label": "NHS Digital service desk"
+    }
+  ],
+  "list3": [
+    {
+      "URL": "/",
+      "label": "NHS Digital"
+    },
+    {
+      "URL": "/",
+      "label": "Capabilities and Standards Model"
+    }
+  ]
+})}}
+{% endblock %}

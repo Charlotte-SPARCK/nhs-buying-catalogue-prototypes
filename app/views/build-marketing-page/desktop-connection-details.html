@@ -1,0 +1,197 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  NHS Digital Buying Catalogue
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{{ nhsdNav({
+    "showNav": "true",
+    "primaryLinks": [
+      {
+        "label" : "[Solution_Name], 1.0"
+      },
+      {
+        'url' : '/',
+        'label' : 'Support'
+      }
+    ]
+})}}
+  {{ breadcrumb({
+  items: [
+    {
+      href: "/",
+      text: "My Solutions"
+    },
+    {
+      href: "/",
+      text: "Adding a Solution"
+    },
+    {
+      href: "all-sections",
+      text: "All sections"
+    }
+  ],
+    href: "native-desktop",
+    text: "Native desktop"
+    }) }}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://beta.nhs.uk/service-manual/styles-components-patterns/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row nhsuk-u-padding-bottom-6 build-marketing-page nhsuk-u-margin-top-9">
+    <div class="nhsuk-grid-column-three-quarters">
+
+      <!-- Change the page title here -->
+      <h2>
+        Native desktop - connection details
+      </h2>
+
+      <h4 class="nhsuk-body-l">Answer the following questions about your desktop Solution</h4>
+
+      <p class="nhsuk-body-l">
+        This information will be visible to buyers on your Solution page.
+      </p>
+      <p class="nhsuk-body-l">
+        <b>*indicates required field.</b>
+      </p>
+    </div>
+
+    <div class="nhsuk-grid-column-three-quarters nhsuk-u-margin-bottom-4">
+      {{ select({
+        "id": "select-1",
+        "name": "select-1",
+        "label": {
+          "html": "<b>Select the minimum connection speed required for your Solution to function?*</b>"
+        },
+        "hint": {
+          "text": "Please select below the minimum bandwidth requirement."
+        },
+        "items": [
+          {
+            "value": 1,
+            "text": "0.5Mbps"
+          },
+          {
+            "value": 2,
+            "text": "1Mbps",
+            "selected": true
+          },
+          {
+            "value": 3,
+            "text": "1.5Mbps"
+          },
+          {
+            "value": 4,
+            "text": "2Mbps"
+          },
+          {
+            "value": 5,
+            "text": "3Mbps"
+          },
+          {
+            "value": 6,
+            "text": "5Mbps"
+          },
+          {
+            "value": 7,
+            "text": "8Mbps"
+          },
+          {
+            "value": 8,
+            "text": "10Mbps"
+          },
+          {
+            "value": 9,
+            "text": "15Mbps"
+          },
+          {
+            "value": 10,
+            "text": "20Mbps"
+          },
+          {
+            "value": 11,
+            "text": "30Mbps"
+          },
+          {
+            "value": 12,
+            "text": "Higher than 30Mbps"
+          },
+          {
+            "value": 13,
+            "text": "No connection required"
+          }
+        ]
+      }) }}
+
+    </div>
+
+    <div class="nhsuk-grid-column-three-quarters">
+      {{ button({
+        "href": "native-desktop",
+        "text": "Save and return"
+      }) }}
+
+      {{ backLink({
+        "href": "all-sections",
+        "text": "Return to all sections"
+      }) }}
+
+    <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}
+
+{% block afterContent %}
+{{ nhsdFooter({
+  "list": "nhsuk-footer__list--three-columns",
+  "list1": [
+    {
+      "URL": "/",
+      "label": "About the Buying Catalogue"
+    },
+    {
+      "URL": "/",
+      "label": "Process overview"
+    },
+    {
+      "URL": "/",
+      "label": "Supplier checklist"
+    }
+  ],
+  "list2": [
+    {
+      "URL": "/",
+      "label": "Catalogue submissions"
+    },
+    {
+      "URL": "/",
+      "label": "NHS Digital service desk"
+    }
+  ],
+  "list3": [
+    {
+      "URL": "/",
+      "label": "NHS Digital"
+    },
+    {
+      "URL": "/",
+      "label": "Capabilities and Standards Model"
+    }
+  ]
+})}}
+{% endblock %}

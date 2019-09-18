@@ -1,0 +1,150 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  NHS Digital Buying Catalogue
+{% endblock %}
+
+{% block header %}
+  {{ nhsdHeader({
+      "showNav": "false"
+    })
+  }}
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+  {{ nhsdNav({
+      "showNav": "true",
+      "primaryLinks": [
+        {
+          "label" : ""
+        },
+        {
+          'url' : '/landing-page/log-in',
+          'label' : 'Log in'
+        }
+      ]
+  })}}
+
+  <section class="nhsuk-hero landing-page">
+    <div class="nhsuk-width-container-fluid">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds nhsuk-u-padding-top-7 nhsuk-u-padding-bottom-7">
+            <h1>
+              Introducing the Buying Catalogue
+              <span class="nhsuk-caption-xl nhsuk-caption--bottom">More choices, better patient outcomes</span>
+            </h1>
+            <p class="nhsuk-body-l">
+              The Buying Catalogue is a procurement platform where clinical commissioners and other NHS buyers can find, evaluate and purchase Catalogue-assured IT Solutions.
+            </p>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://beta.nhs.uk/service-manual/styles-components-patterns/layout -->
+{% block content %}
+<div class="nhsuk-grid-row landing-page">
+  <div class="nhsuk-u-padding-top-7 nhsuk-u-padding-bottom-7">
+    <div class="nhsuk-width-container-fluid {{ containerClasses }}">
+
+        <!-- Add your content here -->
+        <!-- Styles and components can be found at https://beta.nhs.uk/service-manual/styles-components-patterns -->
+
+        <div class="nhsuk-grid-row nhsuk-cards">
+          <div class="nhsuk-grid-column-one-third nhsuk-card">
+            <a href="#">
+            <div class="nhsuk-grid-row nhsuk-blue nhsuk-u-padding-4">
+              <div class="nhsuk-grid-column-one-half">
+                <h3 class="nhsuk-body-l">
+                  GP IT Futures Framework
+                </h3>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <img src="images/bullseye.png" />
+              </div>
+            </div>
+            <div class="nhsuk-grid-row nhsuk-white nhsuk-u-padding-4">
+              <div>
+                <p>
+                  Lean more about the GP IT Framework
+                </p>
+              </div>
+              <div class="icon">
+                <p>→</p>
+              </div>
+            </div>
+            </a>
+          </div>
+          <div class="nhsuk-grid-column-one-third nhsuk-card">
+            <a href="https://gpitbjss.atlassian.net/wiki/spaces/GPITF/overview" target="_blank">
+            <div class="nhsuk-grid-row nhsuk-blue nhsuk-u-padding-4">
+              <div class="nhsuk-grid-column-one-half">
+                <h3 class="nhsuk-body-l">
+                  Capabilities & Standards
+                </h3>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <img src="images/checklist.png" />
+              </div>
+            </div>
+            <div class="nhsuk-grid-row nhsuk-white nhsuk-u-padding-4">
+              <div>
+                <p>
+                  View the Capabilities & Standards model
+                </p>
+              </div>
+              <div class="icon">
+                <p>→</p>
+              </div>
+            </div>
+            </a>
+          </div>
+          <div class="nhsuk-grid-column-one-third nhsuk-card">
+            <a href="https://public-browse.herokuapp.com/">
+            <div class="nhsuk-grid-row nhsuk-blue nhsuk-u-padding-4">
+              <div class="nhsuk-grid-column-one-half">
+                <h3 class="nhsuk-body-l">
+                  Browse Solutions
+                </h3>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <img src="images/magnify.png" />
+              </div>
+            </div>
+            <div class="nhsuk-grid-row nhsuk-white nhsuk-u-padding-4">
+              <div>
+                <p>
+                  Get started and browse Solutions.
+                </p>
+              </div>
+              <div class="icon">
+                <p>→</p>
+              </div>
+            </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- End of content -->
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

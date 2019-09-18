@@ -1,0 +1,169 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  NHS Digital Buying Catalogue
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{{ nhsdNav({
+    "showNav": "true",
+    "primaryLinks": [
+      {
+        "label" : "[Solution_Name], 1.0"
+      },
+      {
+        'url' : '/',
+        'label' : 'Support'
+      }
+    ]
+})}}
+  {{ breadcrumb({
+  items: [
+    {
+      href: "/",
+      text: "My Solutions"
+    },
+    {
+      href: "/",
+      text: "Adding a Solution"
+    }
+  ],
+    href: "all-sections",
+    text: "All sections"
+    }) }}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://beta.nhs.uk/service-manual/styles-components-patterns/layout -->
+{% block content %}
+<div class="nhsuk-grid-row build-marketing-page nhsuk-u-margin-top-9">
+  <div class="nhsuk-grid-column-three-quarters">
+    <!-- Change the page title here -->
+    <h2>
+      Features
+    </h2>
+
+    <h4 class="nhsuk-body-l">Add up to 10 features that describe your Solution.</h4>
+
+    <p class="nhsuk-body-l">
+      Each feature will be displayed as a bulleted list item. For example:
+    </p>
+    <ul>
+      <li><p class="nhsuk-body-l"><i>Create and change appointment entries</i><p></li>
+    </ul>
+    <p class="nhsuk-body-l">
+      You can enter up to 100 characters per feature
+    </p>
+  </div>
+
+  <div class="nhsuk-grid-column-three-quarters">
+    {{ input({
+        "id": "feature-1",
+        "name": "feature-1"
+    }) }}
+    {{ input({
+        "id": "feature-2",
+        "name": "feature-2"
+    }) }}
+    {{ input({
+        "id": "feature-3",
+        "name": "feature-3"
+    }) }}
+    {{ input({
+        "id": "feature-4",
+        "name": "feature-4"
+    }) }}
+    {{ input({
+        "id": "feature-5",
+        "name": "feature-5"
+    }) }}
+    {{ input({
+        "id": "feature-6",
+        "name": "feature-6"
+    }) }}
+    {{ input({
+        "id": "feature-7",
+        "name": "feature-7"
+    }) }}
+    {{ input({
+        "id": "feature-8",
+        "name": "feature-8"
+    }) }}
+    {{ input({
+        "id": "feature-9",
+        "name": "feature-9"
+    }) }}
+    {{ input({
+        "id": "feature-10",
+        "name": "feature-10"
+    }) }}
+
+  </div>
+
+  <div class="nhsuk-grid-column-three-quarters">
+    {{ button({
+      "href": "all-sections",
+      "text": "Save and return to all sections"
+    }) }}
+
+    {{ backLink({
+      "href": "all-sections",
+      "text": "Return to all sections"
+    }) }}
+
+  <!-- End of content -->
+  </div>
+</div>
+{% endblock %}
+
+{% block afterContent %}
+{{ nhsdFooter({
+  "list": "nhsuk-footer__list--three-columns",
+  "list1": [
+    {
+      "URL": "/",
+      "label": "About the Buying Catalogue"
+    },
+    {
+      "URL": "/",
+      "label": "Process overview"
+    },
+    {
+      "URL": "/",
+      "label": "Supplier checklist"
+    }
+  ],
+  "list2": [
+    {
+      "URL": "/",
+      "label": "Catalogue submissions"
+    },
+    {
+      "URL": "/",
+      "label": "NHS Digital service desk"
+    }
+  ],
+  "list3": [
+    {
+      "URL": "/",
+      "label": "NHS Digital"
+    },
+    {
+      "URL": "/",
+      "label": "Capabilities and Standards Model"
+    }
+  ]
+})}}
+{% endblock %}

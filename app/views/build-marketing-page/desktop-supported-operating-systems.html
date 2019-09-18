@@ -1,0 +1,179 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  NHS Digital Buying Catalogue
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{{ nhsdNav({
+    "showNav": "true",
+    "primaryLinks": [
+      {
+        "label" : "[Solution_Name], 1.0"
+      },
+      {
+        'url' : '/',
+        'label' : 'Support'
+      }
+    ]
+})}}
+  {{ breadcrumb({
+  items: [
+    {
+      href: "/",
+      text: "My Solutions"
+    },
+    {
+      href: "/",
+      text: "Adding a Solution"
+    },
+    {
+      href: "all-sections",
+      text: "All sections"
+    }
+  ],
+    href: "native-desktop",
+    text: "Native desktop"
+    }) }}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://beta.nhs.uk/service-manual/styles-components-patterns/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row nhsuk-u-padding-bottom-6 build-marketing-page nhsuk-u-margin-top-9">
+    <div class="nhsuk-grid-column-three-quarters">
+
+      <!-- Change the page title here -->
+      <h2>
+        Native desktop - supported operating systems
+      </h2>
+
+      <h4 class="nhsuk-body-l">Answer the following questions about your desktop based Solution</h4>
+
+      <p class="nhsuk-body-l">
+        This information will be visible to buyers on your Solution page.
+      </p>
+      <p class="nhsuk-body-l">
+        <b>*indicates required field.</b>
+      </p>
+    </div>
+
+    <div class="nhsuk-grid-column-three-quarters">
+         {{ label({
+            "html": "<b>Descripton of supported operating systems*<b>"
+          }) }}
+          {{ hint({
+            "html": "<p>Provide details of the operating systems the Solution supports.<p>
+              <p>You can enter up to 100 characters per field</p>"
+          }) }}
+
+         {{ input({
+             "id": "system-1",
+             "name": "system-1"
+         }) }}
+         {{ input({
+             "id": "system-2",
+             "name": "system-2"
+         }) }}
+         {{ input({
+             "id": "system-3",
+             "name": "system-3"
+         }) }}
+         {{ input({
+             "id": "system-4",
+             "name": "system-4"
+         }) }}
+         {{ input({
+             "id": "system-5",
+             "name": "system-5"
+         }) }}
+         {{ input({
+             "id": "system-6",
+             "name": "system-6"
+         }) }}
+         {{ input({
+             "id": "system-7",
+             "name": "system-7"
+         }) }}
+         {{ input({
+             "id": "system-8",
+             "name": "system-8"
+         }) }}
+         {{ input({
+             "id": "system-9",
+             "name": "system-9"
+         }) }}
+         {{ input({
+             "id": "system-10",
+             "name": "system-10"
+         }) }}
+      </div>
+
+      <div class="nhsuk-grid-column-three-quarters">
+        {{ button({
+          "href": "native-desktop",
+          "text": "Save and return"
+        }) }}
+
+        {{ backLink({
+          "href": "all-sections",
+          "text": "Return to all sections"
+        }) }}
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}
+
+{% block afterContent %}
+{{ nhsdFooter({
+  "list": "nhsuk-footer__list--three-columns",
+  "list1": [
+    {
+      "URL": "/",
+      "label": "About the Buying Catalogue"
+    },
+    {
+      "URL": "/",
+      "label": "Process overview"
+    },
+    {
+      "URL": "/",
+      "label": "Supplier checklist"
+    }
+  ],
+  "list2": [
+    {
+      "URL": "/",
+      "label": "Catalogue submissions"
+    },
+    {
+      "URL": "/",
+      "label": "NHS Digital service desk"
+    }
+  ],
+  "list3": [
+    {
+      "URL": "/",
+      "label": "NHS Digital"
+    },
+    {
+      "URL": "/",
+      "label": "Capabilities and Standards Model"
+    }
+  ]
+})}}
+{% endblock %}

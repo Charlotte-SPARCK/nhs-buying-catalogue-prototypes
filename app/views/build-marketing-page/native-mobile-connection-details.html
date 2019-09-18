@@ -1,0 +1,242 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  NHS Digital Buying Catalogue
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{{ nhsdNav({
+    "showNav": "true",
+    "primaryLinks": [
+      {
+        "label" : "[Solution_Name], 1.0"
+      },
+      {
+        'url' : '/',
+        'label' : 'Support'
+      }
+    ]
+})}}
+  {{ breadcrumb({
+  items: [
+    {
+      href: "/",
+      text: "My Solutions"
+    },
+    {
+      href: "/",
+      text: "Adding a Solution"
+    },
+    {
+      href: "all-sections",
+      text: "All sections"
+    }
+  ],
+    href: "native-mobile-or-tablet",
+    text: "Native mobile or tablet"
+    }) }}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://beta.nhs.uk/service-manual/styles-components-patterns/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row nhsuk-u-padding-bottom-6 build-marketing-page nhsuk-u-margin-top-9">
+    <div class="nhsuk-grid-column-three-quarters">
+
+      <!-- Change the page title here -->
+      <h2>
+        Native mobile or tablet - connection details
+      </h2>
+
+      <h4 class="nhsuk-body-l">Answer the following questions about your mobile or tablet based Solution</h4>
+
+      <p class="nhsuk-body-l">
+        This information will be visible to buyers on your Solution page.
+      </p>
+    </div>
+    <div class="nhsuk-grid-column-three-quarters">
+      {{ select({
+        "id": "select-1",
+        "name": "select-1",
+        "label": {
+          "html": "<b>Select the minimum connection speed required for your Solution to function?</b>"
+        },
+        "hint": {
+          "text": "Please select below the minimum bandwidth requirement."
+        },
+        "items": [
+          {
+            "value": 1,
+            "text": "0.5Mbps"
+          },
+          {
+            "value": 2,
+            "text": "1Mbps",
+            "selected": true
+          },
+          {
+            "value": 3,
+            "text": "1.5Mbps"
+          },
+          {
+            "value": 4,
+            "text": "2Mbps"
+          },
+          {
+            "value": 5,
+            "text": "3Mbps"
+          },
+          {
+            "value": 6,
+            "text": "5Mbps"
+          },
+          {
+            "value": 7,
+            "text": "8Mbps"
+          },
+          {
+            "value": 8,
+            "text": "10Mbps"
+          },
+          {
+            "value": 9,
+            "text": "15Mbps"
+          },
+          {
+            "value": 10,
+            "text": "20Mbps"
+          },
+          {
+            "value": 11,
+            "text": "30Mbps"
+          },
+          {
+            "value": 12,
+            "text": "Higher than 30Mbps"
+          }
+        ]
+      }) }}
+
+      {{ checkboxes({
+        "idPrefix": "connection-details",
+        "name": "connection-details",
+        "fieldset": {
+          "legend": {
+            "html": "<b>What connection types are supported? Select all that apply</b>"
+          }
+        },
+        "hint": {
+          "text": "Please select below all the connection types your Solution supports."
+        },
+        "items": [
+          {
+            "value": "gprs",
+            "text": "GPRS"
+          },
+          {
+            "value": "3g",
+            "text": "3G"
+          },
+          {
+            "value": "lte",
+            "text": "LTE"
+          },
+          {
+            "value": "4g",
+            "text": "4G"
+          },
+          {
+            "value": "5g",
+            "text": "5G"
+          },
+          {
+            "value": "bluetooth",
+            "text": "Bluetooth"
+          },
+          {
+            "value": "wifi",
+            "text": "Wifi"
+          }
+        ]
+        }) }}
+
+        {{ govukCharacterCount({
+           name: "system-description",
+           id: "system-description",
+           maxlength: 300,
+           label: {
+             html: "<b>Descripton of connection requirements</b>"
+           },
+           hint: {
+             text: "Add further description of connectivity requirements for your Solution."
+           }
+         }) }}
+    </div>
+    <div class="nhsuk-grid-column-three-quarters">
+      {{ button({
+        "href": "native-mobile-or-tablet",
+        "text": "Save and return"
+      }) }}
+
+      {{ backLink({
+        "href": "all-sections",
+        "text": "Return to all sections"
+      }) }}
+
+    <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}
+
+{% block afterContent %}
+{{ nhsdFooter({
+  "list": "nhsuk-footer__list--three-columns",
+  "list1": [
+    {
+      "URL": "/",
+      "label": "About the Buying Catalogue"
+    },
+    {
+      "URL": "/",
+      "label": "Process overview"
+    },
+    {
+      "URL": "/",
+      "label": "Supplier checklist"
+    }
+  ],
+  "list2": [
+    {
+      "URL": "/",
+      "label": "Catalogue submissions"
+    },
+    {
+      "URL": "/",
+      "label": "NHS Digital service desk"
+    }
+  ],
+  "list3": [
+    {
+      "URL": "/",
+      "label": "NHS Digital"
+    },
+    {
+      "URL": "/",
+      "label": "Capabilities and Standards Model"
+    }
+  ]
+})}}
+{% endblock %}

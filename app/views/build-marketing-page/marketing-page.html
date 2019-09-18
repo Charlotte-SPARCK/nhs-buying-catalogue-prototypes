@@ -1,0 +1,2785 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  NHS Digital Buying Catalogue
+{% endblock %}
+
+{% block header %}
+  {{ nhsdHeader({
+      "showNav": "true",
+      "homeHref": "/",
+      "primaryLinks": [
+        {
+          "label" : "Healthcare System, 1.0"
+        },
+        {
+          'url' : '/',
+          'label' : 'Support'
+        }
+      ]
+    })
+  }}
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+
+
+{{ breadcrumb({
+  items: [
+    {
+      href: "/build-marketing-page",
+      text: "Adding a Solution"
+    }
+  ],
+    href: "/build-marketing-page/all-sections",
+    text: "All sections"
+    }) }}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://beta.nhs.uk/service-manual/styles-components-patterns/layout -->
+{% block content %}
+<div class="nhsuk-u-padding-top-7 nhsuk-u-padding-bottom-7 marketing-page">
+  <div class="nhsuk-grid-row">
+    <div id="contents" class="nhsuk-grid-column-one-quarter">
+      {{ contentsList({
+        items: [
+          {
+            href: "#solution-description",
+            text: "Solution description"
+          },
+          {
+            href: "#features",
+            text: "Features"
+          },
+          {
+            href: "#framework",
+            text: "Framework"
+          },
+          {
+            href: "#sevice-level",
+            text: "Service level informaion"
+          },
+          {
+            href: "#price",
+            text: "Price"
+          },
+          {
+            href: "#capabilities-met",
+            text: "Capabilities met"
+          },
+          {
+            href: "#standards-met",
+            text: "NHS standards met"
+          },
+          {
+            href: "#associated-services",
+            text: "Associated services"
+          },
+          {
+            href: "#additional-services",
+            text: "Additional services"
+          },
+          {
+            href: "#transition-timescales",
+            text: "Transition timescales"
+          },
+          {
+            href: "#integrations",
+            text: "Integrations"
+          },
+          {
+            href: "#client-type",
+            text: "Client application type"
+          },
+          {
+            href: "#hosting-type",
+            text: "Hosting type"
+          },
+          {
+            href: "#work-off",
+            text: "Compliance work-off plans"
+          },
+          {
+            href: "#roadmap",
+            text: "Roadmap"
+          },
+          {
+            href: "#about-supplier",
+            text: "About supplier"
+          },
+          {
+            href: "#contact-details",
+            text: "Contact details"
+          }
+        ]
+      }) }}
+    </div>
+    <div class="nhsuk-grid-column-three-quarters" id="content">
+      <!-- Change the page title here -->
+      <p>Healthcare Pro</p>
+      <h4>Foundation Solution</h4>
+      <h1>
+        Healthcare System, 1.0
+      </h1>
+
+
+      <details class="nhsuk-details nhsuk-expander" id="solution-description">
+        <summary class="nhsuk-details__summary">
+            <h3 class="nhsuk-u-margin-bottom-0">Solution description</h3>
+          <span class="govuk-accordion__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="nhsuk-details__text nhsuk-grid-row">
+          <div class="nhsuk-grid-column-two-thirds">
+              <p><b>Summary</b></p>
+              <p>Healthcare System 1.0 is one of the most popular document management suites in the UK. Our system is designed to be a complete document management solution that focuses on usability and clinical safety.</p>
+
+              <p><b>About Healthcare System 1.0</b></p>
+              <p>Healthcare System 1.0 has been used across the UK since 1980. With nearly 300,000 patient using it annually, it is one of the most relied upon Solutions in the market.<p>
+              <p>It is an intelligent CMS platform designed to support the secure management and classification of all forms unstructured electronic documents including those created by scanning paper documents. It also enables processing of documents and matching documents with Patients.</p>
+              <p>By Documenting expertise in document imageing, high-speed mail automationg and material handling with our leading electronic and records management software solution, healthcare organisations will benefit from a holistic document management service tailored to their requirements.</p>
+              <p><a>www.healthcare-pro.co.uk/healthcare-system-1</a><p>
+          </div>
+        </div>
+      </details>
+      <details class="nhsuk-details nhsuk-expander" id="features">
+        <summary class="nhsuk-details__summary">
+            <h3 class="nhsuk-u-margin-bottom-0">Features</h3>
+          <span class="govuk-accordion__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="nhsuk-details__text nhsuk-grid-row">
+          <div class="nhsuk-grid-column-two-thirds">
+              <ul>
+                <li>View and add to clinical records, including shared data</li>
+                <li>View daily appointments and diary entries</li>
+                <li>View a map of patient appointment locations</li>
+                <li>Update clinical records via templates</li>
+                <li>Add user tasks</li>
+                <li>Book follow-up appointments</li>
+                <li>Create and amend appointment schedules</li>
+                <li>Add new medication</li>
+                <li>View and enter data on and offline</li>
+                <li>View document attachments</li>
+              </ul>
+          </div>
+        </div>
+      </details>
+      <details class="nhsuk-details nhsuk-expander" id="framework">
+        <summary class="nhsuk-details__summary">
+            <h3 class="nhsuk-u-margin-bottom-0">Framework</h3>
+          <span class="govuk-accordion__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="nhsuk-details__text nhsuk-grid-row">
+          <div class="nhsuk-grid-column-two-thirds">
+              <p>GP IT Futures Framework</p>
+          </div>
+        </div>
+      </details>
+      <details class="nhsuk-details nhsuk-expander" id="service-level">
+        <summary class="nhsuk-details__summary">
+            <h3 class="nhsuk-u-margin-bottom-0">Service level information</h3>
+          <span class="govuk-accordion__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="nhsuk-details__text nhsuk-grid-row">
+          <div class="nhsuk-grid-column-two-thirds">
+          </div>
+        </div>
+      </details>
+      <details class="nhsuk-details nhsuk-expander" id="price">
+        <summary class="nhsuk-details__summary">
+            <h3 class="nhsuk-u-margin-bottom-0">Price</h3>
+          <span class="govuk-accordion__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Price</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row  nhsuk-grid-row">
+                <th class="nhsuk-table__cell">List price</th>
+                <td class="nhsuk-table__cell">£1.60 per patient</td>
+              </tr>
+              <tr class="nhsuk-table__row  nhsuk-grid-row">
+                <th class="nhsuk-table__cell"></th>
+                <td class="nhsuk-table__cell">£1,000 per user</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+      <details class="nhsuk-details nhsuk-expander" id="capabilities-met">
+        <summary class="nhsuk-details__summary">
+            <h3 class="nhsuk-u-margin-bottom-0">Capabilities met (assured by NHS)</h3>
+          <span class="govuk-accordion__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="nhsuk-details__text nhsuk-grid-row">
+          <div class="nhsuk-grid-column-two-thirds">
+            <p>Capabilities have been assessed and approved by the NHS.</p>
+              <p>If all ‘Must’ Epics have been met, the Capability is Full. If some 'Must' Epics have not been met but are in progress the Capability is Partial.</p>
+          </div>
+          <div class="nhsuk-details__text nhsuk-grid-column-full">
+            <details class="nhsuk-details nhsuk-u-margin-top-0">
+              <summary>
+                <span>
+                  Prescribing, 1.0 (Full)
+                </span>
+              </summary>
+              <div class="nhsuk-u-padding-left-4 nhsuk-u-padding-top-4 nhsuk-details__text_inner nhsuk-grid-row">
+                <div class="nhsuk-grid-column-two-thirds">
+                  <p>Supports the effective and safe prescribing of medical products and appliances to Patients. Information to support prescribing will be available.</p>
+                  <p><a>View more including Acceptance Criteria for all Epics in Confluence.</a></p>
+                </div>
+                <div class="nhsuk-grid-column-full">
+                  <table>
+                    <tbody class="nhsuk-table__body">
+                      <tr class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell">
+                          <div>
+                            <h3 class="nhsuk-do-dont-list__label">Must Epics</h3>
+                            <ul class="nhsuk-list nhsuk-list--tick">
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                </svg>
+                                <b>Epic 1 - access prescribable items</b>
+                              </li>
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                </svg>
+                                <b>Epic 2 - manage Formularies</b>
+                              </li>
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                </svg>
+                                <b>Epic 3 - manage shared Formularies</b>
+                              </li>
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                </svg>
+                                <b>Epic 4 - set default Formulary for Practice Users</b>
+                              </li>
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                </svg>
+                                <b>Epic 5 - manage prescribed medication</b>
+                              </li>
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                </svg>
+                                <b>Epic 6 - manage prescriptions</b>
+                              </li>
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                </svg>
+                                <b>Epic 7 - manage Patient's Preferred Pharmacy</b>
+                              </li>
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                </svg>
+                                <b>Epic 8 - manage Patient medication reviews</b>
+                              </li>
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                </svg>
+                                <b>Epic 9 - view prescribed medication reports</b>
+                              </li>
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                </svg>
+                                <b>Epic 10 - manage Repeat Medication requests</b>
+                              </li>
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                </svg>
+                                <b>Epic 11 - manage Acute Medication requests</b>
+                              </li>
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                </svg>
+                                <b>Epic 12 - manage Authorising Prescribers</b>
+                              </li>
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                </svg>
+                                <b>Epic 13 - access Patient Record</b>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+
+                        <td class="nhsuk-table__cell">
+                          <div>
+                            <h3 class="nhsuk-do-dont-list__label">May Epics</h3>
+                            <ul class="nhsuk-list nhsuk-list--tick">
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                </svg>
+                                <b>Epic 14 - view EPS Nominated Pharmacy changes</b>
+                              </li>
+                            </ul>
+                            <h4>May Epics that have NOT been met</h4>
+                            <ul class="nhsuk-list nhsuk-list--tick">
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                                 <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z"></path>
+                                 <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
+                               </svg>
+                                Epic 15 - configure warnings for prescribable items
+                              </li>
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                                 <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z"></path>
+                                 <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
+                               </svg>
+                                Epic 16 - medications are linked to diagnoses
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </details>
+            <details class="nhsuk-details nhsuk-u-margin-top-0">
+              <summary>
+                <span>
+                  Patient Information Maintenance, 1.0 (Partial)
+                </span>
+              </summary>
+              <div class="nhsuk-u-padding-left-4 nhsuk-u-padding-top-4 nhsuk-details__text_inner nhsuk-grid-row">
+                <div class="nhsuk-grid-column-two-thirds">
+                  <p>Supports the registration of Patients and the maintenance of all Patient personal information. Supports the organisation and presentation of a comprehensive Patient Record. Also supports the management of related persons and configuring access to Citizen Services.</p>
+                  <p><a>View more including Acceptance Criteria for all Epics in Confluence.</a></p>
+                </div>
+                <div class="nhsuk-grid-column-full">
+                  <table>
+                    <tbody class="nhsuk-table__body">
+                      <tr class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell">
+                          <div>
+                            <h3 class="nhsuk-do-dont-list__label">Must Epics</h3>
+                            <ul class="nhsuk-list nhsuk-list--tick">
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                </svg>
+                                <b>Epic 1 - manage Patients</b>
+                              </li>
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                </svg>
+                                <b>Epic 2 - access Patient Record</b>
+                              </li>
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                </svg>
+                                <b>Epic 3 - manage Patient Related Persons</b>
+                              </li>
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                </svg>
+                                <b>Epic 4 - manage Patients for Citizen Services</b>
+                              </li>
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                </svg>
+                                <b>Epic 6 - configure Patient notifications</b>
+                              </li>
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                </svg>
+                                <b>Epic 8 - Search for Patient Records</b>
+                              </li>
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                </svg>
+                                <b>Epic 9 - view Patient Reports</b>
+                              </li>
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                </svg>
+                                <b>Epic 10 - configure Citizen service access for the Practice</b>
+                              </li>
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                </svg>
+                                <b>Epic 11 - identify Patients outside of Catchment Area</b>
+                              </li>
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                </svg>
+                                <b>Epic 12 - manage Patient Cohorts from Search Results</b>
+                              </li>
+                            </ul>
+                            <h4>Must Epics that are NOT currently met</h4>
+                            <ul class="nhsuk-list nhsuk-list--tick">
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                                 <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z"></path>
+                                 <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
+                               </svg>
+                               Epic 5 - manage Patient Communications
+                              </li>
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                                 <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z"></path>
+                                 <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
+                               </svg>
+                               Epic 7 - Manage Practice notifications - Patient
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+
+                        <td class="nhsuk-table__cell">
+                          <div>
+                            <h3 class="nhsuk-do-dont-list__label">May Epics</h3>
+                            <ul class="nhsuk-list nhsuk-list--tick">
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                </svg>
+                                <b>Epic 13 - view Subject Access Request reports</b>
+                              </li>
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                </svg>
+                                <b>Epic 14 - manage Acute Prescription Request Service</b>
+                              </li>
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                </svg>
+                                <b>Epic 21 - manage Proxys for Citizen Services</b>
+                              </li>
+                            </ul>
+                            <h4>May Epics that have NOT been met</h4>
+                            <ul class="nhsuk-list nhsuk-list--tick">
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                                 <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z"></path>
+                                 <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
+                               </svg>
+                                Epic 15 - notify the Patient of changes
+                              </li>
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                                 <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z"></path>
+                                 <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
+                               </svg>
+                               Epic 16 - manage Subject Access Request (SAR) requests
+                              </li>
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                                 <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z"></path>
+                                 <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
+                               </svg>
+                               Epic 17 - notify the Proxy of changes
+                              </li>
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                                 <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z"></path>
+                                 <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
+                               </svg>
+                               Epic 18 - Manage Practice notifications - Proxy
+                              </li>
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                                 <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z"></path>
+                                 <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
+                               </svg>
+                               Epic 19 - configure Proxy notifications
+                              </li>
+                              <li>
+                                <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                                 <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z"></path>
+                                 <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
+                               </svg>
+                               Epic 20 - manage Proxy Communications
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </details>
+            <details class="nhsuk-details nhsuk-u-margin-top-0">
+              <summary>
+                <span>
+                  Productivity - GP Analytics
+                </span>
+              </summary>
+              <div class="nhsuk-u-padding-left-4 nhsuk-u-padding-top-4 nhsuk-details__text_inner nhsuk-grid-row">
+                <div class="nhsuk-grid-column-two-thirds">
+                  <p>We will enable you to have visibility of the time spent on activities in your practice to allow you to make processes more efficient and invest that time back into valuable areas of your business.</p>
+                </div>
+                <div class="nhsuk-grid-column-full">
+                  <table>
+                    <tbody class="nhsuk-table__body">
+                      <tr class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell">
+                          <div>
+                            <h3 class="nhsuk-do-dont-list__label">Epics</h3>
+                            <ul class="nhsuk-list nhsuk-list--tick">
+                              <div class="nhsuk-grid-column-two-thirds">
+                                <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                </svg>
+                                <h4>Epic 1 - HR Manager</h4>
+                                <p>As a GP Practice Manager, I want to access the HR Manager tool, so that I can utilise the tool to analyse employee activity</p>
+                                <p><b>Acceptance criterion 1</b><br>
+                                Given that a Practice Manager has the correct administration rights<br>
+                                Then I can access the HR Manager tool
+                                And I can create reports</p>
+                                <p><b>Acceptance criterion 2</b><br>
+                                Given that an employee has the correct administration rights<br>
+                                When the HR Manager tool is accessed<br>
+                                Then I can access the HR Manager tool<br>
+                                And I can access reports</p>
+                              </div>
+                              <div class="nhsuk-grid-column-two-thirds">
+                                <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                </svg>
+                                <h4>Epic 2 - Vacancy Identifier</h4>
+                                <p>As a Practice Manager, I want to manage the vacancies in my Practice, so that I can ensure that we are identifying the best candidates</p>
+                                <p><b>Acceptance criterion 1</b><br>
+                                Given that recruitment activity has identified candidates<br>
+                                When I access the Vacancy Identifier software<br>
+                                Then I can schedule interviews and send out invites to candidates</p>
+                              </div>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </details>
+            <details class="nhsuk-details nhsuk-u-margin-top-0">
+              <summary>
+                <span>
+                  Productivity - Batch Reporting
+                </span>
+              </summary>
+              <div class="nhsuk-u-padding-left-4 nhsuk-u-padding-top-4 nhsuk-details__text_inner nhsuk-grid-row">
+                <div class="nhsuk-grid-column-two-thirds">
+                  <p>Batch reports are generated by users with the ability to run over a variety of dates. Reports can also be sent as tasks as a reminder that a report is available to review.</p>
+                </div>
+                <div class="nhsuk-grid-column-full">
+                  <table>
+                    <tbody class="nhsuk-table__body">
+                      <tr class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell">
+                          <div>
+                            <h3 class="nhsuk-do-dont-list__label">Epics</h3>
+                            <ul class="nhsuk-list nhsuk-list--tick">
+                              <div class="nhsuk-grid-column-two-thirds">
+                                <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                </svg>
+                                <h4>Epic 1 - report data from other Capabilities</h4>
+                                <p>As a Practice User I want Reports to use data from other Capabilities, so that Reports use data from other Capabilities.</p>
+                                <p><b>Acceptance criterion 1: report data from other Capabilities</b><br>
+                                Given the Practice User is permitted to use data from other Capabilities<br>
+                                When the Practice User chooses to use Reports<br>
+                                Then the Reports use data from other Capabilities</p>
+                              </div>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+      </details>
+      <details class="nhsuk-details nhsuk-expander" id="standards-met">
+        <summary class="nhsuk-details__summary">
+            <h3 class="nhsuk-u-margin-bottom-0">NHS Standards met - NHS assured</h3>
+          <span class="govuk-accordion__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="nhsuk-details__text nhsuk-grid-row">
+          <div class="nhsuk-grid-column-two-thirds">
+            <p>All Standards which are displayed have been assessed and approved by the NHS.</p>
+          </div>
+          <div class="nhsuk-details__text nhsuk-grid-column-full">
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">
+              <details class="nhsuk-details nhsuk-u-margin-top-0">
+                <summary>
+                  <span>
+                    Associated Standards
+                  </span>
+                </summary>
+                <div class="nhsuk-u-padding-left-4 nhsuk-u-padding-top-4 nhsuk-details__text_inner">
+                  <table>
+                    <tbody class="nhsuk-table__body">
+                      <tr class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell">
+                          <div class=" nhsuk-grid-column-two-thirds">
+                            <p><b>Document Management Standard, 1.0</b></p>
+                            <p>Supports the secure management and classification of all forms unstructured electronic documents</p>
+                            <p><a>View details</a></p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell">
+                          <div class=" nhsuk-grid-column-two-thirds">
+                            <p><b>Scanning</b></p>
+                            <p>Support the conversion of paper documentation into digital format preserving the document quality and structure.</p>
+                            <p><a>View details</a></p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell">
+                          <div class=" nhsuk-grid-column-two-thirds">
+                            <p><b>Unstructured Data Extraction</b></p>
+                            <p>Enables automated and manual interpretation and extraction of structured data.</p>
+                            <p><a>View details</a></p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell">
+                          <div class=" nhsuk-grid-column-two-thirds">
+                            <p><b>Common Reporting Standard</b></p>
+                            <p>Supports the reporting needs that are common to General Practices and includes searchable report templates.</p>
+                            <p><a>View details</a></p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell">
+                          <div class=" nhsuk-grid-column-two-thirds">
+                            <p><b>MI Reporting Standard</b></p>
+                              <p>Supports the submission of aggregated counts of information.</p>
+                            <p><a>View details</a></p>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </details>
+              <details class="nhsuk-details nhsuk-u-margin-top-0">
+                <summary>
+                  <span>
+                    Overarching Standards
+                  </span>
+                </summary>
+                <div class="nhsuk-u-padding-left-4 nhsuk-u-padding-top-4 nhsuk-details__text_inner">
+                  <table>
+                    <tbody class="nhsuk-table__body">
+                      <tr class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell">
+                          <div class=" nhsuk-grid-column-two-thirds">
+                              <p><b>Business Continuity and Disaster Recovery</b></p>
+                              <p>Ensures that suppliers Solutions are supported by robust business continuity plans and disaster recovery measures.</p>
+                              <p><a>View details</a></p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell">
+                          <div class=" nhsuk-grid-column-two-thirds">
+                              <p><b>Clinical Safety</b></p>
+                              <p>Supports the management of clinical risk and Patient safety.</p>
+                              <p><a>View details</a></p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell">
+                          <div class=" nhsuk-grid-column-two-thirds">
+                              <p><b>Commercial</b></p>
+                              <p>This Standard underpins all commercial activity relating to the Catalogue. It does this by defining a number of rules governing the commercial relationship of relevant parties and by setting out standards of behaviour and principles of access to data and services charges.</p>
+                              <p><a>View details</a></p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell">
+                          <div class=" nhsuk-grid-column-two-thirds">
+                            <p><b>Data Migration</b></p>
+                              <p>Supports the safe and effective migration of data between Catalogue Solutions when a Practice (or other buying organisation such as a CCG, hub, Federation etc.) opts to change from one Catalogue Solution to another.</p>
+                              <p><a>View details</a></p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell">
+                          <div class=" nhsuk-grid-column-two-thirds">
+                              <p><b>Data Standards</b></p>
+                              <p>Defines detailed technical standards for the storage, management and organisation of data and specifies standardised reference data, terminology and codes.</p>
+                              <p><a>View details</a></p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell">
+                          <div class=" nhsuk-grid-column-two-thirds">
+                              <p><b>Hosting & Infrastructure</b></p>
+                              <p>Supports best practices for infrastructure and hosting of systems. For example, ensuring that systems are cost effective, secure and energy efficient.</p>
+                              <p><a>View details</a></p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell">
+                          <div class=" nhsuk-grid-column-two-thirds">
+                              <p><b>Information Governance</b></p>
+                              <p>Supports the controls needed to ensure that sensitive Personal Data is kept confidential, is accurate and is available to authorised users when required.</p>
+                              <p><a>View details</a></p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell">
+                          <div class=" nhsuk-grid-column-two-thirds">
+                              <p><b>Non-Functional Questions</b></p>
+                              <p>Non-functional requirements describe how the Solution works, not what the Solution should do, and serve as constraints or restrictions on the design of the Solution.</p>
+                              <p><a>View details</a></p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell">
+                          <div class=" nhsuk-grid-column-two-thirds">
+                              <p><b>Service Management</b></p>
+                              <p>Supports suppliers in the delivery and management of services that support and provide their Solutions.</p>
+                              <p><a>View details</a></p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell">
+                          <div class=" nhsuk-grid-column-two-thirds">
+                              <p><b>Testing</b></p>
+                              <p>Ensures that Suppliers' software delivery test processes are of sufficient quality and rigour.</p>
+                              <p><a>View details</a></p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell">
+                          <div class=" nhsuk-grid-column-two-thirds">
+                              <p><b>Training</b></p>
+                              <p>Defines the training activities and collateral expected from Suppliers to support the buyers and users of their Solutions.</p>
+                              <p><a>View details</a></p>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </details>
+            </td>
+          </tr>
+          </div>
+        </div>
+      </details>
+      <details class="nhsuk-details nhsuk-expander" id="associated-services">
+        <summary class="nhsuk-details__summary">
+            <h3 class="nhsuk-u-margin-bottom-0">Associated services (optional)</h3>
+          <span class="govuk-accordion__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="nhsuk-details__text nhsuk-grid-row">
+          <div class="nhsuk-details__text nhsuk-grid-column-full">
+            <table class="nhsuk-table">
+              <caption class="nhsuk-table__caption">Associated services (optional)</caption>
+              <tbody class="nhsuk-table__body">
+                <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell">
+                    <p><b>Consultancy</b><p>
+                    <p>We provide a range of consultancy and advisory services which bring together our deep understanding of the health and care system, policy expertise and experience of supporting and developing leaders and organisations.</p>
+                  </td>
+                  <td class="nhsuk-table__cell">
+                    <p>£100 per day</p>
+
+                    <details class="nhsuk-details">
+                      <summary>
+                        <span>
+                          Unit of order and additional details
+                        </span>
+                      </summary>
+                      <div class="nhsuk-details__text nhsuk-details__text_inner">
+                        <p>A typical purchase might include 5 days of Consultancy support.
+                          We recommend no less than 5 days of consultancy support.</p>
+
+                      </div>
+                    </details>
+                  </td>
+                </tr>
+                <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell">
+                    <p><b>Training (on site)</b><p>
+                    <p>On-site Training is a flexible, cost-effective option that allows you to train as many or as few employees as you need from a single team or department to everyone in your organization.</p>
+                  </td>
+                  <td class="nhsuk-table__cell">
+                    <p>£2,000 per day</p>
+
+                    <details class="nhsuk-details">
+                      <summary>
+                        <span>
+                          Unit of order and additional details
+                        </span>
+                      </summary>
+                      <div class="nhsuk-details__text nhsuk-details__text_inner">
+                        <p>A typical purchase includes one full day course.
+                          A full day course caters up to 20 participants. Flexible packages to suit your requirements.</p>
+                      </div>
+                    </details>
+                  </td>
+                </tr>
+                <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell">
+                    <p><b>Training (online)</b><p>
+                    <p>A software-based teaching program installed on a computer network. These programs feature a section for teaching, informal quizzes and tests to complete in your own time over an Internet connection.</p>
+                  </td>
+                  <td class="nhsuk-table__cell">
+                    <p>£1,500 per day</p>
+
+                    <details class="nhsuk-details">
+                      <summary>
+                        <span>
+                          Unit of order and additional details
+                        </span>
+                      </summary>
+                      <div class="nhsuk-details__text nhsuk-details__text_inner">
+                        <p>A typical purchase may include a 30 hour course.
+                            We recommend a minimum of 30 hours of online training.</p>
+                      </div>
+                    </details>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </details>
+      <details class="nhsuk-details nhsuk-expander" id="additional-services">
+        <summary class="nhsuk-details__summary">
+            <h3 class="nhsuk-u-margin-bottom-0">Additional services (optional)</h3>
+          <span class="govuk-accordion__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="nhsuk-details__text nhsuk-grid-row">
+          <div class="nhsuk-details__text nhsuk-grid-column-full">
+            <table class="nhsuk-table">
+              <caption class="nhsuk-table__caption">Additional services (optional)</caption>
+              <tbody class="nhsuk-table__body">
+                <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell">
+                    <h4>Plus Advantage</h4>
+                    <h4>1 - 5 Users, £1000 per user<br>
+                      6 - 10 Users, £900 per user<br>
+                      11 or more Users, £800 per user</h4>
+                      <p>Advanced features to improve efficiency of staff support. It offers clinical and admin support to encourage higher quality data and improving standards of patients health care.</p>
+                      <p><b>Capabilities met</b></p>
+                      <details class="nhsuk-details nhsuk-u-margin-top-0">
+                        <summary>
+                          <span>
+                            Workflow (Full)
+                          </span>
+                        </summary>
+                        <div class="nhsuk-u-padding-left-4 nhsuk-u-padding-top-4 nhsuk-details__text_inner nhsuk-grid-row">
+                          <div class="nhsuk-grid-column-two-thirds">
+                            <p>Supports manual and automated management of work in the Practice. Also supports effective planning, tracking, monitoring and reporting.</p>
+                            <p>For Full Capabilities, all ‘Must’ Epics have been met. Partial Capabilities have ‘Must’ Epics which have not currently been met but are in progress.</p>
+                            <p><a>View more including Acceptance Criteria for all Epics in Confluence.</a></p>
+                          </div>
+                          <div class="nhsuk-grid-column-full">
+                            <table>
+                              <tbody class="nhsuk-table__body">
+                                <tr class="nhsuk-table__row">
+                                  <td class="nhsuk-table__cell">
+                                    <div>
+                                      <h3 class="nhsuk-do-dont-list__label">Must Epics</h3>
+                                      <ul class="nhsuk-list nhsuk-list--tick">
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 1 - manage Task templates</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 2 - manage Workflow templates</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 3 - configure Task rules</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 4 - configure Workflow rules</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 5 - manage Tasks</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 6 - manage Workflows</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 7 - manage Task List configurations</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 8 - manage Workflows List configurations</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 9 - view Task reports</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 10 - view Workflow reports</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 11 - access Patient Record</b>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </td>
+
+                                  <td class="nhsuk-table__cell">
+                                    <div>
+                                      <h3 class="nhsuk-do-dont-list__label">May Epics</h3>
+                                      <ul class="nhsuk-list nhsuk-list--tick">
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 12 - share Task List configuration</b>
+                                        </li>
+                                      </ul>
+                                      <h4>May Epics that have NOT been met</h4>
+                                      <ul class="nhsuk-list nhsuk-list--tick">
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                                           <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z"></path>
+                                           <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
+                                         </svg>
+                                          Epic 13 - share Workflow List configuration
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </details>
+                      <details class="nhsuk-details nhsuk-u-margin-top-0">
+                        <summary>
+                          <span>
+                            Document management (Full)
+                          </span>
+                        </summary>
+                        <div class="nhsuk-u-padding-left-4 nhsuk-u-padding-top-4 nhsuk-details__text_inner nhsuk-grid-row">
+                          <div class="nhsuk-grid-column-two-thirds">
+                            <p>Supports the secure management and classification of all forms unstructured electronic documents including those created by scanning paper documents. Also enables processing of documents and matching documents with Patients.</p>
+                            <p>For Full Capabilities, all ‘Must’ Epics have been met. Partial Capabilities have ‘Must’ Epics which have not currently been met but are in progress.</p>
+                            <p><a>View more including Acceptance Criteria for all Epics in Confluence.</a></p>
+                          </div>
+                          <div class="nhsuk-grid-column-full">
+                            <table>
+                              <tbody class="nhsuk-table__body">
+                                <tr class="nhsuk-table__row">
+                                  <td class="nhsuk-table__cell">
+                                    <div>
+                                      <h3 class="nhsuk-do-dont-list__label">Must Epics</h3>
+                                      <ul class="nhsuk-list nhsuk-list--tick">
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 1 - manage document classifications</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 2 - manage document properties</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 3 - manage document attributes</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 4 - manage document coded entries</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 5 - document workflows</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 6 - manage document annotation</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 7 - search for documents</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 8 - search document content</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 9 - document and Patient matching</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 10 - visually compare multiple documents</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 11 - view any version of a document</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 12 - print documents</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 13 - export documents to new formats</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 14 - document reports</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 15 - receipt of electronic documents </b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 16 - access Patient Record</b>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </td>
+
+                                  <td class="nhsuk-table__cell">
+                                    <div>
+                                      <h3 class="nhsuk-do-dont-list__label">May Epics</h3>
+                                      <ul class="nhsuk-list nhsuk-list--tick">
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 17 - search for documents using document content</b>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </details>
+                      <details class="nhsuk-details nhsuk-u-margin-top-0">
+                        <summary>
+                          <span>
+                            Dispensing (Partial)
+                          </span>
+                        </summary>
+                        <div class="nhsuk-u-padding-left-4 nhsuk-u-padding-top-4 nhsuk-details__text_inner nhsuk-grid-row">
+                          <div class="nhsuk-grid-column-two-thirds">
+                            <p>Supports the timely and effective dispensing of medical products and appliances to Patients.</p>
+                            <p>For Full Capabilities, all ‘Must’ Epics have been met. Partial Capabilities have ‘Must’ Epics which have not currently been met but are in progress.</p>
+                            <p><a>View more including Acceptance Criteria for all Epics in Confluence.</a></p>
+                          </div>
+                          <div class="nhsuk-grid-column-full">
+                            <table>
+                              <tbody class="nhsuk-table__body">
+                                <tr class="nhsuk-table__row">
+                                  <td class="nhsuk-table__cell">
+                                    <div class="nhsuk-grid-column-two-thirds">
+                                      <h3 class="nhsuk-do-dont-list__label">Must Epics</h3>
+                                      <ul class="nhsuk-list nhsuk-list--tick">
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 1 - manage Stock in a Dispensary</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 2 - manage Stock Orders</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 4 - Dispense Medication</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 5 - manage Dispensaries</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 6 - manage Endorsements</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 7 - manage Supplier Accounts</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 8 - view Stock reports</b>
+                                        </li>
+                                      </ul>
+                                      <h4>Must Epics that are NOT currently met</h4>
+                                      <ul class="nhsuk-list nhsuk-list--tick">
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                                           <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z"></path>
+                                           <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
+                                         </svg>
+                                          <b>Epic 3 - manage Dispensing tasks for a Dispensary</b>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </details>
+                      <details class="nhsuk-details nhsuk-u-margin-top-0">
+                        <summary>
+                          <span>
+                            Scanning (Full)
+                          </span>
+                        </summary>
+                        <div class="nhsuk-u-padding-left-4 nhsuk-u-padding-top-4 nhsuk-details__text_inner nhsuk-grid-row">
+                          <div class="nhsuk-grid-column-two-thirds">
+                            <p>Support the conversion of paper documentation into digital format preserving the document quality and structure.</p>
+                            <p>For Full Capabilities, all ‘Must’ Epics have been met. Partial Capabilities have ‘Must’ Epics which have not currently been met but are in progress.</p>
+                            <p><a>View more including Acceptance Criteria for all Epics in Confluence.</a></p>
+                          </div>
+                          <div class="nhsuk-grid-column-full">
+                            <table>
+                              <tbody class="nhsuk-table__body">
+                                <tr class="nhsuk-table__row">
+                                  <td class="nhsuk-table__cell">
+                                    <div>
+                                      <h3 class="nhsuk-do-dont-list__label">Must Epics</h3>
+                                      <ul class="nhsuk-list nhsuk-list--tick">
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>Epic 1 - scan documents</b>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </td>
+
+                                  <td class="nhsuk-table__cell">
+                                    <div>
+                                      <h3 class="nhsuk-do-dont-list__label">May Epics</h3>
+                                      <h4>May Epics that have NOT been met</h4>
+                                      <ul class="nhsuk-list nhsuk-list--tick">
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                                           <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z"></path>
+                                           <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
+                                         </svg>
+                                         Epic 2 - image enhancement
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </details>
+                      <p><b>Standards met</b></p>
+                        <details class="nhsuk-details nhsuk-u-margin-top-0">
+                          <summary>
+                            <span>
+                              Associated Standards
+                            </span>
+                          </summary>
+                          <div class="nhsuk-u-padding-left-4 nhsuk-u-padding-top-4 nhsuk-details__text_inner">
+                            <table>
+                              <tbody class="nhsuk-table__body">
+                                <tr class="nhsuk-table__row">
+                                  <td class="nhsuk-table__cell">
+                                    <div class=" nhsuk-grid-column-two-thirds">
+                                      <p><b>Interoperability Standard</b></p>
+                                      <p>It provides a single place for system suppliers to find out which interfaces they need to implement and to access the required documentation.</p>
+                                      <p><a>View details</a></p>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr class="nhsuk-table__row">
+                                  <td class="nhsuk-table__cell">
+                                    <div class=" nhsuk-grid-column-two-thirds">
+                                      <p><b>Common Reporting Standard</b></p>
+                                      <p>Supports the reporting needs that are common to General Practices and includes searchable report templates.</p>
+                                      <p><a>View details</a></p>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr class="nhsuk-table__row">
+                                  <td class="nhsuk-table__cell">
+                                    <div class=" nhsuk-grid-column-two-thirds">
+                                      <p><b>Document Management Standard</b></p>
+                                      <p>Supports the secure management and classification of all forms unstructured electronic documents including those created by scanning paper documents.</p>
+                                      <p><a>View details</a></p>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr class="nhsuk-table__row">
+                                  <td class="nhsuk-table__cell">
+                                    <div class=" nhsuk-grid-column-two-thirds">
+                                      <p><b>Management Information (MI) Reporting Standard</b></p>
+                                      <p>Supports the submission of aggregated counts of information regarding Citizen Services, Appointments, Prescriptions and documents to NHS Digital.</p>
+                                      <p><a>View details</a></p>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr class="nhsuk-table__row">
+                                  <td class="nhsuk-table__cell">
+                                    <div class=" nhsuk-grid-column-two-thirds">
+                                      <p><b>Workflow Standard</b></p>
+                                        <p>Supports manual and automated management of work in the Practice. Also supports effective planning, tracking, monitoring and reporting.</p>
+                                      <p><a>View details</a></p>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </details>
+                        <details class="nhsuk-details nhsuk-u-margin-top-0">
+                          <summary>
+                            <span>
+                              Overarching Standards
+                            </span>
+                          </summary>
+                          <div class="nhsuk-u-padding-left-4 nhsuk-u-padding-top-4 nhsuk-details__text_inner">
+                            <table>
+                              <tbody class="nhsuk-table__body">
+                                <tr class="nhsuk-table__row">
+                                  <td class="nhsuk-table__cell">
+                                    <div class=" nhsuk-grid-column-two-thirds">
+                                        <p><b>Business Continuity & Disaster Recovery</b></p>
+                                        <p>Ensures that suppliers Solutions are supported by robust business continuity plans and disaster recovery measures.</p>
+                                        <p><a>View details</a></p>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr class="nhsuk-table__row">
+                                  <td class="nhsuk-table__cell">
+                                    <div class=" nhsuk-grid-column-two-thirds">
+                                        <p><b>Clinical Safety</b></p>
+                                        <p>Supports the management of clinical risk and Patient safety.</p>
+                                        <p><a>View details</a></p>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr class="nhsuk-table__row">
+                                  <td class="nhsuk-table__cell">
+                                    <div class=" nhsuk-grid-column-two-thirds">
+                                        <p><b>Commercial Standard</b></p>
+                                        <p>This Standard underpins all commercial activity relating to the Catalogue. It does this by defining a number of rules governing the commercial relationship of relevant parties and by setting out standards of behaviour and principles of access to data and services charges.</p>
+                                        <p><a>View details</a></p>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr class="nhsuk-table__row">
+                                  <td class="nhsuk-table__cell">
+                                    <div class=" nhsuk-grid-column-two-thirds">
+                                      <p><b>Data Migration</b></p>
+                                        <p>Supports the safe and effective migration of data between Catalogue Solutions when a Practice (or other buying organisation such as a CCG, hub, Federation etc.) opts to change from one Catalogue Solution to another.</p>
+                                        <p><a>View details</a></p>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr class="nhsuk-table__row">
+                                  <td class="nhsuk-table__cell">
+                                    <div class=" nhsuk-grid-column-two-thirds">
+                                        <p><b>Data Standards</b></p>
+                                        <p>Defines detailed technical standards for the storage, management and organisation of data and specifies standardised reference data, terminology and codes.</p>
+                                        <p><a>View details</a></p>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr class="nhsuk-table__row">
+                                  <td class="nhsuk-table__cell">
+                                    <div class=" nhsuk-grid-column-two-thirds">
+                                        <p><b>Hosting & Infrastructure</b></p>
+                                        <p>Supports best practices for infrastructure and hosting of systems. For example, ensuring that systems are cost effective, secure and energy efficient.</p>
+                                        <p><a>View details</a></p>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr class="nhsuk-table__row">
+                                  <td class="nhsuk-table__cell">
+                                    <div class=" nhsuk-grid-column-two-thirds">
+                                        <p><b>Information Governance</b></p>
+                                        <p>Supports the controls needed to ensure that sensitive Personal Data is kept confidential, is accurate and is available to authorised users when required.</p>
+                                        <p><a>View details</a></p>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr class="nhsuk-table__row">
+                                  <td class="nhsuk-table__cell">
+                                    <div class=" nhsuk-grid-column-two-thirds">
+                                        <p><b>Non-Functional Questions</b></p>
+                                        <p>Non-functional requirements describe how the Solution works, not what the Solution should do, and serve as constraints or restrictions on the design of the Solution.</p>
+                                        <p><a>View details</a></p>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr class="nhsuk-table__row">
+                                  <td class="nhsuk-table__cell">
+                                    <div class=" nhsuk-grid-column-two-thirds">
+                                        <p><b>Service Management</b></p>
+                                        <p>Supports suppliers in the delivery and management of services that support and provide their Solutions.</p>
+                                        <p><a>View details</a></p>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr class="nhsuk-table__row">
+                                  <td class="nhsuk-table__cell">
+                                    <div class=" nhsuk-grid-column-two-thirds">
+                                        <p><b>Testing</b></p>
+                                        <p>Ensures that Suppliers' software delivery test processes are of sufficient quality and rigour.</p>
+                                        <p><a>View details</a></p>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr class="nhsuk-table__row">
+                                  <td class="nhsuk-table__cell">
+                                    <div class=" nhsuk-grid-column-two-thirds">
+                                        <p><b>Training</b></p>
+                                        <p>Defines the training activities and collateral expected from Suppliers to support the buyers and users of their Solutions.</p>
+                                        <p><a>View details</a></p>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </details>
+                      <p><b>Associated services</b></p>
+                      <div class="nhsuk-grid-row">
+                        <details class="nhsuk-details nhsuk-u-margin-top-0 nhsuk-grid-column-two-thirds">
+                          <summary>
+                                  Consultancy
+                          </summary>
+                          <div class="nhsuk-u-padding-left-4 nhsuk-u-padding-top-4 nhsuk-details__text_inner">
+                              <p>We provide a range of consultancy and advisory services which bring together our deep understanding of the health and care system, policy expertise and experience of supporting and developing leaders and organisations.</p>
+                              <p><b>Unit of order</b><br>
+                              A typical purchase might include 5 days of Consultancy support. We recommend no less than 5 days of consultancy support.</p>
+                          </div>
+                        </details>
+                        <div class="nhsuk-grid-column-one-third">
+                            <p><b>£100 per day</b></p>
+                        </div>
+                      </div>
+                      <div class="nhsuk-grid-row">
+                        <details class="nhsuk-details nhsuk-u-margin-top-0 nhsuk-grid-column-two-thirds">
+                          <summary>
+                                  Training - Full Day
+                          </summary>
+                          <div class="nhsuk-u-padding-left-4 nhsuk-u-padding-top-4 nhsuk-details__text_inner">
+                              <p>A flexible, cost-effective option that allows you to train as many or as few employees as you need from a single team or department to everyone in your organization.</p>
+                              <p><b>Unit of order</b><br>
+                              A full day course caters up to 20 participants. Flexible packages to suit your requirements.</p>
+                          </div>
+                        </details>
+                        <div class="nhsuk-grid-column-one-third">
+                            <p><b>£500 per day</b></p>
+                        </div>
+                      </div>
+                  </td>
+                </tr>
+                <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell">
+                    <h4>AdminMulti</h4>
+                    <h4>£2,500 per month</h4>
+                      <p>Provides the ability to share  functions. Ideal for shared resources within a group of practises. It includes improvement to a variety of systems such as visits, tasks and reporting.</p>
+                      <p><b>Capabilities met</b></p>
+                      <details class="nhsuk-details nhsuk-u-margin-top-0">
+                        <summary>
+                          <span>
+                            Productivity - [Supplier definition]
+                          </span>
+                        </summary>
+                        <div class="nhsuk-u-padding-left-4 nhsuk-u-padding-top-4 nhsuk-details__text_inner nhsuk-grid-row">
+                          <div class="nhsuk-grid-column-two-thirds">
+                            <p>The Productivity Capability is used to describe the delivery of one or more of the following outcomes to Patients/Service Users and Staff within health and care settings:</p>
+                            <ul>
+                              <li>Reduced costs</li>
+                              <li>Improved processes through access to better quality data</li>
+                              <li>Improved Patient/Service User experience</li>
+                              <li>Improved Staff experience</li>
+                            </ul>
+                          </div>
+                          <div class="nhsuk-grid-column-full">
+                            <table>
+                              <tbody class="nhsuk-table__body">
+                                <tr class="nhsuk-table__row">
+                                  <td class="nhsuk-table__cell">
+                                    <div>
+                                      <h3 class="nhsuk-do-dont-list__label">Epics</h3>
+                                      <ul class="nhsuk-list nhsuk-list--tick">
+                                        <div class="nhsuk-grid-column-two-thirds">
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <h4>Epic 1 - title</h4>
+                                          <p>As a ... [add actor]<br>
+                                            I want ... [add objective]<br>
+                                            So that ... [add a goal or outcome]</p>
+                                          <p><b>Acceptance criterion 1: title</b><br>
+                                          Given ... [add description of state/condition 1]<br>
+                                          And (optional) ... [add one or more additional state/conditions]<br>
+                                          When ... [add event]<br>
+                                          Then ... [add description of outcome 1]<br>
+                                          And (optional) ... [add (optional) description of one or more additional outcomes]</p>
+                                        </div>
+                                        <div class="nhsuk-grid-column-two-thirds">
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <h4>Epic 2 - title</h4>
+                                          <p>As a ... [add actor]<br>
+                                            I want ... [add objective]<br>
+                                            So that ... [add a goal or outcome]</p>
+                                          <p><b>Acceptance criterion 1: title</b><br>
+                                          Given ... [add description of state/condition 1]<br>
+                                          And (optional) ... [add one or more additional state/conditions]<br>
+                                          When ... [add event]<br>
+                                          Then ... [add description of outcome 1]<br>
+                                          And (optional) ... [add (optional) description of one or more additional outcomes]</p>
+                                        </div>
+                                      </ul>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </details>
+                      <p><b>Standards met</b></p>
+                      <details class="nhsuk-details nhsuk-u-margin-top-0">
+                        <summary>
+                          <span>
+                            Associated Standards
+                          </span>
+                        </summary>
+                        <div class="nhsuk-u-padding-left-4 nhsuk-u-padding-top-4 nhsuk-details__text_inner">
+                          <table>
+                            <tbody class="nhsuk-table__body">
+                              <tr class="nhsuk-table__row">
+                                <td class="nhsuk-table__cell">
+                                  <div class=" nhsuk-grid-column-two-thirds">
+                                    <p><b>Interoperability Standard</b></p>
+                                    <p>It provides a single place for system suppliers to find out which interfaces they need to implement and to access the required documentation.</p>
+                                    <p><a>View details</a></p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </details>
+                      <details class="nhsuk-details nhsuk-u-margin-top-0">
+                        <summary>
+                          <span>
+                            Overarching Standards
+                          </span>
+                        </summary>
+                        <div class="nhsuk-u-padding-left-4 nhsuk-u-padding-top-4 nhsuk-details__text_inner">
+                          <table>
+                            <tbody class="nhsuk-table__body">
+                              <tr class="nhsuk-table__row">
+                                <td class="nhsuk-table__cell">
+                                  <div class=" nhsuk-grid-column-two-thirds">
+                                      <p><b>Business Continuity & Disaster Recovery</b></p>
+                                      <p>Ensures that suppliers Solutions are supported by robust business continuity plans and disaster recovery measures.</p>
+                                      <p><a>View details</a></p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr class="nhsuk-table__row">
+                                <td class="nhsuk-table__cell">
+                                  <div class=" nhsuk-grid-column-two-thirds">
+                                      <p><b>Clinical Safety</b></p>
+                                      <p>Supports the management of clinical risk and Patient safety.</p>
+                                      <p><a>View details</a></p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr class="nhsuk-table__row">
+                                <td class="nhsuk-table__cell">
+                                  <div class=" nhsuk-grid-column-two-thirds">
+                                      <p><b>Commercial Standard</b></p>
+                                      <p>This Standard underpins all commercial activity relating to the Catalogue. It does this by defining a number of rules governing the commercial relationship of relevant parties and by setting out standards of behaviour and principles of access to data and services charges.</p>
+                                      <p><a>View details</a></p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr class="nhsuk-table__row">
+                                <td class="nhsuk-table__cell">
+                                  <div class=" nhsuk-grid-column-two-thirds">
+                                    <p><b>Data Migration</b></p>
+                                      <p>Supports the safe and effective migration of data between Catalogue Solutions when a Practice (or other buying organisation such as a CCG, hub, Federation etc.) opts to change from one Catalogue Solution to another.</p>
+                                      <p><a>View details</a></p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr class="nhsuk-table__row">
+                                <td class="nhsuk-table__cell">
+                                  <div class=" nhsuk-grid-column-two-thirds">
+                                      <p><b>Data Standards</b></p>
+                                      <p>Defines detailed technical standards for the storage, management and organisation of data and specifies standardised reference data, terminology and codes.</p>
+                                      <p><a>View details</a></p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr class="nhsuk-table__row">
+                                <td class="nhsuk-table__cell">
+                                  <div class=" nhsuk-grid-column-two-thirds">
+                                      <p><b>Hosting & Infrastructure</b></p>
+                                      <p>Supports best practices for infrastructure and hosting of systems. For example, ensuring that systems are cost effective, secure and energy efficient.</p>
+                                      <p><a>View details</a></p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr class="nhsuk-table__row">
+                                <td class="nhsuk-table__cell">
+                                  <div class=" nhsuk-grid-column-two-thirds">
+                                      <p><b>Information Governance</b></p>
+                                      <p>Supports the controls needed to ensure that sensitive Personal Data is kept confidential, is accurate and is available to authorised users when required.</p>
+                                      <p><a>View details</a></p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr class="nhsuk-table__row">
+                                <td class="nhsuk-table__cell">
+                                  <div class=" nhsuk-grid-column-two-thirds">
+                                      <p><b>Non-Functional Questions</b></p>
+                                      <p>Non-functional requirements describe how the Solution works, not what the Solution should do, and serve as constraints or restrictions on the design of the Solution.</p>
+                                      <p><a>View details</a></p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr class="nhsuk-table__row">
+                                <td class="nhsuk-table__cell">
+                                  <div class=" nhsuk-grid-column-two-thirds">
+                                      <p><b>Service Management</b></p>
+                                      <p>Supports suppliers in the delivery and management of services that support and provide their Solutions.</p>
+                                      <p><a>View details</a></p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr class="nhsuk-table__row">
+                                <td class="nhsuk-table__cell">
+                                  <div class=" nhsuk-grid-column-two-thirds">
+                                      <p><b>Testing</b></p>
+                                      <p>Ensures that Suppliers' software delivery test processes are of sufficient quality and rigour.</p>
+                                      <p><a>View details</a></p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr class="nhsuk-table__row">
+                                <td class="nhsuk-table__cell">
+                                  <div class=" nhsuk-grid-column-two-thirds">
+                                      <p><b>Training</b></p>
+                                      <p>Defines the training activities and collateral expected from Suppliers to support the buyers and users of their Solutions.</p>
+                                      <p><a>View details</a></p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </details>
+                      <p><b>Associated services</b></p>
+                      <div class="nhsuk-grid-row">
+                        <details class="nhsuk-details nhsuk-u-margin-top-0 nhsuk-grid-column-two-thirds">
+                          <summary>
+                              Training - half day
+                          </summary>
+                          <div class="nhsuk-u-padding-left-4 nhsuk-u-padding-top-4 nhsuk-details__text_inner">
+                              <p>A flexible, cost-effective option that allows you to train as many or as few employees as you need from a single team or department to everyone in your organization.</p>
+                              <p><b>Unit of order</b><br>
+                              A half day course caters up to 10 participants. Flexible packages to suit your requirements.</p>
+                          </div>
+                        </details>
+                        <div class="nhsuk-grid-column-one-third">
+                            <p><b>£100 per day</b></p>
+                        </div>
+                      </div>
+                      <div class="nhsuk-grid-row">
+                        <details class="nhsuk-details nhsuk-u-margin-top-0 nhsuk-grid-column-two-thirds">
+                          <summary>
+                                  Training environment
+                          </summary>
+                          <div class="nhsuk-u-padding-left-4 nhsuk-u-padding-top-4 nhsuk-details__text_inner">
+                              <p>Initial set up of the system and the training involved. This is for organisations transitioning to AdminMulti and for those wanting to overall improve their training scheme.</p>
+                              <p><b>Unit of order</b><br>
+                              A full set up will initially take 5 days. Ongoing maintenance and support can be tailored to suit requirements.</p>
+                          </div>
+                        </details>
+                        <div class="nhsuk-grid-column-one-third">
+                            <p><b>£1,000 per month</b></p>
+                        </div>
+                      </div>
+                  </td>
+                </tr>
+                <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell">
+                    <h4>Route Planner</h4>
+                    <h4>£500 per user</h4>
+                      <p>Provides staff with the ability to locate and travel to the correct patient homes in a more efficitent way. With a digital memory and pattern generation it increases productivity and reduces costs.</p>
+                      <p><b>Capabilities met</b></p>
+                      <details class="nhsuk-details nhsuk-u-margin-top-0">
+                        <summary>
+                          <span>
+                            Shared care plans (Full)
+                          </span>
+                        </summary>
+                        <div class="nhsuk-u-padding-left-4 nhsuk-u-padding-top-4 nhsuk-details__text_inner nhsuk-grid-row">
+                          <div class="nhsuk-grid-column-two-thirds">
+                            <p>Supports a Patient-centred approach to care. It allows Health and Care Professionals to view and maintain a single, shared Plan for the Patient/Service User rather than holding separate and disconnected Plans within the individual health and care organisations.</p>
+                            <p>For Full Capabilities, all ‘Must’ Epics have been met. Partial Capabilities have ‘Must’ Epics which have not currently been met but are in progress.</p>
+                            <p><a>View more including Acceptance Criteria for all Epics in Confluence.</a></p>
+                          </div>
+                          <div class="nhsuk-grid-column-full">
+                            <table>
+                              <tbody class="nhsuk-table__body">
+                                <tr class="nhsuk-table__row">
+                                  <td class="nhsuk-table__cell">
+                                    <div>
+                                      <h3 class="nhsuk-do-dont-list__label">Must Epics</h3>
+                                      <ul class="nhsuk-list nhsuk-list--tick">
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>EpicSC1 - create Shared Care Plan</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>EpicSC2 - view Shared Care Plan</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>EpicSC3 - amend Shared Care Plan</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>EpicSC4 - close Shared Care Plan </b>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </td>
+
+                                  <td class="nhsuk-table__cell">
+                                    <div>
+                                      <h3 class="nhsuk-do-dont-list__label">May Epics</h3>
+                                      <ul class="nhsuk-list nhsuk-list--tick">
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>EpicSC6 - access Shared Care Plans remotely</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>EpicSC7 - search and view Shared Care Plans</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>EpicSC8 - real-time access to Shared Care Plans</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>EpicSC10 - reports</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>EpicSC11 - manage Shared Care Plan templates</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>EpicSC12 - manage care schedules</b>
+                                        </li>
+                                      </ul>
+                                      <h4>May Epics that have NOT been met</h4>
+                                      <ul class="nhsuk-list nhsuk-list--tick">
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                                           <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z"></path>
+                                           <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
+                                         </svg>
+                                          EpicSC5 - assign Shared Care Plan actions
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                                           <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z"></path>
+                                           <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
+                                         </svg>
+                                          EpicSC9 - notifications
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </details>
+                      <details class="nhsuk-details nhsuk-u-margin-top-0">
+                        <summary>
+                          <span>
+                            Domiciliary care (Partial)
+                          </span>
+                        </summary>
+                        <div class="nhsuk-u-padding-left-4 nhsuk-u-padding-top-4 nhsuk-details__text_inner nhsuk-grid-row">
+                          <div class="nhsuk-grid-column-two-thirds">
+                            <p>Enables Service Providers to effectively plan and manage Domiciliary Care services offered to Service Users.</p>
+                            <p>For Full Capabilities, all ‘Must’ Epics have been met. Partial Capabilities have ‘Must’ Epics which have not currently been met but are in progress.</p>
+                            <p><a>View more including Acceptance Criteria for all Epics in Confluence.</a></p>
+                          </div>
+                          <div class="nhsuk-grid-column-full">
+                            <table>
+                              <tbody class="nhsuk-table__body">
+                                <tr class="nhsuk-table__row">
+                                  <td class="nhsuk-table__cell">
+                                    <div class="nhsuk-grid-column-two-thirds">
+                                      <h3 class="nhsuk-do-dont-list__label">Must Epics</h3>
+                                      <ul class="nhsuk-list nhsuk-list--tick">
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>EpicDC1 - maintain Domiciliary Care schedules</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>EpicDC2 - share Domiciliary Care schedules</b>
+                                        </li>
+                                      </ul>
+                                      <h4>Must Epics that are NOT currently met</h4>
+                                      <ul class="nhsuk-list nhsuk-list--tick">
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                                           <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z"></path>
+                                           <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
+                                         </svg>
+                                          <b>EpicDC3 - manage Appointments </b>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </td>
+
+                                  <td class="nhsuk-table__cell">
+                                    <div>
+                                      <h3 class="nhsuk-do-dont-list__label">May Epics</h3>
+                                      <ul class="nhsuk-list nhsuk-list--tick">
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>EpicDC4 - Service User manages their schedule for Domiciliary Care</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>EpicDC5 - manage Care Plans for Service Users</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>EpicDC6 - remote access to Domiciliary Care schedule</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>EpicDC7 - receive notifications relating to Service User</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>EpicDC8 - reports</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>EpicDC9 - nominated individuals to view Domiciliary Care schedule</b>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </details>
+                      <details class="nhsuk-details nhsuk-u-margin-top-0">
+                        <summary>
+                          <span>
+                            Social prescribing (Full)
+                          </span>
+                        </summary>
+                        <div class="nhsuk-u-padding-left-4 nhsuk-u-padding-top-4 nhsuk-details__text_inner nhsuk-grid-row">
+                          <div class="nhsuk-grid-column-two-thirds">
+                            <p>Focuses on a Patient/Service User's needs in a holistic way, and helps to address the social, practical and emotional needs of Patients that can't (wholly) be addressed medically such as social isolation, reduced mobility, mental health issues or some long-term conditions.</p>
+                            <p>For Full Capabilities, all ‘Must’ Epics have been met. Partial Capabilities have ‘Must’ Epics which have not currently been met but are in progress.</p>
+                            <p><a>View more including Acceptance Criteria for all Epics in Confluence.</a></p>
+                          </div>
+                          <div class="nhsuk-grid-column-full">
+                            <table>
+                              <tbody class="nhsuk-table__body">
+                                <tr class="nhsuk-table__row">
+                                  <td class="nhsuk-table__cell">
+                                    <div>
+                                      <h3 class="nhsuk-do-dont-list__label">Must Epics</h3>
+                                      <ul class="nhsuk-list nhsuk-list--tick">
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>EpicSP1 - assess wellness or well-being of the Patient or Service User</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>EpicSP2 - search the directory</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>EpicSP3 - refer Patient/Service User to service(s)</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>EpicSP4 - maintain referral record</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>EpicSP5 - link to national or local directory of services</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>EpicSP6 - maintain directory of services</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>EpicSP7 - maintain service criteria</b>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </td>
+
+                                  <td class="nhsuk-table__cell">
+                                    <div>
+                                      <h3 class="nhsuk-do-dont-list__label">May Epics</h3>
+                                      <ul class="nhsuk-list nhsuk-list--tick">
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>EpicSP8 - refer Patient/Service User to Link Worker</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>EpicSP10 - Patient self-referral</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>EpicSP11 - integrate Social Prescribing Referral Record with Clinical Record</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>EpicSP12 - receive notification of an Appointment</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>EpicSP13 - remind Patients/Service Users of Appointments</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>EpicSP14 - provide service feedback</b>
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                                          </svg>
+                                          <b>EpicSP15 - view service feedback</b>
+                                        </li>
+                                      </ul>
+                                      <h4>May Epics that have NOT been met</h4>
+                                      <ul class="nhsuk-list nhsuk-list--tick">
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                                           <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z"></path>
+                                           <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
+                                         </svg>
+                                         EpicSP9 - capture Patient/Service User consent
+                                        </li>
+                                        <li>
+                                          <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                                           <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z"></path>
+                                           <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
+                                         </svg>
+                                         EpicSP16 - Obtain Management Information (MI) on Social Prescribing
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </details>
+                      <p><b>Standards met</b></p>
+                      <details class="nhsuk-details nhsuk-u-margin-top-0">
+                        <summary>
+                          <span>
+                            Associated Standards
+                          </span>
+                        </summary>
+                        <div class="nhsuk-u-padding-left-4 nhsuk-u-padding-top-4 nhsuk-details__text_inner">
+                          <table>
+                            <tbody class="nhsuk-table__body">
+                              <tr class="nhsuk-table__row">
+                                <td class="nhsuk-table__cell">
+                                  <div class=" nhsuk-grid-column-two-thirds">
+                                    <p><b>Interoperability Standard</b></p>
+                                    <p>It provides a single place for system suppliers to find out which interfaces they need to implement and to access the required documentation.</p>
+                                    <p><a>View details</a></p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </details>
+                      <details class="nhsuk-details nhsuk-u-margin-top-0">
+                        <summary>
+                          <span>
+                            Overarching Standards
+                          </span>
+                        </summary>
+                        <div class="nhsuk-u-padding-left-4 nhsuk-u-padding-top-4 nhsuk-details__text_inner">
+                          <table>
+                            <tbody class="nhsuk-table__body">
+                              <tr class="nhsuk-table__row">
+                                <td class="nhsuk-table__cell">
+                                  <div class=" nhsuk-grid-column-two-thirds">
+                                      <p><b>Business Continuity & Disaster Recovery</b></p>
+                                      <p>Ensures that suppliers Solutions are supported by robust business continuity plans and disaster recovery measures.</p>
+                                      <p><a>View details</a></p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr class="nhsuk-table__row">
+                                <td class="nhsuk-table__cell">
+                                  <div class=" nhsuk-grid-column-two-thirds">
+                                      <p><b>Clinical Safety</b></p>
+                                      <p>Supports the management of clinical risk and Patient safety.</p>
+                                      <p><a>View details</a></p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr class="nhsuk-table__row">
+                                <td class="nhsuk-table__cell">
+                                  <div class=" nhsuk-grid-column-two-thirds">
+                                      <p><b>Commercial Standard</b></p>
+                                      <p>This Standard underpins all commercial activity relating to the Catalogue. It does this by defining a number of rules governing the commercial relationship of relevant parties and by setting out standards of behaviour and principles of access to data and services charges.</p>
+                                      <p><a>View details</a></p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr class="nhsuk-table__row">
+                                <td class="nhsuk-table__cell">
+                                  <div class=" nhsuk-grid-column-two-thirds">
+                                    <p><b>Data Migration</b></p>
+                                      <p>Supports the safe and effective migration of data between Catalogue Solutions when a Practice (or other buying organisation such as a CCG, hub, Federation etc.) opts to change from one Catalogue Solution to another.</p>
+                                      <p><a>View details</a></p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr class="nhsuk-table__row">
+                                <td class="nhsuk-table__cell">
+                                  <div class=" nhsuk-grid-column-two-thirds">
+                                      <p><b>Data Standards</b></p>
+                                      <p>Defines detailed technical standards for the storage, management and organisation of data and specifies standardised reference data, terminology and codes.</p>
+                                      <p><a>View details</a></p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr class="nhsuk-table__row">
+                                <td class="nhsuk-table__cell">
+                                  <div class=" nhsuk-grid-column-two-thirds">
+                                      <p><b>Hosting & Infrastructure</b></p>
+                                      <p>Supports best practices for infrastructure and hosting of systems. For example, ensuring that systems are cost effective, secure and energy efficient.</p>
+                                      <p><a>View details</a></p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr class="nhsuk-table__row">
+                                <td class="nhsuk-table__cell">
+                                  <div class=" nhsuk-grid-column-two-thirds">
+                                      <p><b>Information Governance</b></p>
+                                      <p>Supports the controls needed to ensure that sensitive Personal Data is kept confidential, is accurate and is available to authorised users when required.</p>
+                                      <p><a>View details</a></p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr class="nhsuk-table__row">
+                                <td class="nhsuk-table__cell">
+                                  <div class=" nhsuk-grid-column-two-thirds">
+                                      <p><b>Non-Functional Questions</b></p>
+                                      <p>Non-functional requirements describe how the Solution works, not what the Solution should do, and serve as constraints or restrictions on the design of the Solution.</p>
+                                      <p><a>View details</a></p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr class="nhsuk-table__row">
+                                <td class="nhsuk-table__cell">
+                                  <div class=" nhsuk-grid-column-two-thirds">
+                                      <p><b>Service Management</b></p>
+                                      <p>Supports suppliers in the delivery and management of services that support and provide their Solutions.</p>
+                                      <p><a>View details</a></p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr class="nhsuk-table__row">
+                                <td class="nhsuk-table__cell">
+                                  <div class=" nhsuk-grid-column-two-thirds">
+                                      <p><b>Testing</b></p>
+                                      <p>Ensures that Suppliers' software delivery test processes are of sufficient quality and rigour.</p>
+                                      <p><a>View details</a></p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr class="nhsuk-table__row">
+                                <td class="nhsuk-table__cell">
+                                  <div class=" nhsuk-grid-column-two-thirds">
+                                      <p><b>Training</b></p>
+                                      <p>Defines the training activities and collateral expected from Suppliers to support the buyers and users of their Solutions.</p>
+                                      <p><a>View details</a></p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </details>
+                      <p><b>Associated services</b></p>
+                      <div class="nhsuk-grid-row">
+                        <details class="nhsuk-details nhsuk-u-margin-top-0 nhsuk-grid-column-two-thirds">
+                          <summary>
+                              Consultancy
+                          </summary>
+                          <div class="nhsuk-u-padding-left-4 nhsuk-u-padding-top-4 nhsuk-details__text_inner">
+                              <p>We provide a range of consultancy and advisory services which bring together our deep understanding of the health and care system, policy expertise and experience of supporting and developing leaders and organisations.</p>
+                              <p><b>Unit of order</b><br>
+                                A typical purchase might include 5 days of Consultancy support. We recommend no less than 5 days of consultancy support.</p>
+                          </div>
+                        </details>
+                        <div class="nhsuk-grid-column-one-third">
+                            <p><b>£100 per day</b></p>
+                        </div>
+                      </div>
+                      <div class="nhsuk-grid-row">
+                        <details class="nhsuk-details nhsuk-u-margin-top-0 nhsuk-grid-column-two-thirds">
+                          <summary>
+                                  Training (on site)
+                          </summary>
+                          <div class="nhsuk-u-padding-left-4 nhsuk-u-padding-top-4 nhsuk-details__text_inner">
+                              <p>Training located on site with flexible scheduling and can be tailored to to meet specific needs and ability levels. No travel expenses and improves quality.</p>
+                              <p><b>Unit of order</b><br>
+                                A typical purchase may include 3 days training depending on number of participants. Flexible packages to suit your requirements.</p>
+                          </div>
+                        </details>
+                        <div class="nhsuk-grid-column-one-third">
+                            <p><b>£650 per day</b></p>
+                        </div>
+                      </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </details>
+      <details class="nhsuk-details nhsuk-expander" id="transition-timescales">
+        <summary class="nhsuk-details__summary">
+            <h3 class="nhsuk-u-margin-bottom-0">Transisiton timescales</h3>
+          <span class="govuk-accordion__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <div class="nhsuk-grid-column-two-thirds">
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">
+                <p>A timescale to display the minimum, maximum and average number of days it takes to transition to this Solution.</p>
+              </td>
+            </tr>
+          </div>
+          <div>
+            <table class="nhsuk-table nhsuk-u-margin-top-3">
+              <tbody class="nhsuk-table__body">
+                <tr class="nhsuk-table__row  nhsuk-grid-row">
+                  <th class="nhsuk-table__cell">Minimum days</th>
+                  <td class="nhsuk-table__cell">1</td>
+                </tr>
+                  <tr class="nhsuk-table__row  nhsuk-grid-row">
+                    <th class="nhsuk-table__cell">Maximum days</th>
+                    <td class="nhsuk-table__cell">10</td>
+                  </tr>
+                  <tr class="nhsuk-table__row  nhsuk-grid-row">
+                    <th class="nhsuk-table__cell">Average days</th>
+                    <td class="nhsuk-table__cell">5</td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </details>
+      <details class="nhsuk-details nhsuk-expander" id="integrations">
+        <summary class="nhsuk-details__summary">
+            <h3 class="nhsuk-u-margin-bottom-0">Integrations</h3>
+          <span class="govuk-accordion__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="nhsuk-details__text nhsuk-grid-row">
+          <div class="nhsuk-grid-column-two-thirds">
+              <p><b>Supplier asserted</b></p>
+              <p>These Integrations are added by the Supplier and are not assured by the NHS and may be partial therefore may not fully integrate with the system.</p>
+              <p><a href="/">Solution_1.0_Integrations.png</a></p><br>
+
+              <p><b>NHS assured (8 systems)</b></p>
+              <p>These Integrations are assured and added by the NHS.</p>
+            </div>
+            <div class="nhsuk-grid-column-full">
+              <details class="nhsuk-details">
+                <summary>
+                  <span>
+                    GPConnect (5 systems)
+                  </span>
+                </summary>
+                <div class="nhsuk-details__text nhsuk-details__text_inner">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td>System 1</td>
+                      </tr>
+                      <tr>
+                        <td>System 2</td>
+                      </tr>
+                      <tr>
+                        <td>System 3</td>
+                      </tr>
+                      <tr>
+                        <td>System 4</td>
+                      </tr>
+                      <tr>
+                        <td>System 5</td>
+                      </tr>
+                      <tr>
+                        <td><a>Learn more about GPConnect</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </details>
+              <details class="nhsuk-details">
+                <summary>
+                  <span>
+                    IM1 (3 systems)
+                  </span>
+                </summary>
+                <div class="nhsuk-details__text nhsuk-details__text_inner">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td>RK Appointment Manager</td>
+                      </tr>
+                      <tr>
+                        <td>TruBlue Data Management</td>
+                      </tr>
+                      <tr>
+                        <td>ClearBlue Scanner</td>
+                      </tr>
+                      <tr>
+                        <td><a>Learn more about IM1</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </details>
+            </div>
+        </div>
+      </details>
+      <details class="nhsuk-details nhsuk-expander" id="client-type">
+        <summary class="nhsuk-details__summary">
+            <h3 class="nhsuk-u-margin-bottom-0">Client application type</h3>
+          <span class="govuk-accordion__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="nhsuk-details__text nhsuk-grid-row">
+          <div class="nhsuk-grid-column-two-thirds">
+            <p>Minimum recommended technical specifications needed for the Solution to function efficiently on an application or device.</p>
+          </div>
+          <div class="nhsuk-grid-column-full">
+            <details class="nhsuk-details nhsuk-u-margin-top-0">
+              <summary>
+                <span>
+                  Browser based
+                </span>
+              </summary>
+              <div class="nhsuk-u-padding-left-4 nhsuk-u-padding-top-4 nhsuk-details__text_inner">
+                <table>
+                  <tbody class="nhsuk-table__body">
+                    <tr class="nhsuk-table__row">
+                      <th class="nhsuk-table__cell">Browsers Supported</th>
+                      <td class="nhsuk-table__cell">
+                        <ul class="nhsuk-u-margin-0">
+                          <li>Google Chrome</li>
+                          <li>Safari</li>
+                          <li>Internet Explorer 11</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr class="nhsuk-table__row">
+                      <th class="nhsuk-table__cell">Mobile responsive</th>
+                      <td class="nhsuk-table__cell ">Yes</td>
+                    </tr>
+                    <tr class="nhsuk-table__row">
+                      <th class="nhsuk-table__cell">Plug ins or extensions required</th>
+                      <td class="nhsuk-table__cell">
+                        <p>Yes</p>
+                        <details>
+                          <summary>
+                            <span>
+                              Additional information
+                            </span>
+                          </summary>
+                          <div class="nhsuk-details__text">
+                            <p>We recommend several plugins that we use for various products that only need to be installed prior to the initial product set up.</p>
+                          </div>
+                        </details>
+                      </td>
+                    </tr>
+                    <tr class="nhsuk-table__row">
+                      <th class="nhsuk-table__cell">Minimum connection speed required</th>
+                      <td class="nhsuk-table__cell">
+                        <p>1Mbps</p>
+                      </td>
+                    </tr>
+                    <tr class="nhsuk-table__row">
+                      <th class="nhsuk-table__cell">Recommended desktop aspect ratio and screen resolution	</th>
+                      <td class="nhsuk-table__cell">
+                        <p>4:3 800 x 600</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="nhsuk-grid-column-two-thirds">
+                          <p><b>Hardware requirements</b></p>
+                          <p>In order to leverage the function of [System Name] to the fullest extent we recommend that you allow access to the device media library.</p>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="nhsuk-table__row">
+                        <td>
+                          <div class="nhsuk-grid-column-two-thirds">
+                            <p><b>Additional information</b></p>
+                            <p>It is possible that it may install on other platforms or versions not listed in this section. However, support is limited to systems that meet the minimum requirements.</p>
+                          </div>
+                        </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </details>
+            <details class="nhsuk-details nhsuk-u-margin-top-0">
+              <summary>
+                <span>
+                  Native mobile or tablet application
+                </span>
+              </summary>
+              <div class="nhsuk-u-padding-left-4 nhsuk-u-padding-top-4 nhsuk-details__text_inner">
+                <table>
+                  <tbody class="nhsuk-table__body">
+                    <tr class="nhsuk-table__row">
+                      <th class="nhsuk-table__cell">Supported operating systems</th>
+                      <td class="nhsuk-table__cell">
+                        <ul class="nhsuk-u-margin-0">
+                          <li>Apple IOS</li>
+                          <li>Android</li>
+                          <li>Other</li>
+                        </ul><br>
+                        <details>
+                          <summary>
+                            <span>
+                              Additional information
+                            </span>
+                          </summary>
+                          <div class="nhsuk-details__text">
+                            <p>Android 4.1 and above.<br>
+                              IOS 10.6 and above.
+                            </p>
+                          </div>
+                        </details>
+                      </td>
+                    </tr>
+                    <tr class="nhsuk-table__row">
+                      <th class="nhsuk-table__cell">Minimum connection speed required</th>
+                      <td class="nhsuk-table__cell ">1Mbps</td>
+                    </tr>
+                    <tr class="nhsuk-table__row">
+                      <th class="nhsuk-table__cell">Connection types supported</th>
+                      <td class="nhsuk-table__cell">
+                        <ul class="nhsuk-u-margin-0">
+                          <li>GPRS</li>
+                          <li>3G</li>
+                          <li>4G</li>
+                          <li>Wifi</li>
+                        </ul><br>
+                        <details>
+                          <summary>
+                            <span>
+                              Additional information
+                            </span>
+                          </summary>
+                          <div class="nhsuk-details__text">
+                            <p>No additional information.</p>
+                          </div>
+                        </details>
+                      </td>
+                    </tr>
+                    <tr class="nhsuk-table__row">
+                      <th class="nhsuk-table__cell">Minimum memory requirement</th>
+                      <td class="nhsuk-table__cell">
+                        <p>4GB</p>
+                        <details>
+                          <summary>
+                            <span>
+                              Additional information
+                            </span>
+                          </summary>
+                          <div class="nhsuk-details__text">
+                            <p>No additional information.</p>
+                          </div>
+                        </details>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="nhsuk-grid-column-two-thirds">
+                          <p><b>Hardware requirements</b></p>
+                          <p>In order to leverage the function of [System Name] to the fullest extent we recommend that you purchase an LED Display Board, this will allow you to present information to Patients in a waiting area that the GP is ready to see them.</p>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="nhsuk-table__row">
+                      <td class="nhsuk-table__cell">
+                        <div class="nhsuk-grid-column-two-thirds">
+                          <p><b>Additional information</b></p>
+                          <p>It is possible that it may install on other platforms or versions not listed in this section. However, support is limited to systems that meet the minimum requirements.</p>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </details>
+          </div>
+        </div>
+      </details>
+      <details class="nhsuk-details nhsuk-expander" id="hosting-type">
+        <summary class="nhsuk-details__summary">
+            <h3 class="nhsuk-u-margin-bottom-0">Hosting type</h3>
+          <span class="govuk-accordion__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="nhsuk-details__text nhsuk-grid-row">
+          <div class="nhsuk-grid-column-two-thirds">
+            <p>Minimum recommended hosting specifications needed for the Solution to function efficiently on an application or device.</p>
+          </div>
+          <div class="nhsuk-grid-column-full">
+            <details class="nhsuk-details nhsuk-u-margin-top-0">
+              <summary>
+                <span>
+                  Hybrid
+                </span>
+              </summary>
+              <div class="nhsuk-u-padding-left-4 nhsuk-u-padding-top-4 nhsuk-details__text_inner">
+                <table>
+                  <tbody class="nhsuk-table__body">
+                    <tr class="nhsuk-table__row">
+                      <td class="nhsuk-table__cell">
+                        <div class="nhsuk-grid-column-two-thirds">
+                          <p><b>Summary</b><p>
+                          <p>Our solution uses a combination of private and public cloud suppliers. We store all of our patient confidential data in a data centre that we own and manage. We leverage the power of [Public Cloud provider] to run our analytical suite and only transfer anonymised or pseudonymised data to that provider to support this.</p>
+                          <a>www.healthcare-pro.co.uk/healthcare-system-1/hybrid-hosting</a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="nhsuk-table__row">
+                      <td class="nhsuk-table__cell ">
+                        <div class="nhsuk-grid-column-two-thirds">
+                          <p><b>Data center hosting model</b></p>
+                          Our managed data centre is hosted in two separate geographical locations, they both comply to the highest standards to ensure that even if one of our data centres suffers an outage, we can ensure that your daily activities are not interrupted. We also create a back up of all of our data every evening and store it separately, so in the result of any catastrophic failure, we can ensure that patient confidential information is kept secure.
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table>
+                  <tbody class="nhsuk-table__body">
+                    <tr class="nhsuk-table__row">
+                      <th class="nhsuk-table__cell">HSCN or N3 connection required for this Solution</th>
+                      <td class="nhsuk-table__cell">
+                        Yes
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </details>
+          </div>
+        </div>
+      </details>
+      <details class="nhsuk-details nhsuk-expander" id="work-off">
+        <summary class="nhsuk-details__summary">
+            <h3 class="nhsuk-u-margin-bottom-0">Compliance work-off plans</h3>
+          <span class="govuk-accordion__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+            <table class="nhsuk-table">
+              <caption class="nhsuk-table__caption">Solution description</caption>
+              <tbody class="nhsuk-table__body">
+                <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell">
+                    <div class="nhsuk-grid-column-two-thirds">
+                      <p><b>Target date:</b> 20/11/2019</p>
+                      We are going to achieve the updated Document Management Standard ahead of schedule in November 2019.
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </details>
+      <details class="nhsuk-details nhsuk-expander" id="roadmap">
+        <summary class="nhsuk-details__summary">
+            <h3 class="nhsuk-u-margin-bottom-0">Roadmap</h3>
+          <span class="govuk-accordion__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Roadmap</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">
+                  <div class="nhsuk-grid-column-two-thirds">
+                    <a>Healthcare_System_1.0_Roadmap_2019.png</a>
+                  </div>
+                </td>
+              </tr>
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">
+                  <div class="nhsuk-grid-column-two-thirds">
+                    We plan to deliver a task management function by Autumn 2019. We are also going to achieve the updated Document Management Standard ahead of schedule in August 2019.
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+      <details class="nhsuk-details nhsuk-expander" id="about-supplier">
+        <summary class="nhsuk-details__summary">
+            <h3 class="nhsuk-u-margin-bottom-0">About supplier</h3>
+          <span class="govuk-accordion__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">About supplier</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">
+                  <div class="nhsuk-grid-column-two-thirds">
+                    <p>Healthcare Pro have been dedicated to taking care of healthcare professionals across the NHS for over 20 years. With award winning Solutions we support over 10,000 organisations and over 75% of NHS acute trusts rely on our software and services.</p>
+                    <p>Our mission is to make a real difference to healthcare professionals and patients.</p>
+                    <a>www.healthcare-pro.co.uk</a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+      <details class="nhsuk-details nhsuk-expander" id="contact-details">
+        <summary class="nhsuk-details__summary">
+            <h3 class="nhsuk-u-margin-bottom-0">Contact details</h3>
+          <span class="govuk-accordion__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="nhsuk-details__text">
+            <table class="nhsuk-table">
+              <caption class="nhsuk-table__caption">Contact 1</caption>
+              <tbody class="nhsuk-table__body">
+                <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell">
+                    <p><b>Contact 1</b></p>
+                    <p>[Department_Name]<br>
+                      [Full_Name]<br>
+                      [Phone_Number]<br>
+                      [Email]</p>
+                  </td>
+                  <td class="nhsuk-table__cell">
+                    <p><b>Contact 2</b></p>
+                    <p>[Department_Name]<br>
+                      [Full_Name]<br>
+                      [Phone_Number]<br>
+                      [Email]</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+      </details>
+
+
+      <div class="nhsuk-grid-row nhsuk-u-margin-top-5">
+        <div class="nhsuk-grid-column-three-quarters">
+      {{ backLink({
+        "href": "/build-marketing-page/all-sections",
+        "text": "Return to all sections"
+      }) }}
+      </div>
+    </div>
+  </div>
+
+
+   </div>
+<div>
+
+      <!-- End of content -->
+
+
+{% endblock %}
+
+{% block footer %}
+  {{ nhsdFooter({
+    "list": "nhsuk-footer__list--three-columns",
+    "list1": [
+      {
+        "URL": "marketing-page",
+        "label": "About the Buying Catalogue"
+      },
+      {
+        "URL": "marketing-page",
+        "label": "Process overview"
+      },
+      {
+        "URL": "marketing-page",
+        "label": "Supplier checklist"
+      }
+    ],
+    "list2": [
+      {
+        "URL": "marketing-page",
+        "label": "Catalogue submissions"
+      },
+      {
+        "URL": "marketing-page",
+        "label": "NHS Digital service desk"
+      }
+    ],
+    "list3": [
+      {
+        "URL": "marketing-page",
+        "label": "NHS Digital"
+      },
+      {
+        "URL": "marketing-page",
+        "label": "Capabilities and Standards Model"
+      }
+    ]
+  })}}
+{% endblock %}
