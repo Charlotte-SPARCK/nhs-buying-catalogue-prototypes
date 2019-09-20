@@ -2,7 +2,13 @@
   td{
     vertical-align: top;
   }
-  
+
+  .nhsuk-table__row {
+    border-bottom: 1px solid #d8dde0;
+    padding-top: 20px;
+  }
+
+
   .nhsuk-expander {
     background-color: $color_nhsuk-grey-5;
     margin: 0 10px 0 0;
@@ -43,6 +49,10 @@
   .nhsuk-details {
     background-color: $color_nhsuk-grey-5;
     cursor: pointer;
+
+    .nhsuk-do-dont-list__label {
+      margin: 20px 0 0 0;
+    }
 
     summary {
         color: $color_nhsuk-blue;

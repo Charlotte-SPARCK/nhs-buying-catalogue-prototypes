@@ -1079,3 +1079,43 @@
   </div>
 </div>
 {% endblock %}
+
+{% block afterContent %}
+{{ nhsdFooter({
+  "list": "nhsuk-footer__list--three-columns",
+  "list1": [
+    {
+      "URL": "/",
+      "label": "About the Buying Catalogue"
+    },
+    {
+      "URL": "/",
+      "label": "Process overview"
+    },
+    {
+      "URL": "/",
+      "label": "Supplier checklist"
+    }
+  ],
+  "list2": [
+    {
+      "URL": "/",
+      "label": "Catalogue submissions"
+    },
+    {
+      "URL": "/",
+      "label": "NHS Digital service desk"
+    }
+  ],
+  "list3": [
+    {
+      "URL": "/",
+      "label": "NHS Digital"
+    },
+    {
+      "URL": "/",
+      "label": "Capabilities and Standards Model"
+    }
+  ]
+})}}
+{% endblock %}

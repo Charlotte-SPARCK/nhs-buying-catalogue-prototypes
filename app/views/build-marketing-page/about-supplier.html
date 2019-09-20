@@ -17,6 +17,19 @@
 
 <!-- Breadcrumb goes inside the beforeContent block -->
 {% block beforeContent %}
+  {{ nhsdNav({
+      "showNav": "true",
+      "primaryLinks": [
+        {
+          "label" : "[Solution_Name], 1.0"
+        },
+        {
+          'url' : '',
+          'label' : 'Support'
+        }
+      ]
+  })}}
+
   {{ breadcrumb({
   items: [
     {
