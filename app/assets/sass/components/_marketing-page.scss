@@ -5,10 +5,21 @@
 
   .nhsuk-table__row {
     border-bottom: 1px solid #d8dde0;
-    padding-top: 20px;
+    margin-bottom: 24px;
   }
 
+  .nhsd-inset-text {
+    border-left: 12px solid #005eb8;
+    padding: 20px;
+    margin-bottom: 30px;
 
+  }
+
+  .nhsuk_title {
+     background-color: $color_nhsuk-grey-5;
+     margin: 30px 0;
+     border-bottom: 2px solid $color_nhsuk-blue;
+   }
   .nhsuk-expander {
     background-color: $color_nhsuk-grey-5;
     margin: 0 10px 0 0;
