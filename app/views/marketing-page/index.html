@@ -42,7 +42,7 @@
 {% block content %}
 <div class="nhsuk-u-padding-top-7 nhsuk-u-padding-bottom-7 marketing-page">
   <div class="nhsuk-grid-row">
-    <div id="contents" class="nhsuk-grid-column-one-quarter">
+    <div id="contents" class="nhsuk-grid-column-one-quarter sticky">
       {{ contentsList({
         items: [
           {
@@ -111,6 +111,14 @@
           }
         ]
       }) }}
+      <div>
+        <svg role="presentation" focusable="false" class="app-back-to-top__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17">
+          <path fill="#005eb8" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+        </svg>
+        <a href="#header-navigation">
+           Back to top
+        </a>
+      </div>
     </div>
     <div class="nhsuk-grid-column-three-quarters" id="content">
       <!-- Change the page title here -->
@@ -704,7 +712,7 @@
           </div>
           <div class="nhsuk-grid-column-two-thirds">
               <h4>Compliance work-off plans</h4>
-              <p><b>Target date: 20/11/2019</b><br>We are going to achieve the updated Document Management Standard ahead of schedule in November 2019.</p>
+              <p><b>Target date: 20/11/2019</b><br>We are going to achieve the updated Appointment Management Standard ahead of schedule in November 2019.</p>
           </div>
         </div>
 
@@ -2038,10 +2046,10 @@
             <div class="nhsuk-grid-row">
               <div class="nhsuk-grid-column-two-thirds">
                 <p><b>NHS assured (8 systems)</b></p>
-                <p>There are two types of integrations specified and assured by the NHS. To find out more, click on the links below.</p>
-                <p><a>www.gpconnect.co.uk</a><br><a>www.im1.co.uk</a></p>
                 <p>Download the the template to see the the NHS assured integrations that this Solution uses.</p>
                 <p><a href="/files/NHS_Assured_Integrations_Example_Supplier.xlsx" download>NHS_Assured_Integrations_Example_Supplier.xlsx</a></p>
+                <p>There are two types of integrations specified and assured by the NHS. To find out more, click on the links below.</p>
+                <p><a>www.gpconnect.co.uk</a><br><a>www.im1.co.uk</a></p>
               </div>
             </div>
           </div>
@@ -2058,7 +2066,7 @@
 
         <div class="nhsuk-grid-column-full" id="transition-timescales">
           <div class="nhsuk-grid-column-full nhsuk_title">
-            <h3>Transisiton timescales</h3>
+            <h3>Transition timescales</h3>
           </div>
           <div class="nhsuk-grid-column-two-thirds">
             <p>A timescale to display the minimum, maximum and average number of days it takes to transition to this Solution.</p>
@@ -2443,14 +2451,14 @@
                   <div class="nhsuk-grid-row nhsuk-table__row">
                     <div class="nhsuk-grid-column-two-thirds">
                       <p><b>Summary</b><p>
-                      <p>The buyer of the product will be wholly responsible for hosting the application. Hosting could be done locally on site or via a Private or Public Cloud. We offer Consultancy to support you in ensuring that the application is correctly hosted.</p>
+                      <p>Our solution uses a combination of private and public cloud suppliers. We store all of our patient confidential data in a data centre that we own and manage. We leverage the power of [Public Cloud provider] to run our analytical suite and only transfer anonymised or pseudonymised data to that provider to support this.</p>
                       <p><a>www.healthcare-pro.co.uk/healthcare-system-1/hosting</a></p>
                     </div>
                   </div>
                   <div class="nhsuk-grid-row nhsuk-table__row">
                     <div class="nhsuk-grid-column-two-thirds">
                       <p><b>Data center hosting model</b></p>
-                      <p>It will be the responsibility of the Supplier to ensure that any hosting arrangements meet the required standards for safety and resilience.</p>
+                      <p>Our managed data centre is hosted in two separate geographical locations, they both comply to the highest standards to ensure that even if one of our data centres suffers an outage, we can ensure that your daily activities are not interrupted. We also create a back up of all of our data every evening and store it separately, so in the result of any catastrophic failure, we can ensure that patient confidential information is kept secure.</p>
                     </div>
                   </div>
                   <div class="nhsuk-grid-row">
@@ -2475,14 +2483,14 @@
                   <div class="nhsuk-grid-row nhsuk-table__row">
                     <div class="nhsuk-grid-column-two-thirds">
                       <p><b>Summary</b><p>
-                      <p>We store all of our patient confidential data in a data centre that we own and manage. We leverage the power of [Public Cloud provider] to run our analytical suite and only transfer anonymised or pseudonymised data to that provider to support this.</p>
+                      <p>The buyer of the product will be wholly responsible for hosting the application. Hosting could be done locally on site or via a Private or Public Cloud. We offer Consultancy to support you in ensuring that the application is correctly hosted.</p>
                       <p><a>www.healthcare-pro.co.uk/healthcare-system-1/hosting</a></p>
                     </div>
                   </div>
                   <div class="nhsuk-grid-row nhsuk-table__row">
                     <div class="nhsuk-grid-column-two-thirds">
                       <p><b>Data center hosting model</b></p>
-                      <p>Our managed data centre is hosted in two separate geographical locations, they both comply to the highest standards to ensure that even if one of our data centres suffers an outage, we can ensure that your daily activities are not interrupted. We also create a back up of all of our data every evening and store it separately, so in the result of any catastrophic failure, we can ensure that patient confidential information is kept secure.</p>
+                      <p>It will be the responsibility of the Supplier to ensure that any hosting arrangements meet the required standards for safety and resilience.</p>
                     </div>
                   </div>
                   <div class="nhsuk-grid-row">
