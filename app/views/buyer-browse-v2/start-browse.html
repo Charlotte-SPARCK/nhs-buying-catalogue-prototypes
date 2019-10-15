@@ -1,0 +1,112 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  NHS Digital Buying Catalogue
+{% endblock %}
+
+{% block header %}
+  {{ nhsdHeader({
+      "showNav": "true",
+      "homeHref": "/",
+      "primaryLinks": [
+        {
+          "label" : "Buyer browse"
+        },
+        {
+          'url' : '/',
+          'label' : 'Support'
+        }
+      ]
+    })
+  }}
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://beta.nhs.uk/service-manual/styles-components-patterns/layout -->
+{% block content %}
+<div class="nhsuk-u-padding-top-7 nhsuk-u-padding-bottom-7 buyer-browse-3">
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full" id="content">
+      <!-- Change the page title here -->
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-three-quarters">
+
+          <!-- Change the page title here -->
+          <h2>
+            Buying Catalogue - Begin browse
+          </h2>
+
+          <h4 class="nhsuk-body-l">Choose if you would like to search for Foundation Solutions of if you would like to search for Solutions by selecting the Capabilities you are interested in.</h4>
+
+          <p class="nhsuk-body-l">
+            Select one of the following options.
+          </p>
+
+          <div class="nhsuk-u-margin-top-7">
+            {{ actionLink({
+              "text": "Browse Foundation Solutions",
+              "href": "foundation-result"
+            }) }}
+
+            {{ actionLink({
+              "text": "Browse Solutions by selecting Capabilities",
+              "href": "capability-selector"
+            }) }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <!-- End of content -->
+
+
+{% endblock %}
+
+{% block footer %}
+  {{ nhsdFooter({
+    "list": "nhsuk-footer__list--three-columns",
+    "list1": [
+      {
+        "label": "About the Buying Catalogue"
+      },
+      {
+        "label": "Process overview"
+      }
+    ],
+    "list2": [
+      {
+        "label": "Catalogue submissions"
+      },
+      {
+        "label": "NHS Digital service desk"
+      }
+    ],
+    "list3": [
+      {
+        "label": "NHS Digital"
+      },
+      {
+        "label": "Capabilities and Standards Model"
+      }
+    ]
+  })}}
+{% endblock %}

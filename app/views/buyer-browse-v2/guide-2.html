@@ -1,0 +1,119 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  NHS Digital Buying Catalogue
+{% endblock %}
+
+{% block header %}
+  {{ nhsdHeader({
+      "showNav": "true",
+      "homeHref": "/",
+      "primaryLinks": [
+        {
+          "label" : "Buyer browse"
+        },
+        {
+          'url' : '/',
+          'label' : 'Support'
+        }
+      ]
+    })
+  }}
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://beta.nhs.uk/service-manual/styles-components-patterns/layout -->
+{% block content %}
+<div class="nhsuk-u-padding-top-7 nhsuk-u-padding-bottom-7 buyer-browse-3">
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full" id="content">
+      <!-- Change the page title here -->
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+
+          <!-- Change the page title here -->
+          <h2>
+            Guidance - Capabilities
+          </h2>
+
+          <h4 class="nhsuk-body-l">The Buying Catalogue represents Solutions through groups of features called ‘Capabilities’.</h4>
+
+          <p class="nhsuk-body-l">
+            The example below shows a Solution represented as a set of Capabilities.
+          </p>
+        </div>
+        <div class="nhsuk-grid-column-one-third">
+          <p>
+            <a href="start-browse">Skip to browse Solutions</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+          <div class="nhsuk-grid-column-two-thirds">
+            <p></p>
+          </div>
+          <div class="nhsuk-grid-column-one-third">
+            {{ actionLink({
+              "text": "Next",
+              "href": "guide-3"
+            }) }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <!-- End of content -->
+
+
+{% endblock %}
+
+{% block footer %}
+  {{ nhsdFooter({
+    "list": "nhsuk-footer__list--three-columns",
+    "list1": [
+      {
+        "label": "About the Buying Catalogue"
+      },
+      {
+        "label": "Process overview"
+      }
+    ],
+    "list2": [
+      {
+        "label": "Catalogue submissions"
+      },
+      {
+        "label": "NHS Digital service desk"
+      }
+    ],
+    "list3": [
+      {
+        "label": "NHS Digital"
+      },
+      {
+        "label": "Capabilities and Standards Model"
+      }
+    ]
+  })}}
+{% endblock %}

@@ -1,0 +1,38 @@
+.buyer-browse-3 {
+  .nhsuk-details {
+    .nhsuk-details__summary {
+      color: $color_nhsuk-white;
+      background-color: $color_nhsuk-blue;
+      box-shadow: 0 0 0 8px $color_nhsuk-blue;
+      width: 90%;
+
+      .nhsuk-details__summary-text {
+        color: $color_nhsuk-white;
+      }
+    }
+    .nhsuk-details__text {
+      border: none;
+      padding-left: 0;
+
+      .productivity {
+        border-top: 2px solid $color_nhsuk-grey-3;
+        padding-top: 20px;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .solution-cards {
+    border-top: 2px solid $color_nhsuk-grey-3;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .blue {
+    color: $color_nhsuk-blue;
+  }
+
+  .view-results {
+    text-align: right;
+  }
+}
