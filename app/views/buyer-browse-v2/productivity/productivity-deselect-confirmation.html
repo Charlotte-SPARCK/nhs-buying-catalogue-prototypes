@@ -1,0 +1,326 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  NHS Digital Buying Catalogue
+{% endblock %}
+
+{% block header %}
+  {{ nhsdHeader({
+      "showNav": "true",
+      "homeHref": "/",
+      "primaryLinks": [
+        {
+          "label" : "Buyer browse"
+        },
+        {
+          'url' : '/',
+          'label' : 'Support'
+        }
+      ]
+    })
+  }}
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+  {{ breadcrumb({
+  items: [
+    {
+      href: "/buyer-browse-v2",
+      text: "Welcome"
+    },
+    {
+      href: "/buyer-browse-v2/start-browse",
+      text: "Begin browse"
+    },
+    {
+      href: "/buyer-browse-v2/capability-selector",
+      text: "Capability Selector"
+    },
+    {
+      href: "/buyer-browse-v2/productivity/productivity-search-results",
+      text: "Search Results"
+    }
+  ],
+  href: "/buyer-browse-v2/productivity/productivity-deselect",
+  text: "Deselect Solutions"
+  }) }}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://beta.nhs.uk/service-manual/styles-components-patterns/layout -->
+{% block content %}
+<div class="nhsuk-u-padding-top-7 nhsuk-u-padding-bottom-7 buyer-browse-3">
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full" id="content">
+      <!-- Change the page title here -->
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-three-quarters">
+          <!-- Change the page title here -->
+          <h2>
+            Browse Solutions - Confirm deselection
+          </h2>
+
+          <h4 class="nhsuk-body-l">Below are the Solutions you have selected to remove from the competition.</h4>
+
+          <p>
+            You must provide valid feedback for every Solution you have chosen to deselect, please review this list before proceeding to the next step.
+          </p>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-half">
+          <p class="blue nhsuk-u-margin-top-6">
+            ← <a href="/buyer-browse-v2/productivity/productivity-deselect">Return to deselection</a>
+          </p>
+        </div>
+        <div class="nhsuk-grid-column-one-half">
+          <div class="view-results">
+            {{ button({
+              "text": "Continue: Provide feedback",
+              "href": "/buyer-browse-v2/productivity/productivity-feedback/solution-1"
+            }) }}
+          </div>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+          <div class="nhsuk-table-responsive">
+            <table class="nhsuk-table">
+              <thead class="nhsuk-table__head">
+                <tr class="nhsuk-table__row">
+                  <th class="nhsuk-table__header" scope="col">Solution name</th>
+                  <th class="nhsuk-table__header" scope="col">Base price</th>
+                  <th class="nhsuk-table__header" scope="col">Capabilities matched</th>
+                </tr>
+              </thead>
+              <tbody class="nhsuk-table__body">
+                <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell">
+                    <ul class="nhsuk-list nhsuk-list--cross">
+                    <li>
+                      <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z"></path>
+                        <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
+                      </svg>
+                      <b class="blue">Everva Diagnostics</b>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="nhsuk-table__cell ">£160 / per user</td>
+                  <td class="nhsuk-table__cell ">
+                    <ul>
+                      <li>Professional to Professional Communication</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell">
+                    <ul class="nhsuk-list nhsuk-list--cross">
+                    <li>
+                      <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z"></path>
+                        <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
+                      </svg>
+                      <b class="blue">Atmios DD</b>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="nhsuk-table__cell ">£75 / per patient</td>
+                  <td class="nhsuk-table__cell ">
+                    <ul>
+                      <li>Professional to Professional Communication</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell">
+                    <ul class="nhsuk-list nhsuk-list--cross">
+                    <li>
+                      <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z"></path>
+                        <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
+                      </svg>
+                      <b class="blue">Bioqem Diagnose</b>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="nhsuk-table__cell ">£90 / per user</td>
+                  <td class="nhsuk-table__cell ">
+                    <ul>
+                      <li>Professional to Professional Communication</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell">
+                    <ul class="nhsuk-list nhsuk-list--cross">
+                    <li>
+                      <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z"></path>
+                        <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
+                      </svg>
+                      <b class="blue">Protota Mobile</b>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="nhsuk-table__cell ">£12 / per user</td>
+                  <td class="nhsuk-table__cell ">
+                    <ul>
+                      <li>Professional to Professional Communication</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell">
+                    <ul class="nhsuk-list nhsuk-list--cross">
+                    <li>
+                      <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z"></path>
+                        <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
+                      </svg>
+                      <b class="blue">Biovus Manager</b>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="nhsuk-table__cell ">£110 / per user</td>
+                  <td class="nhsuk-table__cell ">
+                    <ul>
+                      <li>Professional to Professional Communication</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell">
+                    <ul class="nhsuk-list nhsuk-list--cross">
+                    <li>
+                      <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z"></path>
+                        <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
+                      </svg>
+                      <b class="blue">Chemegic Care</b>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="nhsuk-table__cell ">£20 / per patient</td>
+                  <td class="nhsuk-table__cell ">
+                    <ul>
+                      <li>Professional to Professional Communication</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell">
+                    <ul class="nhsuk-list nhsuk-list--cross">
+                    <li>
+                      <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z"></path>
+                        <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
+                      </svg>
+                      <b class="blue">Kinaegis CareDigital</b>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="nhsuk-table__cell ">£120 / per user</td>
+                  <td class="nhsuk-table__cell ">
+                    <ul>
+                      <li>Professional to Professional Communication</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell">
+                    <ul class="nhsuk-list nhsuk-list--cross">
+                    <li>
+                      <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z"></path>
+                        <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
+                      </svg>
+                      <b class="blue">Clarimy Budget</b>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="nhsuk-table__cell ">£120 / per user</td>
+                  <td class="nhsuk-table__cell ">
+                    <ul>
+                      <li>Professional to Professional Communication</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell">
+                    <ul class="nhsuk-list nhsuk-list--cross">
+                    <li>
+                      <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z"></path>
+                        <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
+                      </svg>
+                      <b class="blue">Uniwell Records</b>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="nhsuk-table__cell ">£50 / per user</td>
+                  <td class="nhsuk-table__cell ">
+                    <ul>
+                      <li>Professional to Professional Communication</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+      <!-- End of content -->
+
+
+{% endblock %}
+
+{% block footer %}
+  {{ nhsdFooter({
+    "list": "nhsuk-footer__list--three-columns",
+    "list1": [
+      {
+        "label": "About the Buying Catalogue"
+      },
+      {
+        "label": "Process overview"
+      }
+    ],
+    "list2": [
+      {
+        "label": "Catalogue submissions"
+      },
+      {
+        "label": "NHS Digital service desk"
+      }
+    ],
+    "list3": [
+      {
+        "label": "NHS Digital"
+      },
+      {
+        "label": "Capabilities and Standards Model"
+      }
+    ]
+  })}}
+{% endblock %}

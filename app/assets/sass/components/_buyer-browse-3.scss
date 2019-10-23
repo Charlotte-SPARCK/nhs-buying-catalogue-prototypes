@@ -1,4 +1,43 @@
 .buyer-browse-3 {
+  .view-results {
+    text-align: right;
+
+    h4 {
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: 16px;
+      margin-right: 20px;
+    }
+  }
+
+  .nhsuk-contents-list__item {
+    a {
+      text-decoration: none;
+      color: $color_nhsuk-black;
+    }
+  }
+
+  .box {
+    background-color: $color_nhsuk-white;
+    padding: 20px;
+    margin-bottom: 0;
+  }
+
+  .nhsuk-contents-list {
+    margin: 0;
+    .nhsuk-contents-list__list {
+      margin: 0;
+    }
+  }
+
+  .nhsuk-table-responsive {
+    margin: 0;
+
+    ul {
+      margin: 0;
+    }
+  }
+
   .nhsuk-details {
     .nhsuk-details__summary {
       color: $color_nhsuk-white;
@@ -13,17 +52,17 @@
     .nhsuk-details__text {
       border: none;
       padding-left: 0;
-
-      .productivity {
-        border-top: 2px solid $color_nhsuk-grey-3;
-        padding-top: 20px;
-        margin-top: 20px;
-      }
     }
   }
 
-  .solution-cards {
+  .productivity {
     border-top: 2px solid $color_nhsuk-grey-3;
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+
+  .solution-cards {
+    border-top: 2px solid $color_nhsuk-blue;
     padding-top: 40px;
     padding-bottom: 40px;
   }
@@ -32,7 +71,24 @@
     color: $color_nhsuk-blue;
   }
 
-  .view-results {
-    text-align: right;
+  .additional-services {
+    border-top: 2px solid $color_nhsuk-blue;
+    padding-top: 20px;
+  }
+
+  .nhsuk-table__cell {
+    vertical-align: top;
+  }
+
+  .nhsuk-panel--confirmation {
+    padding: 10px;
+
+    .nhsuk-panel__title {
+      text-align: left;
+    }
+
+    .nhsuk-panel__body {
+      text-align: left;
+    }
   }
 }

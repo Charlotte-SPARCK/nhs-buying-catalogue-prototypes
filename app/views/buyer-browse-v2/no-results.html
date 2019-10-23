@@ -34,10 +34,7 @@
 
 <!-- Breadcrumb goes inside the beforeContent block -->
 {% block beforeContent %}
-  {{ breadcrumb({
-  href: "/buyer-browse-v2/",
-  text: "Welcome"
-  }) }}
+
 {% endblock %}
 
 <!-- Your page content goes inside the content block -->
@@ -47,43 +44,25 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full" id="content">
       <!-- Change the page title here -->
-      <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-two-thirds">
-          <p>
-          </p>
-        </div>
-        <div class="nhsuk-grid-column-one-third">
-            <p class="blue">
-              ← <a href="/buyer-browse-v2/guide-5">Back: Additional services</a>
-            </p>
-        </div>
-      </div>
 
       <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-three-quarters">
+        <div class="nhsuk-grid-column-two-thirds">
 
           <!-- Change the page title here -->
           <h2>
-            Buying Catalogue - Begin browse
+            Browse Solutions - No Results Found
           </h2>
 
-          <h4>Choose if you would like to search for Foundation Solutions of if you would like to search for Solutions by selecting the Capabilities you are interested in.</h4>
+          <h4>There are no results that match this selection of Calabilities.</h4>
 
-          <p>
-            Select one of the following options.
+          <p>Try again with a new selection or reduce the amount of Capabilities you have selected.</p>
+        </div>
+      </div>
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+          <p class="blue">
+            ← <a href="/buyer-browse-v2/capability-selector">Try again</a>
           </p>
-
-          <div class="nhsuk-u-margin-top-7">
-            {{ actionLink({
-              "text": "Browse Foundation Solutions",
-              "href": "/buyer-browse-v2/foundation/foundation-result"
-            }) }}
-
-            {{ actionLink({
-              "text": "Browse Solutions by selecting Capabilities",
-              "href": "/buyer-browse-v2/capability-selector"
-            }) }}
-          </div>
         </div>
       </div>
     </div>

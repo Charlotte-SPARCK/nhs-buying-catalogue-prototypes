@@ -1,52 +1,26 @@
-// ES6 or Vanilla JavaScript
-function setCookie(cname, cvalue, exdays) {
-    var d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    var expires = "expires="+d.toUTCString();
+// Get the button, and when the user clicks on it, execute myFunction
+document.getElementById("view-results").onclick = function() {checkboxLink()};
 
-    var checkboxCookie = this.id + "=" + this.checked + "; " + expires;
-    document.cookie = checkboxCookie;
+/* myFunction */
+function checkboxLink() {
+  var digitalDiagnostics = document.getElementById("digital-diagnostics-1");
+  var digitalDiagnostics2 = document.getElementById("digital-diagnostics-2");
+  var productivityTheme = document.getElementById("professional-to-professional-1");
+  var noResults = document.getElementById("shared-care-plan");
+
+  if (digitalDiagnostics.checked == true) {
+    document.getElementById("view-results").setAttribute("href", "/buyer-browse-v2/capability-select/capability-search-results");
+  }
+  else if (digitalDiagnostics2.checked == true) {
+    document.getElementById("view-results").setAttribute("href", "/buyer-browse-v2/capability-select/capability-search-results");
+  }
+  else if (productivityTheme.checked == true) {
+    document.getElementById("view-results").setAttribute("href", "/buyer-browse-v2/productivity/productivity-search-results");
+  }
+  else if (noResults.checked == true) {
+    document.getElementById("view-results").setAttribute("href", "no-results");
+  }
+  else {
+    document.getElementById("view-results").setAttribute("href", "search-results");
+  }
 }
-
- var allInputs = document.getElementsByTagName("input");
- var  i=0;
-
- for (i=0; i<allInputs.length; i++){
-   allInputs[i].onclick=setCookie;
- }
-
-//To get a cookie:
-function getCookie(cname) {
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0; i<ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1);
-        if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
-    }
-    return "";
-}
-
-//Check if cookie exists on page load
-function checkCookieOnLoad() {
-   if(getCookie("client-application-type-1") == "true") {
-      // Show content and hide clicklink
-      document.getElementById("client-type-section-1").style.display = "block";
-      document.getElementById("disabled-1").style.display = "none";
-      document.getElementById("client-type-section-1").checked = true;
-   }
-   if(getCookie("client-application-type-2") == "true") {
-      // Show content and hide clicklink
-      document.getElementById("client-type-section-2").style.display = "block";
-      document.getElementById("disabled-2").style.display = "none";
-   }
-   if(getCookie("client-application-type-3") == "true") {
-      // Show content and hide clicklink
-      document.getElementById("client-type-section-3").style.display = "block";
-      document.getElementById("disabled-3").style.display = "none";
-   }
-}
-
-window.onload = function() {
-  checkCookieOnLoad();
-};

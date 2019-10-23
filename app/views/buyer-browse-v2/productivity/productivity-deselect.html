@@ -1,0 +1,1461 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  NHS Digital Buying Catalogue
+{% endblock %}
+
+{% block header %}
+  {{ nhsdHeader({
+      "showNav": "true",
+      "homeHref": "/",
+      "primaryLinks": [
+        {
+          "label" : "Buyer browse"
+        },
+        {
+          'url' : '/',
+          'label' : 'Support'
+        }
+      ]
+    })
+  }}
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+  {{ breadcrumb({
+  items: [
+    {
+      href: "/buyer-browse-v2",
+      text: "Welcome"
+    },
+    {
+      href: "/buyer-browse-v2/start-browse",
+      text: "Begin browse"
+    },
+    {
+      href: "/buyer-browse-v2/capability-selector",
+      text: "Capability Selector"
+    }
+  ],
+  href: "/buyer-browse-v2/productivity/productivity-search-results",
+  text: "Search Results"
+  }) }}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://beta.nhs.uk/service-manual/styles-components-patterns/layout -->
+{% block content %}
+<div class="nhsuk-u-padding-top-7 nhsuk-u-padding-bottom-7 buyer-browse-3">
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full" id="content">
+      <!-- Change the page title here -->
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-three-quarters">
+          <!-- Change the page title here -->
+          <h2>
+            Browse Solutions - Deselect Solutions
+          </h2>
+
+          <h4 class="nhsuk-body-l">Content.</h4>
+
+          <p>
+            Content.
+          </p>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-half">
+          <p class="blue nhsuk-u-margin-top-6">
+            ← <a href="/buyer-browse-v2/productivity/productivity-search-results">Return to search results</a>
+          </p>
+        </div>
+        <div class="nhsuk-grid-column-one-half">
+          <div class="view-results">
+            {{ button({
+              "text": "Continue: Confirm deselection",
+              "href": "/buyer-browse-v2/productivity/productivity-deselect-confirmation"
+            }) }}
+          </div>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+          <div class="solution-cards">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-three-quarters">
+                <p></p>
+              </div>
+              <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-left-9">
+                {{ checkboxes({
+                  "idPrefix": "deselect-1",
+                  "name": "deselect",
+                  "items": [
+                    {
+                      "value": "deselect",
+                      "text": "Deselect this Solution"
+                    }
+                  ]
+                }) }}
+              </div>
+            </div>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-third">
+                <h3 class="nhsuk-u-margin-bottom-0">Everva</h3>
+                <h2 class="nhsuk-u-margin-bottom-7"><a href="/buyer-browse-v2/productivity/productivity-mp/everva-diagnostics">Everva Diagnostics</a></h2>
+
+                <div class="nhsuk-u-margin-bottom-7 box">
+                  {{ fieldset({
+                    "legend": {
+                      "html": "<b>Capabilities this Solution offers</b>"
+                    }
+                  }) }}
+                  {{ hint({
+                    "text": "This Solution has 1 Capability in total."
+                  }) }}
+
+                  <div class="productivity">
+                    {{ fieldset({
+                      "legend": {
+                        "html": "<b>Supplied defined Capabilities</b>"
+                      }
+                    }) }}
+                    {{ contentsList({
+                      items: [
+                        {
+                          text: "Professional to professional communication",
+                          current: "true"
+                        }
+                      ]
+                    }) }}
+                  </div>
+                </div>
+              </div>
+              <div class="nhsuk-grid-column-two-thirds">
+                <h3 class="nhsuk-u-margin-bottom-0">Base price</h3>
+                <h2 class="nhsuk-u-margin-bottom-7">£160 / per user</h2>
+                <p class="nhsuk-u-margin-top-2">Everva Diagnostics is one of the most popular digital clinical systems in the UK. Our system is designed to be a complete solution that focuses on usability and clinical safety. This Solution supports joined-up working accross all care settings, helping you work towards the target of dissolving boundaries.</p>
+                <p><a href="/buyer-browse-v2/productivity/productivity-mp/everva-diagnostics">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+          <div class="solution-cards">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-three-quarters">
+                <p></p>
+              </div>
+              <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-left-9">
+                {{ checkboxes({
+                  "idPrefix": "deselect-1",
+                  "name": "deselect",
+                  "items": [
+                    {
+                      "value": "deselect",
+                      "text": "Deselect this Solution"
+                    }
+                  ]
+                }) }}
+              </div>
+            </div>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-third">
+                <h3 class="nhsuk-u-margin-bottom-0">Invios</h3>
+                <h2 class="nhsuk-u-margin-bottom-7"><a href="/buyer-browse-v2/productivity/productivity-mp/invios-multirequest">Invios MultiRequest</a></h2>
+
+                <div class="nhsuk-u-margin-bottom-7 box">
+                  {{ fieldset({
+                    "legend": {
+                      "html": "<b>Capabilities this Solution offers</b>"
+                    }
+                  }) }}
+                  {{ hint({
+                    "text": "This Solution has 2 Capabilities in total."
+                  }) }}
+
+                  {{ contentsList({
+                    items: [
+                      {
+                        text: "Reporting"
+                      }
+                    ]
+                  }) }}
+
+                  <div class="productivity">
+                    {{ fieldset({
+                      "legend": {
+                        "html": "<b>Supplied defined Capabilities</b>"
+                      }
+                    }) }}
+                    {{ contentsList({
+                      items: [
+                        {
+                          text: "Professional to professional communication",
+                          current: "true"
+                        }
+                      ]
+                    }) }}
+                  </div>
+                </div>
+              </div>
+              <div class="nhsuk-grid-column-two-thirds">
+                <h3 class="nhsuk-u-margin-bottom-0">Base price</h3>
+                <h2 class="nhsuk-u-margin-bottom-7">£1.60 / per patient</h2>
+                <p class="nhsuk-u-margin-top-2">Invios MultiRequest is one of the most popular digital clinical systems in the UK. Our system is designed to be a complete solution that focuses on usability and clinical safety. This Solution supports joined-up working accross all care settings, helping you work towards the target of dissolving boundaries.</p>
+                <p><a href="/buyer-browse-v2/productivity/productivity-mp/invios-multirequest">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+          <div class="solution-cards">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-three-quarters">
+                <p></p>
+              </div>
+              <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-left-9">
+                {{ checkboxes({
+                  "idPrefix": "deselect-1",
+                  "name": "deselect",
+                  "items": [
+                    {
+                      "value": "deselect",
+                      "text": "Deselect this Solution"
+                    }
+                  ]
+                }) }}
+              </div>
+            </div>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-third">
+                <h3 class="nhsuk-u-margin-bottom-0">Atmios</h3>
+                <h2 class="nhsuk-u-margin-bottom-7"><a href="/buyer-browse-v2/productivity/productivity-mp/atmios-dd">Atmios DD</a></h2>
+
+                <div class="nhsuk-u-margin-bottom-7 box">
+                  {{ fieldset({
+                    "legend": {
+                      "html": "<b>Capabilities this Solution offers</b>"
+                    }
+                  }) }}
+                  {{ hint({
+                    "text": "This Solution has 2 Capabilities in total."
+                  }) }}
+
+                  {{ contentsList({
+                    items: [
+                      {
+                        text: "Communication Management"
+                      }
+                    ]
+                  }) }}
+
+                  <div class="productivity">
+                    {{ fieldset({
+                      "legend": {
+                        "html": "<b>Supplied defined Capabilities</b>"
+                      }
+                    }) }}
+                    {{ contentsList({
+                      items: [
+                        {
+                          text: "Professional to professional communication",
+                          current: "true"
+                        }
+                      ]
+                    }) }}
+                  </div>
+                </div>
+              </div>
+              <div class="nhsuk-grid-column-two-thirds">
+                <h3 class="nhsuk-u-margin-bottom-0">Base price</h3>
+                <h2 class="nhsuk-u-margin-bottom-7">£75 / per patient</h2>
+                <p class="nhsuk-u-margin-top-2">Atmios DD is one of the most popular digital clinical systems in the UK. Our system is designed to be a complete solution that focuses on usability and clinical safety. This Solution supports joined-up working accross all care settings, helping you work towards the target of dissolving boundaries.</p>
+                <p><a href="/buyer-browse-v2/productivity/productivity-mp/atmios-dd">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+          <div class="solution-cards">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-three-quarters">
+                <p></p>
+              </div>
+              <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-left-9">
+                {{ checkboxes({
+                  "idPrefix": "deselect-1",
+                  "name": "deselect",
+                  "items": [
+                    {
+                      "value": "deselect",
+                      "text": "Deselect this Solution"
+                    }
+                  ]
+                }) }}
+              </div>
+            </div>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-third">
+                <h3 class="nhsuk-u-margin-bottom-0">Clarimy</h3>
+                <h2 class="nhsuk-u-margin-bottom-7"><a href="/buyer-browse-v2/productivity/productivity-mp/clarimy-access-diagnostics">Clarimy Access Diagnostics</a></h2>
+
+                <div class="nhsuk-u-margin-bottom-7 box">
+                  {{ fieldset({
+                    "legend": {
+                      "html": "<b>Capabilities this Solution offers</b>"
+                    }
+                  }) }}
+                  {{ hint({
+                    "text": "This Solution has 2 Capabilities in total."
+                  }) }}
+
+                  {{ contentsList({
+                    items: [
+                      {
+                        text: "Communication Management"
+                      }
+                    ]
+                  }) }}
+
+                  <div class="productivity">
+                    {{ fieldset({
+                      "legend": {
+                        "html": "<b>Supplied defined Capabilities</b>"
+                      }
+                    }) }}
+                    {{ contentsList({
+                      items: [
+                        {
+                          text: "Professional to professional communication",
+                          current: "true"
+                        }
+                      ]
+                    }) }}
+                  </div>
+                </div>
+              </div>
+              <div class="nhsuk-grid-column-two-thirds">
+                <h3 class="nhsuk-u-margin-bottom-0">Base price</h3>
+                <h2  class="nhsuk-u-margin-bottom-7">£9 / per patient</h2>
+                <p class="nhsuk-u-margin-top-2">Clarimy Access Diagnostics is one of the most popular digital clinical systems in the UK. Our system is designed to be a complete solution that focuses on usability and clinical safety. This Solution supports joined-up working accross all care settings, helping you work towards the target of dissolving boundaries.</p>
+                <p><a href="/buyer-browse-v2/productivity/productivity-mp/clarimy-access-diagnostics">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+          <div class="solution-cards">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-three-quarters">
+                <p></p>
+              </div>
+              <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-left-9">
+                {{ checkboxes({
+                  "idPrefix": "deselect-1",
+                  "name": "deselect",
+                  "items": [
+                    {
+                      "value": "deselect",
+                      "text": "Deselect this Solution"
+                    }
+                  ]
+                }) }}
+              </div>
+            </div>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-third">
+                <h3 class="nhsuk-u-margin-bottom-0">Bioqem</h3>
+                <h2 class="nhsuk-u-margin-bottom-7"><a href="/buyer-browse-v2/productivity/productivity-mp/bioqem-diagnose">Bioqem Diagnose</a></h2>
+
+                <div class="nhsuk-u-margin-bottom-7 box">
+                  {{ fieldset({
+                    "legend": {
+                      "html": "<b>Capabilities this Solution offers</b>"
+                    }
+                  }) }}
+                  {{ hint({
+                    "text": "This Solution has 6 Capabilities in total."
+                  }) }}
+
+                  {{ contentsList({
+                    items: [
+                      {
+                        text: "Document Management"
+                      },
+                      {
+                        text: "Recording Consultation"
+                      },
+                      {
+                        text: "Unified Care Record"
+                      },
+                      {
+                        text: "Care Homes"
+                      }
+                    ]
+                  }) }}
+
+                  <div class="productivity">
+                    {{ fieldset({
+                      "legend": {
+                        "html": "<b>Supplied defined Capabilities</b>"
+                      }
+                    }) }}
+                    {{ contentsList({
+                      items: [
+                        {
+                          text: "Professional to professional communication",
+                          current: "true"
+                        },
+                        {
+                          text: "Pathology/Patient Test Results"
+                        }
+                      ]
+                    }) }}
+                  </div>
+                </div>
+              </div>
+              <div class="nhsuk-grid-column-two-thirds">
+                <h3 class="nhsuk-u-margin-bottom-0">Base price</h3>
+                <h2  class="nhsuk-u-margin-bottom-7">£90 / per user</h2>
+                <p class="nhsuk-u-margin-top-2">Bioqem Diagnose is one of the most popular digital clinical systems in the UK. Our system is designed to be a complete solution that focuses on usability and clinical safety. This Solution supports joined-up working accross all care settings, helping you work towards the target of dissolving boundaries.</p>
+                <p><a href="/buyer-browse-v2/productivity/productivity-mp/bioqem-diagnose">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+          <div class="solution-cards">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-three-quarters">
+                <p></p>
+              </div>
+              <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-left-9">
+                {{ checkboxes({
+                  "idPrefix": "deselect-1",
+                  "name": "deselect",
+                  "items": [
+                    {
+                      "value": "deselect",
+                      "text": "Deselect this Solution"
+                    }
+                  ]
+                }) }}
+              </div>
+            </div>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-third">
+                <h3 class="nhsuk-u-margin-bottom-0">Protota</h3>
+                <h2 class="nhsuk-u-margin-bottom-7"><a href="/buyer-browse-v2/productivity/productivity-mp/protota-mobile">Protota Mobile</a></h2>
+
+                <div class="nhsuk-u-margin-bottom-7 box">
+                  {{ fieldset({
+                    "legend": {
+                      "html": "<b>Capabilities this Solution offers</b>"
+                    }
+                  }) }}
+                  {{ hint({
+                    "text": "This Solution has 7 Capabilities in total."
+                  }) }}
+
+                  {{ contentsList({
+                    items: [
+                      {
+                        text: "Document Management"
+                      },
+                      {
+                        text: "Scanning"
+                      },
+                      {
+                        text: "Reporting"
+                      },
+                      {
+                        text: "Recording Consultations"
+                      },
+                      {
+                        text: "Domiciliary Care"
+                      }
+                    ]
+                  }) }}
+
+                  <div class="productivity">
+                    {{ fieldset({
+                      "legend": {
+                        "html": "<b>Supplied defined Capabilities</b>"
+                      }
+                    }) }}
+                    {{ contentsList({
+                      items: [
+                        {
+                          text: "Professional to professional communication",
+                          current: "true"
+                        },
+                        {
+                          text: "Patient Check-In"
+                        }
+                      ]
+                    }) }}
+                  </div>
+                </div>
+              </div>
+              <div class="nhsuk-grid-column-two-thirds">
+                <h3 class="nhsuk-u-margin-bottom-0">Base price</h3>
+                <h2  class="nhsuk-u-margin-bottom-7">£12 / per user</h2>
+                <p class="nhsuk-u-margin-top-2">Protota Mobile is one of the most popular digital clinical systems in the UK. Our system is designed to be a complete solution that focuses on usability and clinical safety. This Solution supports joined-up working accross all care settings, helping you work towards the target of dissolving boundaries.</p>
+                <p><a href="/buyer-browse-v2/productivity/productivity-mp/protota-mobile">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+          <div class="solution-cards">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-three-quarters">
+                <p></p>
+              </div>
+              <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-left-9">
+                {{ checkboxes({
+                  "idPrefix": "deselect-1",
+                  "name": "deselect",
+                  "items": [
+                    {
+                      "value": "deselect",
+                      "text": "Deselect this Solution"
+                    }
+                  ]
+                }) }}
+              </div>
+            </div>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-third">
+                <h3 class="nhsuk-u-margin-bottom-0">Sinous</h3>
+                <h2 class="nhsuk-u-margin-bottom-7"><a href="/buyer-browse-v2/productivity/productivity-mp/sinous-investigation">Sinous Investigation</a></h2>
+
+                <div class="nhsuk-u-margin-bottom-7 box">
+                  {{ fieldset({
+                    "legend": {
+                      "html": "<b>Capabilities this Solution offers</b>"
+                    }
+                  }) }}
+                  {{ hint({
+                    "text": "This Solution has 9 Capabilities in total."
+                  }) }}
+
+                  {{ contentsList({
+                    items: [
+                      {
+                        text: "Scanning"
+                      },
+                      {
+                        text: "Unified Care Record"
+                      },
+                      {
+                        text: "Telehealth"
+                      },
+                      {
+                        text: "Risk Stratification"
+                      },
+                      {
+                        text: "Telecare"
+                      },
+                      {
+                        text: "Patient Information Maintenance"
+                      },
+                      {
+                        text: "Personal Health Budget"
+                      },
+                      {
+                        text: "View Record - Citizen"
+                      }
+                    ]
+                  }) }}
+
+                  <div class="productivity">
+                    {{ fieldset({
+                      "legend": {
+                        "html": "<b>Supplied defined Capabilities</b>"
+                      }
+                    }) }}
+                    {{ contentsList({
+                      items: [
+                        {
+                          text: "Professional to professional communication",
+                          current: "true"
+                        }
+                      ]
+                    }) }}
+                  </div>
+                </div>
+              </div>
+              <div class="nhsuk-grid-column-two-thirds">
+                <h3 class="nhsuk-u-margin-bottom-0">Base price</h3>
+                <h2  class="nhsuk-u-margin-bottom-7">£5 / per patient</h2>
+                <p class="nhsuk-u-margin-top-2">Sinous Investigation is one of the most popular digital clinical systems in the UK. Our system is designed to be a complete solution that focuses on usability and clinical safety. This Solution supports joined-up working accross all care settings, helping you work towards the target of dissolving boundaries.</p>
+                <p><a href="/buyer-browse-v2/productivity/productivity-mp/sinous-investigation">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+          <div class="solution-cards">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-three-quarters">
+                <p></p>
+              </div>
+              <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-left-9">
+                {{ checkboxes({
+                  "idPrefix": "deselect-1",
+                  "name": "deselect",
+                  "items": [
+                    {
+                      "value": "deselect",
+                      "text": "Deselect this Solution"
+                    }
+                  ]
+                }) }}
+              </div>
+            </div>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-third">
+                <h3 class="nhsuk-u-margin-bottom-0">Biovus</h3>
+                <h2 class="nhsuk-u-margin-bottom-7"><a href="/buyer-browse-v2/productivity/productivity-mp/biovus-manager">Biovus Manager</a></h2>
+
+                <div class="nhsuk-u-margin-bottom-7 box">
+                  {{ fieldset({
+                    "legend": {
+                      "html": "<b>Capabilities this Solution offers</b>"
+                    }
+                  }) }}
+                  {{ hint({
+                    "text": "This Solution has 11 Capabilities in total."
+                  }) }}
+
+                  {{ contentsList({
+                    items: [
+                      {
+                        text: "Document Management"
+                      },
+                      {
+                        text: "Scanning"
+                      },
+                      {
+                        text: "Reporting"
+                      },
+                      {
+                        text: "Recording Consultations"
+                      },
+                      {
+                        text: "Domiciliary Care"
+                      },
+                      {
+                        text: "Unified Care Record"
+                      },
+                      {
+                        text: "Care Homes"
+                      }
+                    ]
+                  }) }}
+
+                  <div class="productivity">
+                    {{ fieldset({
+                      "legend": {
+                        "html": "<b>Supplied defined Capabilities</b>"
+                      }
+                    }) }}
+                    {{ contentsList({
+                      items: [
+                        {
+                          text: "Professional to professional communication",
+                          current: "true"
+                        },
+                        {
+                          text: "Medical device integration"
+                        },
+                        {
+                          text: "NHS Health Check"
+                        }
+                      ]
+                    }) }}
+                  </div>
+
+                  <p class="nhsuk-u-margin-top-3"><a href="/buyer-browse-v2/productivity/productivity-mp/biovus-manager#capabilities-met">View all Capabilities</a></p>
+                </div>
+              </div>
+              <div class="nhsuk-grid-column-two-thirds">
+                <h3 class="nhsuk-u-margin-bottom-0">Base price</h3>
+                <h2  class="nhsuk-u-margin-bottom-7">£110 / per user</h2>
+                <p class="nhsuk-u-margin-top-2">Biovus Manager is one of the most popular digital clinical systems in the UK. Our system is designed to be a complete solution that focuses on usability and clinical safety. This Solution supports joined-up working accross all care settings, helping you work towards the target of dissolving boundaries.</p>
+                <p><a href="/buyer-browse-v2/productivity/productivity-mp/biovus-manager">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+          <div class="solution-cards">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-three-quarters">
+                <p></p>
+              </div>
+              <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-left-9">
+                {{ checkboxes({
+                  "idPrefix": "deselect-1",
+                  "name": "deselect",
+                  "items": [
+                    {
+                      "value": "deselect",
+                      "text": "Deselect this Solution"
+                    }
+                  ]
+                }) }}
+              </div>
+            </div>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-third">
+                <h3 class="nhsuk-u-margin-bottom-0">Chemegic</h3>
+                <h2 class="nhsuk-u-margin-bottom-7"><a href="/buyer-browse-v2/productivity/productivity-mp/chemegic-care">Chemegic Care</a></h2>
+
+                <div class="nhsuk-u-margin-bottom-7 box">
+                  {{ fieldset({
+                    "legend": {
+                      "html": "<b>Capabilities this Solution offers</b>"
+                    }
+                  }) }}
+                  {{ hint({
+                    "text": "This Solution has 11 Capabilities in total."
+                  }) }}
+
+                  {{ contentsList({
+                    items: [
+                      {
+                        text: "Document Management"
+                      },
+                      {
+                        text: "Scanning"
+                      },
+                      {
+                        text: "Reporting"
+                      },
+                      {
+                        text: "Recording Consultations"
+                      },
+                      {
+                        text: "Domiciliary Care"
+                      },
+                      {
+                        text: "Unified Care Record"
+                      },
+                      {
+                        text: "Care Homes"
+                      }
+                    ]
+                  }) }}
+
+                  <div class="productivity">
+                    {{ fieldset({
+                      "legend": {
+                        "html": "<b>Supplied defined Capabilities</b>"
+                      }
+                    }) }}
+                    {{ contentsList({
+                      items: [
+                        {
+                          text: "Professional to professional communication",
+                          current: "true"
+                        },
+                        {
+                          text: "SMS"
+                        },
+                        {
+                          text: "Panic Alert"
+                        }
+                      ]
+                    }) }}
+                  </div>
+
+                  <p class="nhsuk-u-margin-top-3"><a href="/buyer-browse-v2/productivity/productivity-mp/chemegic-care#capabilities-met">View all Capabilities</a></p>
+                </div>
+              </div>
+              <div class="nhsuk-grid-column-two-thirds">
+                <h3 class="nhsuk-u-margin-bottom-0">Base price</h3>
+                <h2  class="nhsuk-u-margin-bottom-7">£20 / per patient</h2>
+                <p class="nhsuk-u-margin-top-2">Chemegic Care is one of the most popular digital clinical systems in the UK. Our system is designed to be a complete solution that focuses on usability and clinical safety. This Solution supports joined-up working accross all care settings, helping you work towards the target of dissolving boundaries.</p>
+                <p><a href="/buyer-browse-v2/productivity/productivity-mp/chemegic-care">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+          <div class="solution-cards">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-three-quarters">
+                <p></p>
+              </div>
+              <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-left-9">
+                {{ checkboxes({
+                  "idPrefix": "deselect-1",
+                  "name": "deselect",
+                  "items": [
+                    {
+                      "value": "deselect",
+                      "text": "Deselect this Solution"
+                    }
+                  ]
+                }) }}
+              </div>
+            </div>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-third">
+                <h3 class="nhsuk-u-margin-bottom-0">Kinaegis</h3>
+                <h2 class="nhsuk-u-margin-bottom-7"><a href="/buyer-browse-v2/productivity/productivity-mp/kinaegis-caredigital">Kinaegis CareDigital</a></h2>
+
+                <div class="nhsuk-u-margin-bottom-7 box">
+                  {{ fieldset({
+                    "legend": {
+                      "html": "<b>Capabilities this Solution offers</b>"
+                    }
+                  }) }}
+                  {{ hint({
+                    "text": "This Solution has 15 Capabilities in total."
+                  }) }}
+
+                  {{ contentsList({
+                    items: [
+                      {
+                        text: "Document Management"
+                      },
+                      {
+                        text: "Scanning"
+                      },
+                      {
+                        text: "Reporting"
+                      },
+                      {
+                        text: "Recording Consultations"
+                      },
+                      {
+                        text: "Domiciliary Care"
+                      },
+                      {
+                        text: "Unified Care Record"
+                      },
+                      {
+                        text: "Care Homes"
+                      },
+                      {
+                        text: "Telehealth"
+                      }
+                    ]
+                  }) }}
+
+                  <div class="productivity">
+                    {{ fieldset({
+                      "legend": {
+                        "html": "<b>Supplied defined Capabilities</b>"
+                      }
+                    }) }}
+                    {{ contentsList({
+                      items: [
+                        {
+                          text: "Professional to professional communication",
+                          current: "true"
+                        },
+                        {
+                          text: "Dictation"
+                        }
+                      ]
+                    }) }}
+                  </div>
+
+                  <p class="nhsuk-u-margin-top-3"><a href="/buyer-browse-v2/productivity/productivity-mp/kinaegis-caredigital#capabilities-met">View all Capabilities</a></p>
+                </div>
+              </div>
+              <div class="nhsuk-grid-column-two-thirds">
+                <h3 class="nhsuk-u-margin-bottom-0">Base price</h3>
+                <h2  class="nhsuk-u-margin-bottom-7">£120 / per user</h2>
+                <p class="nhsuk-u-margin-top-2">Kinaegis CareDigital is one of the most popular digital clinical systems in the UK. Our system is designed to be a complete solution that focuses on usability and clinical safety. This Solution supports joined-up working accross all care settings, helping you work towards the target of dissolving boundaries.</p>
+                <p><a href="/buyer-browse-v2/productivity/productivity-mp/kinaegis-caredigital">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+          <div class="solution-cards">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-three-quarters">
+                <p></p>
+              </div>
+              <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-left-9">
+                {{ checkboxes({
+                  "idPrefix": "deselect-1",
+                  "name": "deselect",
+                  "items": [
+                    {
+                      "value": "deselect",
+                      "text": "Deselect this Solution"
+                    }
+                  ]
+                }) }}
+              </div>
+            </div>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-third">
+                <h3 class="nhsuk-u-margin-bottom-0">Clarimy</h3>
+                <h2 class="nhsuk-u-margin-bottom-7"><a href="/buyer-browse-v2/productivity/productivity-mp/clarimy-budget">Clarimy Budget</a></h2>
+
+                <div class="nhsuk-u-margin-bottom-7 box">
+                  {{ fieldset({
+                    "legend": {
+                      "html": "<b>Capabilities this Solution offers</b>"
+                    }
+                  }) }}
+                  {{ hint({
+                    "text": "This Solution has 17 Capabilities in total."
+                  }) }}
+
+                  {{ contentsList({
+                    items: [
+                      {
+                        text: "Document Management"
+                      },
+                      {
+                        text: "Scanning"
+                      },
+                      {
+                        text: "Reporting"
+                      },
+                      {
+                        text: "Recording Consultations"
+                      },
+                      {
+                        text: "Domiciliary Care"
+                      },
+                      {
+                        text: "Unified Care Record"
+                      },
+                      {
+                        text: "Care Homes"
+                      },
+                      {
+                        text: "Telehealth"
+                      }
+                    ]
+                  }) }}
+
+                  <div class="productivity">
+                    {{ fieldset({
+                      "legend": {
+                        "html": "<b>Supplied defined Capabilities</b>"
+                      }
+                    }) }}
+                    {{ contentsList({
+                      items: [
+                        {
+                          text: "Professional to professional communication",
+                          current: "true"
+                        },
+                        {
+                          text: "Clinical Data Extraction"
+                        }
+                      ]
+                    }) }}
+                  </div>
+
+                  <p class="nhsuk-u-margin-top-3"><a href="/buyer-browse-v2/productivity/productivity-mp/clarimy-budget#capabilities-met">View all Capabilities</a></p>
+                </div>
+              </div>
+              <div class="nhsuk-grid-column-two-thirds">
+                <h3 class="nhsuk-u-margin-bottom-0">Base price</h3>
+                <h2  class="nhsuk-u-margin-bottom-7">£120 / per user</h2>
+                <p class="nhsuk-u-margin-top-2">Clarimy Budget is one of the most popular digital clinical systems in the UK. Our system is designed to be a complete solution that focuses on usability and clinical safety. This Solution supports joined-up working accross all care settings, helping you work towards the target of dissolving boundaries.</p>
+                <p><a href="/buyer-browse-v2/productivity/productivity-mp/clarimy-budget">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+          <div class="solution-cards">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-three-quarters">
+                <p></p>
+              </div>
+              <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-left-9">
+                {{ checkboxes({
+                  "idPrefix": "deselect-1",
+                  "name": "deselect",
+                  "items": [
+                    {
+                      "value": "deselect",
+                      "text": "Deselect this Solution"
+                    }
+                  ]
+                }) }}
+              </div>
+            </div>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-third">
+                <h3 class="nhsuk-u-margin-bottom-0">Uniwell</h3>
+                <h2 class="nhsuk-u-margin-bottom-7"><a href="/buyer-browse-v2/productivity/productivity-mp/uniwell-records">Uniwell Records</a></h2>
+
+                <div class="nhsuk-u-margin-bottom-7 box">
+                  {{ fieldset({
+                    "legend": {
+                      "html": "<b>Capabilities this Solution offers</b>"
+                    }
+                  }) }}
+                  {{ hint({
+                    "text": "This Solution has 20 Capabilities in total."
+                  }) }}
+
+                  {{ contentsList({
+                    items: [
+                      {
+                        text: "Document Management"
+                      },
+                      {
+                        text: "Scanning"
+                      },
+                      {
+                        text: "Reporting"
+                      },
+                      {
+                        text: "Recording Consultations"
+                      },
+                      {
+                        text: "Domiciliary Care"
+                      },
+                      {
+                        text: "Unified Care Record"
+                      },
+                      {
+                        text: "Care Homes"
+                      },
+                      {
+                        text: "Telehealth"
+                      }
+                    ]
+                  }) }}
+
+                  <div class="productivity">
+                    {{ fieldset({
+                      "legend": {
+                        "html": "<b>Supplied defined Capabilities</b>"
+                      }
+                    }) }}
+                    {{ contentsList({
+                      items: [
+                        {
+                          text: "Professional to professional communication",
+                          current: "true"
+                        },
+                        {
+                          text: "Appointment Booking"
+                        }
+                      ]
+                    }) }}
+                  </div>
+
+                  <p class="nhsuk-u-margin-top-3"><a href="/buyer-browse-v2/productivity/productivity-mp/uniwell-records#capabilities-met">View all Capabilities</a></p>
+                </div>
+              </div>
+              <div class="nhsuk-grid-column-two-thirds">
+                <h3 class="nhsuk-u-margin-bottom-0">Base price</h3>
+                <h2  class="nhsuk-u-margin-bottom-7">£50 / per patient</h2>
+                <p class="nhsuk-u-margin-top-2">Uniwell Records is one of the most popular digital clinical systems in the UK. Our system is designed to be a complete solution that focuses on usability and clinical safety. This Solution supports joined-up working accross all care settings, helping you work towards the target of dissolving boundaries.</p>
+                <p><a href="/buyer-browse-v2/productivity/productivity-mp/uniwell-records">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+          <div class="solution-cards">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-three-quarters">
+                <p></p>
+              </div>
+              <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-left-9">
+                {{ checkboxes({
+                  "idPrefix": "deselect-1",
+                  "name": "deselect",
+                  "items": [
+                    {
+                      "value": "deselect",
+                      "text": "Deselect this Solution"
+                    }
+                  ]
+                }) }}
+              </div>
+            </div>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-third">
+                <h3 class="nhsuk-u-margin-bottom-0">Chemixal</h3>
+                <h2 class="nhsuk-u-margin-bottom-7"><a href="/buyer-browse-v2/productivity/productivity-mp/chemixal-multipatient">Chemixal MultiPatient</a></h2>
+
+                <div class="nhsuk-u-margin-bottom-7 box">
+                  {{ fieldset({
+                    "legend": {
+                      "html": "<b>Capabilities this Solution offers</b>"
+                    }
+                  }) }}
+                  {{ hint({
+                    "text": "This Solution has 20 Capabilities in total."
+                  }) }}
+
+                  {{ contentsList({
+                    items: [
+                      {
+                        text: "Document Management"
+                      },
+                      {
+                        text: "Scanning"
+                      },
+                      {
+                        text: "Reporting"
+                      },
+                      {
+                        text: "Recording Consultations"
+                      },
+                      {
+                        text: "Domiciliary Care"
+                      },
+                      {
+                        text: "Unified Care Record"
+                      },
+                      {
+                        text: "Care Homes"
+                      },
+                      {
+                        text: "Telehealth"
+                      }
+                    ]
+                  }) }}
+
+                  <div class="productivity">
+                    {{ fieldset({
+                      "legend": {
+                        "html": "<b>Supplied defined Capabilities</b>"
+                      }
+                    }) }}
+                    {{ contentsList({
+                      items: [
+                        {
+                          text: "Professional to professional communication",
+                          current: "true"
+                        },
+                        {
+                          text: "Medication Review"
+                        }
+                      ]
+                    }) }}
+                  </div>
+
+                  <p class="nhsuk-u-margin-top-3"><a href="/buyer-browse-v2/productivity/productivity-mp/chemixal-multipatient#capabilities-met">View all Capabilities</a></p>
+                </div>
+              </div>
+              <div class="nhsuk-grid-column-two-thirds">
+                <h3 class="nhsuk-u-margin-bottom-0">Base price</h3>
+                <h2  class="nhsuk-u-margin-bottom-7">£18 / per user</h2>
+                <p class="nhsuk-u-margin-top-2">Chemixal MultiPatient is one of the most popular digital clinical systems in the UK. Our system is designed to be a complete solution that focuses on usability and clinical safety. This Solution supports joined-up working accross all care settings, helping you work towards the target of dissolving boundaries.</p>
+                <p><a href="/buyer-browse-v2/productivity/productivity-mp/chemixal-multipatient">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+          <div class="solution-cards">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-three-quarters">
+                <p></p>
+              </div>
+              <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-left-9">
+                {{ checkboxes({
+                  "idPrefix": "deselect-1",
+                  "name": "deselect",
+                  "items": [
+                    {
+                      "value": "deselect",
+                      "text": "Deselect this Solution"
+                    }
+                  ]
+                }) }}
+              </div>
+            </div>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-third">
+                <h3 class="nhsuk-u-margin-bottom-0">Sinous</h3>
+                <h2 class="nhsuk-u-margin-bottom-7"><a href="/buyer-browse-v2/productivity/productivity-mp/sinous-digital">Sinous Digital, 1.0</a></h2>
+
+                <div class="nhsuk-u-margin-bottom-7 box">
+                  {{ fieldset({
+                    "legend": {
+                      "html": "<b>Capabilities this Solution offers</b>"
+                    }
+                  }) }}
+                  {{ hint({
+                    "text": "This Solution has 5 Capabilities in total."
+                  }) }}
+
+                  {{ contentsList({
+                    items: [
+                      {
+                        text: "Unified Care Record"
+                      },
+                      {
+                        text: "Telehealth"
+                      },
+                      {
+                        text: "Telecare"
+                      },
+                      {
+                        text: "Personal Health Budget"
+                      },
+                      {
+                        text: "View Record - Citizen"
+                      }
+                    ]
+                  }) }}
+                </div>
+              </div>
+              <div class="nhsuk-grid-column-two-thirds">
+                <h3 class="nhsuk-u-margin-bottom-0">Base price</h3>
+                <h2 class="nhsuk-u-margin-bottom-7">£2.50 / per user</h2>
+                <p class="nhsuk-u-margin-top-2">Sinous Digital is one of the most popular digital clinical systems in the UK. Our system is designed to be a complete solution that focuses on usability and clinical safety. This Solution supports joined-up working accross all care settings, helping you work towards the target of dissolving boundaries.</p>
+                <p><a href="/buyer-browse-v2/productivity/productivity-mp/sinous-digital">Learn more</a></p>
+
+                <div class="nhsuk-table-responsive">
+                  <table class="nhsuk-table">
+                    <thead class="nhsuk-table__head">
+                      <tr class="nhsuk-table__row">
+                        <th class="nhsuk-table__header" scope="col">Additional Service</th>
+                        <th class="nhsuk-table__header" scope="col">Base price</th>
+                        <th class="nhsuk-table__header" scope="col">Capabilities matched</th>
+                      </tr>
+                    </thead>
+                    <tbody class="nhsuk-table__body">
+                      <tr class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell"><b><a href="/buyer-browse-v2/productivity/productivity-mp/sinous-digital#additional-services">ProCommunicate</a></b></td>
+                        <td class="nhsuk-table__cell">£250 per month</td>
+                        <td class="nhsuk-table__cell">
+                          <ul>
+                             <li>Professional to professional communication</li><a href="/buyer-browse-v2/productivity-mp/sinous-digital#additional-services">View all 3 Capabilities</a>
+                           </ul>
+                         </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+          <div class="solution-cards">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-three-quarters">
+                <p></p>
+              </div>
+              <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-left-9">
+                {{ checkboxes({
+                  "idPrefix": "deselect-1",
+                  "name": "deselect",
+                  "items": [
+                    {
+                      "value": "deselect",
+                      "text": "Deselect this Solution"
+                    }
+                  ]
+                }) }}
+              </div>
+            </div>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-third">
+                <h3 class="nhsuk-u-margin-bottom-0">Atmios</h3>
+                <h2 class="nhsuk-u-margin-bottom-7"><a href="/buyer-browse-v2/productivity/productivity-mp/atmios-multidiagnose">Atmios MultiDiagnose</a></h2>
+
+                <div class="nhsuk-u-margin-bottom-7 box">
+                  {{ fieldset({
+                    "legend": {
+                      "html": "<b>Capabilities this Solution offers</b>"
+                    }
+                  }) }}
+                  {{ hint({
+                    "text": "This Solution has 16 Capabilities in total."
+                  }) }}
+
+                  {{ contentsList({
+                    items: [
+                      {
+                        text: "Document Management"
+                      },
+                      {
+                        text: "Scanning"
+                      },
+                      {
+                        text: "Reporting"
+                      },
+                      {
+                        text: "Domiciliary Care"
+                      },
+                      {
+                        text: "Unified Care Record"
+                      },
+                      {
+                        text: "Telehealth"
+                      },
+                      {
+                        text: "Communication management"
+                      },
+                      {
+                        text: "Shared care plans"
+                      },
+                      {
+                        text: "Telecare"
+                      },
+                      {
+                        text: "Dispensing"
+                      },
+                      {
+                        text: "Patient Information Maintenance"
+                      }
+                    ]
+                  }) }}
+
+                  <p class="nhsuk-u-margin-top-3"><a href="/buyer-browse-v2/productivity/productivity-mp/atmios-multidiagnose#capabilities-met">View all Capabilities</a></p>
+                </div>
+              </div>
+              <div class="nhsuk-grid-column-two-thirds">
+                <h3 class="nhsuk-u-margin-bottom-0">Base price</h3>
+                <h2 class="nhsuk-u-margin-bottom-7">£16 / per patient</h2>
+                <p class="nhsuk-u-margin-top-2">Atmios MultiDiagnose is one of the most popular digital clinical systems in the UK. Our system is designed to be a complete solution that focuses on usability and clinical safety. This Solution supports joined-up working accross all care settings, helping you work towards the target of dissolving boundaries.</p>
+                <p><a href="/buyer-browse-v2/productivity/productivity-mp/atmios-multidiagnose">Learn more</a></p>
+
+                <div class="nhsuk-table-responsive">
+                  <table class="nhsuk-table">
+                    <thead class="nhsuk-table__head">
+                      <tr class="nhsuk-table__row">
+                        <th class="nhsuk-table__header" scope="col">Additional Service</th>
+                        <th class="nhsuk-table__header" scope="col">Base price</th>
+                        <th class="nhsuk-table__header" scope="col">Capabilities matched</th>
+                      </tr>
+                    </thead>
+                    <tbody class="nhsuk-table__body">
+                      <tr class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell"><b><a href="/buyer-browse-v2/productivity/productivity-mp/atmios-multidiagnose#additional-services">CommsPro</a></b></td>
+                        <td class="nhsuk-table__cell">£800 per user</td>
+                        <td class="nhsuk-table__cell">
+                          <ul>
+                             <li>Professional to professional communication</li><a href="/buyer-browse-v2/productivity/productivity-mp/atmios-multidiagnose#additional-services">View all 4 Capabilities</a>
+                           </ul>
+                         </td>
+                      </tr>
+                        <tr class="nhsuk-table__row">
+                          <td class="nhsuk-table__cell"><b><a href="/buyer-browse-v2/productivity/productivity-mp/atmios-multidiagnose#additional-services">Pro2Pro</a></b></td>
+                          <td class="nhsuk-table__cell">£250 per user</td>
+                          <td class="nhsuk-table__cell">
+                            <ul>
+                               <li>Professional to professional communication</li><a href="/buyer-browse-v2/productivity/productivity-mp/atmios-multidiagnose#additional-services">View all 7 Capabilities</a>
+                             </ul>
+                           </td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+      <!-- End of content -->
+
+
+{% endblock %}
+
+{% block footer %}
+  {{ nhsdFooter({
+    "list": "nhsuk-footer__list--three-columns",
+    "list1": [
+      {
+        "label": "About the Buying Catalogue"
+      },
+      {
+        "label": "Process overview"
+      }
+    ],
+    "list2": [
+      {
+        "label": "Catalogue submissions"
+      },
+      {
+        "label": "NHS Digital service desk"
+      }
+    ],
+    "list3": [
+      {
+        "label": "NHS Digital"
+      },
+      {
+        "label": "Capabilities and Standards Model"
+      }
+    ]
+  })}}
+{% endblock %}

@@ -34,20 +34,28 @@
 
 <!-- Breadcrumb goes inside the beforeContent block -->
 {% block beforeContent %}
-  {{ breadcrumb({
-  items: [
-    {
-      href: "/buyer-browse-v2",
-      text: "Welcome"
-    },
-    {
-      href: "/buyer-browse-v2/start-browse",
-      text: "Begin browse"
-    }
-  ],
-  href: "/buyer-browse-v2/capability-selector",
-  text: "Capability Selector"
-  }) }}
+{{ breadcrumb({
+items: [
+  {
+    href: "/buyer-browse-v2",
+    text: "Welcome"
+  },
+  {
+    href: "/buyer-browse-v2/start-browse",
+    text: "Begin browse"
+  },
+  {
+    href: "/buyer-browse-v2/capability-selector",
+    text: "Capability Selector"
+  },
+  {
+    href: "/buyer-browse-v2/productivity/productivity-search-results",
+    text: "Search Results"
+  }
+],
+href: "/buyer-browse-v2/productivity/productivity-deselect",
+text: "Deselect Solutions"
+}) }}
 {% endblock %}
 
 <!-- Your page content goes inside the content block -->
@@ -61,13 +69,13 @@
         <div class="nhsuk-grid-column-three-quarters">
           <!-- Change the page title here -->
           <h2>
-            Browse Solutions - Search Results
+            Browse Solutions - Remaining Results
           </h2>
 
-          <h4 class="nhsuk-body-l">Below are all the Solutions on the Buying Catalogue that match some or all of the Capabilities you have selected.</h4>
+          <h4 class="nhsuk-body-l">Below are all the Solutions remaining after deselection and providing feedback.</h4>
 
           <p>
-            All Solutions contain their own set Capabilities including some or all of the Capabilities you have selected. Some of the Solutions have Additional Services offering one or more of the Capabilities you selected, these services can be purchased at an additional cost to allow the Solution to meet your needs.
+            These will be the results you will be taking to competition. You can deselect further Solutions or continue to start a competition.
           </p>
         </div>
       </div>
@@ -75,13 +83,13 @@
       <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-one-half">
           <p class="blue nhsuk-u-margin-top-6">
-            ← <a href="/buyer-browse-v2/capability-selector">Search again</a>
           </p>
         </div>
         <div class="nhsuk-grid-column-one-half">
           <div class="view-results">
+            <h4 class="nhsuk-u-margin-top-2">6 results in total</h4>
             {{ button({
-              "text": "Continue: Start deselection"
+              "text": "Continue: Start a competition"
             }) }}
           </div>
         </div>
@@ -93,7 +101,7 @@
             <div class="nhsuk-grid-row">
               <div class="nhsuk-grid-column-one-third">
                 <h3 class="nhsuk-u-margin-bottom-0">Invios</h3>
-                <h2 class="nhsuk-u-margin-bottom-7"><a href="/buyer-browse-v2/marketing-pages/invios-multirequest">Invios MultiRequest</a></h2>
+                <h2 class="nhsuk-u-margin-bottom-7"><a href="/buyer-browse-v2/productivity/productivity-mp/invios-multirequest">Invios MultiRequest</a></h2>
 
                 <div class="nhsuk-u-margin-bottom-7 box">
                   {{ fieldset({
@@ -107,140 +115,8 @@
 
                   {{ contentsList({
                     items: [
-                      {
-                        text: "Unified Care Record"
-                      },
                       {
                         text: "Reporting"
-                      }
-                    ]
-                  }) }}
-                </div>
-              </div>
-              <div class="nhsuk-grid-column-two-thirds">
-                <h3 class="nhsuk-u-margin-bottom-0">Base price</h3>
-                <h2 class="nhsuk-u-margin-bottom-7">£1.60 / per patient</h2>
-                <p class="nhsuk-u-margin-top-2">Invios MultiRequest is one of the most popular digital clinical systems in the UK. Our system is designed to be a complete solution that focuses on usability and clinical safety. This Solution supports joined-up working accross all care settings, helping you work towards the target of dissolving boundaries.</p>
-                <p><a href="/buyer-browse-v2/marketing-pages/invios-multirequest">Learn more</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-full">
-          <div class="solution-cards">
-            <div class="nhsuk-grid-row">
-              <div class="nhsuk-grid-column-one-third">
-                <h3 class="nhsuk-u-margin-bottom-0">Atmios</h3>
-                <h2 class="nhsuk-u-margin-bottom-7"><a href="/buyer-browse-v2/marketing-pages/atmios-dd">Atmios DD</a></h2>
-
-                <div class="nhsuk-u-margin-bottom-7 box">
-                  {{ fieldset({
-                    "legend": {
-                      "html": "<b>Capabilities this Solution offers</b>"
-                    }
-                  }) }}
-                  {{ hint({
-                    "text": "This Solution has 2 Capabilities in total."
-                  }) }}
-
-                  {{ contentsList({
-                    items: [
-                      {
-                        text: "Dispensing"
-                      },
-                      {
-                        text: "Communication Management"
-                      }
-                    ]
-                  }) }}
-                </div>
-              </div>
-              <div class="nhsuk-grid-column-two-thirds">
-                <h3 class="nhsuk-u-margin-bottom-0">Base price</h3>
-                <h2 class="nhsuk-u-margin-bottom-7">£75 / per patient</h2>
-                <p class="nhsuk-u-margin-top-2">Atmios DD is one of the most popular digital clinical systems in the UK. Our system is designed to be a complete solution that focuses on usability and clinical safety. This Solution supports joined-up working accross all care settings, helping you work towards the target of dissolving boundaries.</p>
-                <p><a href="/buyer-browse-v2/marketing-pages/atmios-dd">Learn more</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-full">
-          <div class="solution-cards">
-            <div class="nhsuk-grid-row">
-              <div class="nhsuk-grid-column-one-third">
-                <h3 class="nhsuk-u-margin-bottom-0">Clarimy</h3>
-                <h2 class="nhsuk-u-margin-bottom-7"><a href="/buyer-browse-v2/marketing-pages/clarimy-access-diagnostics">Clarimy Access Diagnostics</a></h2>
-
-                <div class="nhsuk-u-margin-bottom-7 box">
-                  {{ fieldset({
-                    "legend": {
-                      "html": "<b>Capabilities this Solution offers</b>"
-                    }
-                  }) }}
-                  {{ hint({
-                    "text": "This Solution has 2 Capabilities in total."
-                  }) }}
-
-                  {{ contentsList({
-                    items: [
-                      {
-                        text: "Dispensing"
-                      },
-                      {
-                        text: "Communication Management"
-                      }
-                    ]
-                  }) }}
-                </div>
-              </div>
-              <div class="nhsuk-grid-column-two-thirds">
-                <h3 class="nhsuk-u-margin-bottom-0">Base price</h3>
-                <h2  class="nhsuk-u-margin-bottom-7">£9 / per patient</h2>
-                <p class="nhsuk-u-margin-top-2">Clarimy Access Diagnostics is one of the most popular digital clinical systems in the UK. Our system is designed to be a complete solution that focuses on usability and clinical safety. This Solution supports joined-up working accross all care settings, helping you work towards the target of dissolving boundaries.</p>
-                <p><a href="/buyer-browse-v2/marketing-pages/clarimy-access-diagnostics">Learn more</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-full">
-          <div class="solution-cards">
-            <div class="nhsuk-grid-row">
-              <div class="nhsuk-grid-column-one-third">
-                <h3 class="nhsuk-u-margin-bottom-0">Bioqem</h3>
-                <h2 class="nhsuk-u-margin-bottom-7"><a href="/buyer-browse-v2/marketing-pages/bioqem-diagnose">Bioqem Diagnose</a></h2>
-
-                <div class="nhsuk-u-margin-bottom-7 box">
-                  {{ fieldset({
-                    "legend": {
-                      "html": "<b>Capabilities this Solution offers</b>"
-                    }
-                  }) }}
-                  {{ hint({
-                    "text": "This Solution has 6 Capabilities in total."
-                  }) }}
-
-                  {{ contentsList({
-                    items: [
-                      {
-                        text: "Document Management"
-                      },
-                      {
-                        text: "Recording Consultation"
-                      },
-                      {
-                        text: "Unified Care Record"
-                      },
-                      {
-                        text: "Care Homes"
                       }
                     ]
                   }) }}
@@ -254,10 +130,8 @@
                     {{ contentsList({
                       items: [
                         {
-                          text: "Productivity theme"
-                        },
-                        {
-                          text: "Productivity theme"
+                          text: "Professional to professional communication",
+                          current: "true"
                         }
                       ]
                     }) }}
@@ -266,9 +140,63 @@
               </div>
               <div class="nhsuk-grid-column-two-thirds">
                 <h3 class="nhsuk-u-margin-bottom-0">Base price</h3>
-                <h2  class="nhsuk-u-margin-bottom-7">£90 / per user</h2>
-                <p class="nhsuk-u-margin-top-2">Bioqem Diagnose is one of the most popular digital clinical systems in the UK. Our system is designed to be a complete solution that focuses on usability and clinical safety. This Solution supports joined-up working accross all care settings, helping you work towards the target of dissolving boundaries.</p>
-                <p><a href="/buyer-browse-v2/marketing-pages/bioqem-diagnose">Learn more</a></p>
+                <h2 class="nhsuk-u-margin-bottom-7">£1.60 / per patient</h2>
+                <p class="nhsuk-u-margin-top-2">Invios MultiRequest is one of the most popular digital clinical systems in the UK. Our system is designed to be a complete solution that focuses on usability and clinical safety. This Solution supports joined-up working accross all care settings, helping you work towards the target of dissolving boundaries.</p>
+                <p><a href="/buyer-browse-v2/productivity/productivity-mp/invios-multirequest">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+          <div class="solution-cards">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-third">
+                <h3 class="nhsuk-u-margin-bottom-0">Clarimy</h3>
+                <h2 class="nhsuk-u-margin-bottom-7"><a href="/buyer-browse-v2/productivity/productivity-mp/clarimy-access-diagnostics">Clarimy Access Diagnostics</a></h2>
+
+                <div class="nhsuk-u-margin-bottom-7 box">
+                  {{ fieldset({
+                    "legend": {
+                      "html": "<b>Capabilities this Solution offers</b>"
+                    }
+                  }) }}
+                  {{ hint({
+                    "text": "This Solution has 2 Capabilities in total."
+                  }) }}
+
+                  {{ contentsList({
+                    items: [
+                      {
+                        text: "Communication Management"
+                      }
+                    ]
+                  }) }}
+
+                  <div class="productivity">
+                    {{ fieldset({
+                      "legend": {
+                        "html": "<b>Supplied defined Capabilities</b>"
+                      }
+                    }) }}
+                    {{ contentsList({
+                      items: [
+                        {
+                          text: "Professional to professional communication",
+                          current: "true"
+                        }
+                      ]
+                    }) }}
+                  </div>
+                </div>
+              </div>
+              <div class="nhsuk-grid-column-two-thirds">
+                <h3 class="nhsuk-u-margin-bottom-0">Base price</h3>
+                <h2  class="nhsuk-u-margin-bottom-7">£9 / per patient</h2>
+                <p class="nhsuk-u-margin-top-2">Clarimy Access Diagnostics is one of the most popular digital clinical systems in the UK. Our system is designed to be a complete solution that focuses on usability and clinical safety. This Solution supports joined-up working accross all care settings, helping you work towards the target of dissolving boundaries.</p>
+                <p><a href="/buyer-browse-v2/productivity/productivity-mp/clarimy-access-diagnostics">Learn more</a></p>
               </div>
             </div>
           </div>
@@ -281,7 +209,7 @@
             <div class="nhsuk-grid-row">
               <div class="nhsuk-grid-column-one-third">
                 <h3 class="nhsuk-u-margin-bottom-0">Sinous</h3>
-                <h2 class="nhsuk-u-margin-bottom-7"><a href="/buyer-browse-v2/marketing-pages/sinous-investigation">Sinous Investigation</a></h2>
+                <h2 class="nhsuk-u-margin-bottom-7"><a href="/buyer-browse-v2/productivity/productivity-mp/sinous-investigation">Sinous Investigation</a></h2>
 
                 <div class="nhsuk-u-margin-bottom-7 box">
                   {{ fieldset({
@@ -331,7 +259,8 @@
                     {{ contentsList({
                       items: [
                         {
-                          text: "Productivity theme"
+                          text: "Professional to professional communication",
+                          current: "true"
                         }
                       ]
                     }) }}
@@ -342,74 +271,7 @@
                 <h3 class="nhsuk-u-margin-bottom-0">Base price</h3>
                 <h2  class="nhsuk-u-margin-bottom-7">£5 / per patient</h2>
                 <p class="nhsuk-u-margin-top-2">Sinous Investigation is one of the most popular digital clinical systems in the UK. Our system is designed to be a complete solution that focuses on usability and clinical safety. This Solution supports joined-up working accross all care settings, helping you work towards the target of dissolving boundaries.</p>
-                <p><a href="/buyer-browse-v2/marketing-pages/sinous-investigation">Learn more</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-full">
-          <div class="solution-cards">
-            <div class="nhsuk-grid-row">
-              <div class="nhsuk-grid-column-one-third">
-                <h3 class="nhsuk-u-margin-bottom-0">Kinaegis</h3>
-                <h2 class="nhsuk-u-margin-bottom-7"><a href="/buyer-browse-v2/marketing-pages/kinaegis-caredigital">Kinaegis CareDigital</a></h2>
-
-                <div class="nhsuk-u-margin-bottom-7 box">
-                  {{ fieldset({
-                    "legend": {
-                      "html": "<b>Capabilities this Solution offers</b>"
-                    }
-                  }) }}
-                  {{ hint({
-                    "text": "This Solution has 15 Capabilities in total."
-                  }) }}
-
-                  {{ contentsList({
-                    items: [
-                      {
-                        text: "Document Management"
-                      },
-                      {
-                        text: "Scanning"
-                      },
-                      {
-                        text: "Reporting"
-                      },
-                      {
-                        text: "Recording Consultations"
-                      },
-                      {
-                        text: "Digital Diagnostics"
-                      },
-                      {
-                        text: "Domiciliary Care"
-                      },
-                      {
-                        text: "Unified Care Record"
-                      },
-                      {
-                        text: "Care Homes"
-                      },
-                      {
-                        text: "Telehealth"
-                      },
-                      {
-                        text: "Communication Management"
-                      }
-                    ]
-                  }) }}
-
-                  <p class="nhsuk-u-margin-top-3"><a href="/buyer-browse-v2/marketing-pages/kinaegis-caredigital#capabilities-met">View all Capabilities</a></p>
-                </div>
-              </div>
-              <div class="nhsuk-grid-column-two-thirds">
-                <h3 class="nhsuk-u-margin-bottom-0">Base price</h3>
-                <h2  class="nhsuk-u-margin-bottom-7">£120 / per user</h2>
-                <p class="nhsuk-u-margin-top-2">Kinaegis CareDigital is one of the most popular digital clinical systems in the UK. Our system is designed to be a complete solution that focuses on usability and clinical safety. This Solution supports joined-up working accross all care settings, helping you work towards the target of dissolving boundaries.</p>
-                <p><a href="/buyer-browse-v2/marketing-pages/kinaegis-caredigital">Learn more</a></p>
+                <p><a href="/buyer-browse-v2/productivity/productivity-mp/sinous-investigation">Learn more</a></p>
               </div>
             </div>
           </div>
@@ -422,7 +284,7 @@
             <div class="nhsuk-grid-row">
               <div class="nhsuk-grid-column-one-third">
                 <h3 class="nhsuk-u-margin-bottom-0">Chemixal</h3>
-                <h2 class="nhsuk-u-margin-bottom-7"><a href="/buyer-browse-v2/marketing-pages/chemixal-multipatient">Chemixal MultiPatient</a></h2>
+                <h2 class="nhsuk-u-margin-bottom-7"><a href="/buyer-browse-v2/productivity/productivity-mp/chemixal-multipatient">Chemixal MultiPatient</a></h2>
 
                 <div class="nhsuk-u-margin-bottom-7 box">
                   {{ fieldset({
@@ -455,28 +317,41 @@
                         text: "Unified Care Record"
                       },
                       {
-                        text: "Digital Diagnostics"
-                      },
-                      {
                         text: "Care Homes"
                       },
                       {
                         text: "Telehealth"
-                      },
-                      {
-                        text: "Communication Management"
                       }
                     ]
                   }) }}
 
-                  <p class="nhsuk-u-margin-top-3"><a href="/buyer-browse-v2/marketing-pages/chemixal-multipatient#capabilities-met">View all Capabilities</a></p>
+                  <div class="productivity">
+                    {{ fieldset({
+                      "legend": {
+                        "html": "<b>Supplied defined Capabilities</b>"
+                      }
+                    }) }}
+                    {{ contentsList({
+                      items: [
+                        {
+                          text: "Professional to professional communication",
+                          current: "true"
+                        },
+                        {
+                          text: "Medication Review"
+                        }
+                      ]
+                    }) }}
+                  </div>
+
+                  <p class="nhsuk-u-margin-top-3"><a href="/buyer-browse-v2/productivity/productivity-mp/chemixal-multipatient#capabilities-met">View all Capabilities</a></p>
                 </div>
               </div>
               <div class="nhsuk-grid-column-two-thirds">
                 <h3 class="nhsuk-u-margin-bottom-0">Base price</h3>
                 <h2  class="nhsuk-u-margin-bottom-7">£18 / per user</h2>
                 <p class="nhsuk-u-margin-top-2">Chemixal MultiPatient is one of the most popular digital clinical systems in the UK. Our system is designed to be a complete solution that focuses on usability and clinical safety. This Solution supports joined-up working accross all care settings, helping you work towards the target of dissolving boundaries.</p>
-                <p><a href="/buyer-browse-v2/marketing-pages/chemixal-multipatient">Learn more</a></p>
+                <p><a href="/buyer-browse-v2/productivity/productivity-mp/chemixal-multipatient">Learn more</a></p>
               </div>
             </div>
           </div>
@@ -489,7 +364,7 @@
             <div class="nhsuk-grid-row">
               <div class="nhsuk-grid-column-one-third">
                 <h3 class="nhsuk-u-margin-bottom-0">Sinous</h3>
-                <h2 class="nhsuk-u-margin-bottom-7"><a href="/buyer-browse-v2/marketing-pages/sinous-digital">Sinous Digital, 1.0</a></h2>
+                <h2 class="nhsuk-u-margin-bottom-7"><a href="/buyer-browse-v2/productivity/productivity-mp/sinous-digital">Sinous Digital, 1.0</a></h2>
 
                 <div class="nhsuk-u-margin-bottom-7 box">
                   {{ fieldset({
@@ -526,7 +401,7 @@
                 <h3 class="nhsuk-u-margin-bottom-0">Base price</h3>
                 <h2 class="nhsuk-u-margin-bottom-7">£2.50 / per user</h2>
                 <p class="nhsuk-u-margin-top-2">Sinous Digital is one of the most popular digital clinical systems in the UK. Our system is designed to be a complete solution that focuses on usability and clinical safety. This Solution supports joined-up working accross all care settings, helping you work towards the target of dissolving boundaries.</p>
-                <p><a href="/buyer-browse-v2/foundation-mp/marketing-pages/sinous-digital">Learn more</a></p>
+                <p><a href="/buyer-browse-v2/productivity/productivity-mp/sinous-digital">Learn more</a></p>
 
                 <div class="nhsuk-table-responsive">
                   <table class="nhsuk-table">
@@ -539,11 +414,11 @@
                     </thead>
                     <tbody class="nhsuk-table__body">
                       <tr class="nhsuk-table__row">
-                        <td class="nhsuk-table__cell"><b><a href="/buyer-browse-v2/marketing-pages/sinous-digital#additional-services">Admin Digital</a></b></td>
+                        <td class="nhsuk-table__cell"><b><a href="/buyer-browse-v2/productivity/productivity-mp/sinous-digital#additional-services">ProCommunicate</a></b></td>
                         <td class="nhsuk-table__cell">£250 per month</td>
                         <td class="nhsuk-table__cell">
                           <ul>
-                             <li>Workflow</li><a href="/buyer-browse-v2/marketing-pages/sinous-digital#additional-services">View all 3 Capabilities</a>
+                             <li>Professional to professional communication</li><a href="/buyer-browse-v2/productivity-mp/sinous-digital#additional-services">View all 3 Capabilities</a>
                            </ul>
                          </td>
                       </tr>
@@ -562,7 +437,7 @@
             <div class="nhsuk-grid-row">
               <div class="nhsuk-grid-column-one-third">
                 <h3 class="nhsuk-u-margin-bottom-0">Atmios</h3>
-                <h2 class="nhsuk-u-margin-bottom-7"><a href="/buyer-browse-v2/marketing-pages/atmios-multidiagnose">Atmios MultiDiagnose</a></h2>
+                <h2 class="nhsuk-u-margin-bottom-7"><a href="/buyer-browse-v2/productivity/productivity-mp/atmios-multidiagnose">Atmios MultiDiagnose</a></h2>
 
                 <div class="nhsuk-u-margin-bottom-7 box">
                   {{ fieldset({
@@ -612,14 +487,14 @@
                     ]
                   }) }}
 
-                  <p class="nhsuk-u-margin-top-3"><a href="/buyer-browse-v2/marketing-pages/atmios-multidiagnose#capabilities-met">View all Capabilities</a></p>
+                  <p class="nhsuk-u-margin-top-3"><a href="/buyer-browse-v2/productivity/productivity-mp/atmios-multidiagnose#capabilities-met">View all Capabilities</a></p>
                 </div>
               </div>
               <div class="nhsuk-grid-column-two-thirds">
                 <h3 class="nhsuk-u-margin-bottom-0">Base price</h3>
                 <h2 class="nhsuk-u-margin-bottom-7">£16 / per patient</h2>
                 <p class="nhsuk-u-margin-top-2">Atmios MultiDiagnose is one of the most popular digital clinical systems in the UK. Our system is designed to be a complete solution that focuses on usability and clinical safety. This Solution supports joined-up working accross all care settings, helping you work towards the target of dissolving boundaries.</p>
-                <p><a href="/buyer-browse-v2/marketing-pages/atmios-multidiagnose">Learn more</a></p>
+                <p><a href="/buyer-browse-v2/productivity/productivity-mp/atmios-multidiagnose">Learn more</a></p>
 
                 <div class="nhsuk-table-responsive">
                   <table class="nhsuk-table">
@@ -632,20 +507,20 @@
                     </thead>
                     <tbody class="nhsuk-table__body">
                       <tr class="nhsuk-table__row">
-                        <td class="nhsuk-table__cell"><b><a href="/buyer-browse-v2/marketing-pages/atmios-multidiagnose#additional-services">GoDigital</a></b></td>
+                        <td class="nhsuk-table__cell"><b><a href="/buyer-browse-v2/productivity/productivity-mp/atmios-multidiagnose#additional-services">CommsPro</a></b></td>
                         <td class="nhsuk-table__cell">£800 per user</td>
                         <td class="nhsuk-table__cell">
                           <ul>
-                             <li>Reporting</li><a href="/buyer-browse-v2/marketing-pages/atmios-multidiagnose#additional-services">View all 4 Capabilities</a>
+                             <li>Professional to professional communication</li><a href="/buyer-browse-v2/productivity/productivity-mp/atmios-multidiagnose#additional-services">View all 4 Capabilities</a>
                            </ul>
                          </td>
                       </tr>
                         <tr class="nhsuk-table__row">
-                          <td class="nhsuk-table__cell"><b><a href="/buyer-browse-v2/marketing-pages/atmios-multidiagnose#additional-services">Diagnose Mobile</a></b></td>
+                          <td class="nhsuk-table__cell"><b><a href="/buyer-browse-v2/productivity/productivity-mp/atmios-multidiagnose#additional-services">Pro2Pro</a></b></td>
                           <td class="nhsuk-table__cell">£250 per user</td>
                           <td class="nhsuk-table__cell">
                             <ul>
-                               <li>Domiciliary care</li><a href="/buyer-browse-v2/marketing-pages/atmios-multidiagnose#additional-services">View all 7 Capabilities</a>
+                               <li>Professional to professional communication</li><a href="/buyer-browse-v2/productivity/productivity-mp/atmios-multidiagnose#additional-services">View all 7 Capabilities</a>
                              </ul>
                            </td>
                         </tr>
