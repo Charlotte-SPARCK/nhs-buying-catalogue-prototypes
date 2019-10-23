@@ -41,6 +41,10 @@
       text: "Welcome"
     },
     {
+      href: "/buyer-browse-v2/guide-2",
+      text: "Guidance"
+    },
+    {
       href: "/buyer-browse-v2/start-browse",
       text: "Begin browse"
     }
@@ -58,7 +62,7 @@
     <div class="nhsuk-grid-column-full" id="content">
       <!-- Change the page title here -->
       <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-three-quarters">
+        <div class="nhsuk-grid-column-three-quarters nhsuk-u-margin-bottom-7">
           <!-- Change the page title here -->
           <h2>
             Browse Solutions - Search Results
@@ -74,12 +78,15 @@
 
       <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-one-half">
-          <p class="blue nhsuk-u-margin-top-6">
-            ← <a href="/buyer-browse-v2/capability-selector">Search again</a>
-          </p>
+          {{ button({
+            "text": "Search again",
+            "classes": "nhsuk-button--secondary",
+            "href": "/buyer-browse-v2/capability-selector"
+          }) }}
         </div>
         <div class="nhsuk-grid-column-one-half">
           <div class="view-results">
+            <h4 class="nhsuk-u-margin-top-2">9 results in total</h4>
             {{ button({
               "text": "Continue: Start deselection"
             }) }}
@@ -248,7 +255,7 @@
                   <div class="productivity">
                     {{ fieldset({
                       "legend": {
-                        "html": "<b>Supplied defined Capabilities</b>"
+                        "html": "<b>Supplier defined Capabilities</b>"
                       }
                     }) }}
                     {{ contentsList({
@@ -325,7 +332,7 @@
                   <div class="productivity">
                     {{ fieldset({
                       "legend": {
-                        "html": "<b>Supplied defined Capabilities</b>"
+                        "html": "<b>Supplier defined Capabilities</b>"
                       }
                     }) }}
                     {{ contentsList({
@@ -656,6 +663,15 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="nhsuk-grid-column-full view-results">
+        <svg role="presentation" focusable="false" class="app-back-to-top__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17">
+          <path fill="#005eb8" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+        </svg>
+        <a href="#header-navigation">
+           Back to top
+        </a>
       </div>
 
     </div>

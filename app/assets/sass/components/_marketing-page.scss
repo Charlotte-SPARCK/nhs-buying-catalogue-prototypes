@@ -3,6 +3,17 @@
     vertical-align: top;
   }
 
+  .view-results {
+    text-align: right;
+
+    h4 {
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: 16px;
+      margin-right: 20px;
+    }
+  }
+
   .nhsuk-table__row {
     border-bottom: 1px solid #d8dde0;
     margin-bottom: 24px;

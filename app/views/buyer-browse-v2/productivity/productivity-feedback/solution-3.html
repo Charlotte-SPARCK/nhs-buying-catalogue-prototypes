@@ -41,6 +41,10 @@
       text: "Welcome"
     },
     {
+      href: "/buyer-browse-v2/guide-2",
+      text: "Guidance"
+    },
+    {
       href: "/buyer-browse-v2/start-browse",
       text: "Begin browse"
     },
@@ -71,17 +75,11 @@
           <h2>
             Browse Solutions - Provide feedback
           </h2>
-
-          <h4 class="nhsuk-body-l">Content.</h4>
-
-          <p>
-            Content.
-          </p>
         </div>
       </div>
 
       <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-two-thirds">
+        <div class="nhsuk-grid-column-one-half">
           {{ textarea({
             "name": "more-detail",
             "id": "more-detail",
@@ -93,25 +91,14 @@
             }
           }) }}
         </div>
-        <div class="nhsuk-grid-column-one-half">
-          <p></p>
-        </div>
-      </div>
-
-      <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-one-half">
-          <p class="blue nhsuk-u-margin-top-6">
-          </p>
-        </div>
-        <div class="nhsuk-grid-column-one-half">
-          <div class="view-results">
-            <h4><b>Solution 3 of 9</b></h4>
+        <div class="nhsuk-grid-column-one-half view-results">
+            <div class="height"></div>
+            <h4><b>Solution 3 of 5</b></h4>
 
             {{ button({
               "text": "Next Solution",
               "href": "/buyer-browse-v2/productivity/productivity-feedback/solution-4"
             }) }}
-          </div>
         </div>
       </div>
 
@@ -153,7 +140,7 @@
                   <div class="productivity">
                     {{ fieldset({
                       "legend": {
-                        "html": "<b>Supplied defined Capabilities</b>"
+                        "html": "<b>Supplier defined Capabilities</b>"
                       }
                     }) }}
                     {{ contentsList({

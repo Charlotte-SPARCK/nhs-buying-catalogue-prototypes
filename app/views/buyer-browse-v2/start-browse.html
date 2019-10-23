@@ -35,8 +35,14 @@
 <!-- Breadcrumb goes inside the beforeContent block -->
 {% block beforeContent %}
   {{ breadcrumb({
-  href: "/buyer-browse-v2/",
-  text: "Welcome"
+  items: [
+    {
+      href: "/buyer-browse-v2",
+      text: "Welcome"
+    }
+  ],
+  href: "/buyer-browse-v2/guide-2",
+  text: "Guidance"
   }) }}
 {% endblock %}
 
@@ -53,8 +59,8 @@
           </p>
         </div>
         <div class="nhsuk-grid-column-one-third">
-            <p class="blue">
-              ← <a href="/buyer-browse-v2/guide-5">Back: Additional services</a>
+            <p class="blue view-results">
+              ← <a href="/buyer-browse-v2/guide-5">Back: Starting a competition</a>
             </p>
         </div>
       </div>

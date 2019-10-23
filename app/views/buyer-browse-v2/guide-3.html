@@ -34,7 +34,10 @@
 
 <!-- Breadcrumb goes inside the beforeContent block -->
 {% block beforeContent %}
-
+{{ breadcrumb({
+href: "/buyer-browse-v2/",
+text: "Welcome"
+}) }}
 {% endblock %}
 
 <!-- Your page content goes inside the content block -->
@@ -51,7 +54,7 @@
           </p>
         </div>
         <div class="nhsuk-grid-column-one-third">
-          <p class="blue">
+          <p class="blue view-results">
             <a href="/buyer-browse-v2/start-browse">Skip to browse Solutions</a> →
           </p>
         </div>
@@ -62,28 +65,23 @@
 
           <!-- Change the page title here -->
           <h2>
-            Browse Solutions - Productivity Capability
+            Browse Solutions - Supplier defined capabilities
           </h2>
 
-          <h4>The Productivity Capability is a different kind of capability</h4>
+          <h4>Supplier defined capabilities are a different kind of capability</h4>
 
           <p>Instead of being pre-defined as with the other Capabilities, Suppliers have written their own description of the function they offer and defined their own Epics and Acceptance Criteria. These Supplier-defined Capabilities have been grouped into themes. You’ll be able to search using themes in the same way as regular Capabilities.</p>
 
-          <p>For example, several Suppliers may have defined their own Productivity Capability, but those different Capabilities all meet a business need to send SMS texts. SMS will therefore be presented as a theme.</p>
+          <p>For example, several Suppliers may have defined their own capabilities, but those different Capabilities all meet a business need to send SMS texts. SMS will therefore be presented as a theme.</p>
         </div>
       </div>
 
       <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-full">
-          <div class="nhsuk-grid-column-two-thirds">
-            <p></p>
-          </div>
-          <div class="nhsuk-grid-column-one-third">
+        <div class="nhsuk-grid-column-full nhsuk-u-margin-top-4">
             {{ actionLink({
               "text": "Next: Additional services",
               "href": "/buyer-browse-v2/guide-4"
             }) }}
-          </div>
         </div>
       </div>
     </div>

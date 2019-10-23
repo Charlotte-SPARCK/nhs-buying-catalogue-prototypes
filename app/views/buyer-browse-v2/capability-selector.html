@@ -1,4 +1,4 @@
-Supplied defined Capabilities<!-- Use this page as the index for your project -->
+<!-- Use this page as the index for your project -->
 
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
@@ -39,6 +39,10 @@ Supplied defined Capabilities<!-- Use this page as the index for your project --
     {
       href: "/buyer-browse-v2",
       text: "Welcome"
+    },
+    {
+      href: "/buyer-browse-v2/guide-2",
+      text: "Guidance"
     }
   ],
   href: "/buyer-browse-v2/start-browse",
@@ -53,6 +57,14 @@ Supplied defined Capabilities<!-- Use this page as the index for your project --
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full" id="content">
       <!-- Change the page title here -->
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+            <p class="blue view-results">
+              ← <a href="/buyer-browse-v2/start-browse">Back: Begin browse</a>
+            </p>
+        </div>
+      </div>
+
       <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-three-quarters">
 
@@ -70,7 +82,7 @@ Supplied defined Capabilities<!-- Use this page as the index for your project --
       </div>
       <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-one-half">
-          <p class="nhsuk-u-margin-top-6"><a href="">Collapse all</a></p>
+          <p class="nhsuk-u-margin-top-6"><a id="collapse">Hide all</a></p>
         </div>
         <div class="nhsuk-grid-column-one-half">
           <div class="view-results">
@@ -123,7 +135,7 @@ Supplied defined Capabilities<!-- Use this page as the index for your project --
                     </div>
 
                     <div class="productivity">
-                      <p><b>Supplied defined Capabilities</b></p>
+                      <p><b>Supplier defined Capabilities</b></p>
                       <div class="nhsuk-checkboxes__item">
                         <input class="nhsuk-checkboxes__input" id="appointment-booking-1" name="appointment-booking-1" type="checkbox" value="appointment-booking-1">
                         <label class="nhsuk-label nhsuk-checkboxes__label" for="appointment-booking-1">
@@ -137,105 +149,7 @@ Supplied defined Capabilities<!-- Use this page as the index for your project --
 
             </div>
           </details>
-        </div>
-        <div class="nhsuk-grid-column-one-third">
-          <details class="nhsuk-details" open>
-            <summary class="nhsuk-details__summary">
-              <span class="nhsuk-details__summary-text">
-                Mobile/Remote Working
-              </span>
-            </summary>
-            <div class="nhsuk-details__text">
 
-              <div class="nhsuk-form-group">
-                <fieldset class="nhsuk-fieldset" aria-describedby="nationality-hint">
-                  <legend class="nhsuk-fieldset__legend">
-                    <b>Capabilities related to mobile or remote working.</b>
-                  </legend>
-
-                  <span class="nhsuk-hint" id="nationality-hint">
-                    Select all options that are relevant to you.
-                  </span>
-
-                  <div class="nhsuk-checkboxes">
-                    <div class="productivity">
-                      <p><b>Supplied defined Capabilities</b></p>
-                      <div class="nhsuk-checkboxes__item">
-                        <input class="nhsuk-checkboxes__input" id="remote-clinician-scheduling-1" name="remote-clinician-scheduling-1" type="checkbox" value="triage-1">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="remote-clinician-scheduling-1">
-                          Remote Clinician Scheduling
-                        </label>
-                      </div>
-                      <div class="nhsuk-checkboxes__item">
-                        <input class="nhsuk-checkboxes__input" id="remote-mobile-working-1" name="remote-mobile-working-1" type="checkbox" value="remote-mobile-working-1">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="remote-mobile-working-1">
-                          Remote/Mobile Working
-                        </label>
-                      </div>
-                      <div class="nhsuk-checkboxes__item">
-                        <input class="nhsuk-checkboxes__input" id="sms-2" name="sms-2" type="checkbox" value="sms-2">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="sms-2">
-                          SMS
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </fieldset>
-              </div>
-
-            </div>
-          </details>
-        </div>
-        <div class="nhsuk-grid-column-one-third">
-          <details class="nhsuk-details" open>
-            <summary class="nhsuk-details__summary">
-              <span class="nhsuk-details__summary-text">
-                Document & artefact management
-              </span>
-            </summary>
-            <div class="nhsuk-details__text">
-
-              <div class="nhsuk-form-group">
-                <fieldset class="nhsuk-fieldset" aria-describedby="nationality-hint">
-                  <legend class="nhsuk-fieldset__legend">
-                    <b>Capabilities related to document or artefact management.</b>
-                  </legend>
-
-                  <span class="nhsuk-hint" id="nationality-hint">
-                    Select all options that are relevant to you.
-                  </span>
-
-                  <div class="nhsuk-checkboxes">
-
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="document-management" name="document-management" type="checkbox" value="document-management">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="document-management">
-                        Document management
-                      </label>
-                    </div>
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="scanning" name="scanning" type="checkbox" value="scanning">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="scanning">
-                        Scanning
-                      </label>
-                    </div>
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="unstructured-data-extraction" name="unstructured-data-extraction" type="checkbox" value="unstructured-data-extraction">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="unstructured-data-extraction">
-                        Unstructured data extraction
-                      </label>
-                    </div>
-                  </div>
-                </fieldset>
-              </div>
-
-            </div>
-          </details>
-        </div>
-      </div>
-
-      <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-one-third">
           <details class="nhsuk-details" open>
             <summary class="nhsuk-details__summary">
               <span class="nhsuk-details__summary-text">
@@ -284,7 +198,7 @@ Supplied defined Capabilities<!-- Use this page as the index for your project --
                     </div>
 
                     <div class="productivity">
-                      <p><b>Supplied defined Capabilities</b></p>
+                      <p><b>Supplier defined Capabilities</b></p>
                       <div class="nhsuk-checkboxes__item">
                         <input class="nhsuk-checkboxes__input" id="patient-feedback-1" name="patient-feedback-1" type="checkbox" value="patient-feedback-1">
                         <label class="nhsuk-label nhsuk-checkboxes__label" for="patient-feedback-1">
@@ -309,315 +223,7 @@ Supplied defined Capabilities<!-- Use this page as the index for your project --
               </div>
             </div>
           </details>
-        </div>
-        <div class="nhsuk-grid-column-one-third">
-          <details class="nhsuk-details" open>
-            <summary class="nhsuk-details__summary">
-              <span class="nhsuk-details__summary-text">
-                Cross-organisation practice managements
-              </span>
-            </summary>
-            <div class="nhsuk-details__text">
-              <div class="nhsuk-form-group">
-                <fieldset class="nhsuk-fieldset" aria-describedby="nationality-hint">
-                  <legend class="nhsuk-fieldset__legend">
-                    <b>Capabilities related to cross-organisation practise managements.</b>
-                  </legend>
 
-                  <span class="nhsuk-hint" id="nationality-hint">
-                    Select all options that are relevant to you.
-                  </span>
-
-                  <div class="nhsuk-checkboxes">
-
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="appointment-booking-1" name="appointment-booking-1" type="checkbox" value="appointment-booking-1">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="appointment-booking-1">
-                        Cross-organisation appointment booking
-                      </label>
-                    </div>
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="workflow-tools" name="workflow-tools" type="checkbox" value="workflow-tools">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="workflow-tools">
-                        Cross-organisation workflow tools
-                      </label>
-                    </div>
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="workforce-management" name="workforce-management" type="checkbox" value="workforce-management">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="workforce-management">
-                        Cross-organisation workforce management
-                      </label>
-                    </div>
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input digital-diagnostics" id="digital-diagnostics-1" name="digital-diagnostics-1" type="checkbox" value="digital-diagnostics-1">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="digital-diagnostics-1">
-                        Digital diagnostics
-                      </label>
-                    </div>
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="unified-care-records-1" name="unified-care-records-1" type="checkbox" value="unified-care-records-1">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="unified-care-records-1">
-                        Unified care records
-                      </label>
-                    </div>
-
-                    <div class="productivity">
-                      <p><b>Supplied defined Capabilities</b></p>
-                      <div class="nhsuk-checkboxes__item">
-                        <input class="nhsuk-checkboxes__input" id="patient-record-sharing-1" name="patient-record-sharing-1" type="checkbox" value="patient-record-sharing-1">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="patient-record-sharing-1">
-                          Patient Record Sharing
-                        </label>
-                      </div>
-                      <div class="nhsuk-checkboxes__item">
-                        <input class="nhsuk-checkboxes__input" id="cross-organisation-recalls-1" name="cross-organisation-recalls-1" type="checkbox" value="cross-organisation-recalls-1">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="cross-organisation-recalls-1">
-                          Cross-organisation Recalls
-                        </label>
-                      </div>
-                      <div class="nhsuk-checkboxes__item">
-                        <input class="nhsuk-checkboxes__input" id="cross-organisation-prescribing-1" name="cross-organisation-prescribing-1" type="checkbox" value="cross-organisation-prescribing-1">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="cross-organisation-prescribing-1">
-                          Cross-organisation Prescribing
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </fieldset>
-              </div>
-
-            </div>
-          </details>
-        </div>
-        <div class="nhsuk-grid-column-one-third">
-          <details class="nhsuk-details" open>
-            <summary class="nhsuk-details__summary">
-              <span class="nhsuk-details__summary-text">
-                Medicines management
-              </span>
-            </summary>
-            <div class="nhsuk-details__text">
-
-              <div class="nhsuk-form-group">
-                <fieldset class="nhsuk-fieldset" aria-describedby="nationality-hint">
-                  <legend class="nhsuk-fieldset__legend">
-                    <b>Capabilities related to medicines management</b>
-                  </legend>
-
-                  <span class="nhsuk-hint" id="nationality-hint">
-                    Select all options that are relevant to you.
-                  </span>
-
-                  <div class="nhsuk-checkboxes">
-
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="dispensing" name="dispensing" type="checkbox" value="dispensing">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="dispensing">
-                        Dispensing
-                      </label>
-                    </div>
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="medicines-optimisation" name="medicines-optimisation" type="checkbox" value="medicines-optimisation">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="medicines-optimisation">
-                        Medicines optimisation
-                      </label>
-                    </div>
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="medicines-verification" name="medicines-verification" type="checkbox" value="medicines-verification">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="medicines-verification">
-                        Medicines verification
-                      </label>
-                    </div>
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="prescribing" name="prescribing" type="checkbox" value="prescribing">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="prescribing">
-                        Prescribing
-                      </label>
-                    </div>
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="prescription-ordering-1" name="prescription-ordering-1" type="checkbox" value="prescription-ordering-1">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="prescription-ordering-1">
-                        Prescription ordering - Citizen
-                      </label>
-                    </div>
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="social-prescribing-3" name="social-prescribing-3" type="checkbox" value="social-prescribing-3">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="social-prescribing-3">
-                        Social prescribing
-                      </label>
-                    </div>
-
-                    <div class="productivity">
-                      <p><b>Supplied defined Capabilities</b></p>
-                      <div class="nhsuk-checkboxes__item">
-                        <input class="nhsuk-checkboxes__input" id="cross-organisation-prescribing-2" name="cross-organisation-prescribing-2" type="checkbox" value="cross-organisation-prescribing-2">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="cross-organisation-prescribing-2">
-                          Cross-organisation Prescribing
-                        </label>
-                      </div>
-                      <div class="nhsuk-checkboxes__item">
-                        <input class="nhsuk-checkboxes__input" id="medication-review-1" name="medication-review-1" type="checkbox" value="medication-review-1">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="medication-review-1">
-                          Medication review
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </fieldset>
-              </div>
-
-            </div>
-          </details>
-        </div>
-      </div>
-
-      <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-one-third">
-          <details class="nhsuk-details" open>
-            <summary class="nhsuk-details__summary">
-              <span class="nhsuk-details__summary-text">
-                Practise management
-              </span>
-            </summary>
-            <div class="nhsuk-details__text">
-              <div class="nhsuk-form-group">
-                <fieldset class="nhsuk-fieldset" aria-describedby="nationality-hint">
-                  <legend class="nhsuk-fieldset__legend">
-                    <b>Capabilities related to practise management.</b>
-                  </legend>
-
-                  <span class="nhsuk-hint" id="nationality-hint">
-                    Select all options that are relevant to you.
-                  </span>
-
-                  <div class="nhsuk-checkboxes">
-
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="appointments-management-citizen-2" name="appointments-management-citizen-2" type="checkbox" value="appointments-management-citizen-2">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="appointments-management-citizen-2">
-                        Appointments management - Citizen
-                      </label>
-                    </div>
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="appointments-management-gp-2" name="appointments-management-gp-2" type="checkbox" value="appointments-management-gp-2">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="appointments-management-gp-2">
-                        Appointments management - GP
-                      </label>
-                    </div>
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="care-homes" name="care-homes" type="checkbox" value="care-homes">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="care-homes">
-                        Care homes
-                      </label>
-                    </div>
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="caseload-management" name="caseload-management" type="checkbox" value="caseload-management">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="caseload-management">
-                        Caseload management
-                      </label>
-                    </div>
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="clinical-decision-support" name="clinical-decision-support" type="checkbox" value="clinical-decision-support">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="clinical-decision-support">
-                        Clinical decision support
-                      </label>
-                    </div>
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="domiciliary-care" name="domiciliary-care" type="checkbox" value="domiciliary-care">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="domiciliary-care">
-                        Domiciliary care
-                      </label>
-                    </div>
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="referral-management-1" name="referral-management-1" type="checkbox" value="referral-management-1">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="referral-management-1">
-                        Referral management
-                      </label>
-                    </div>
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="recording-consultation-1" name="recording-consultation-1" type="checkbox" value="recording-consultation-1">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="recording-consultation-1">
-                        Recording consultation
-                      </label>
-                    </div>
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="resource-management-1" name="resource-management-1" type="checkbox" value="resource-management-1">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="resource-management-1">
-                        Resource management
-                      </label>
-                    </div>
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="workflow" name="workflow" type="checkbox" value="workflow">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="workflow">
-                        Workflow
-                      </label>
-                    </div>
-
-                    <div class="productivity">
-                      <p><b>Supplied defined Capabilities</b></p>
-                      <div class="nhsuk-checkboxes__item">
-                        <input class="nhsuk-checkboxes__input" id="billing-1" name="billing-1" type="checkbox" value="billing-1">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="billing-1">
-                          Billing
-                        </label>
-                      </div>
-                      <div class="nhsuk-checkboxes__item">
-                        <input class="nhsuk-checkboxes__input" id="qof-1" name="qof-1" type="checkbox" value="qof-1">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="qof-1">
-                          QOF
-                        </label>
-                      </div>
-                      <div class="nhsuk-checkboxes__item">
-                        <input class="nhsuk-checkboxes__input" id="sms-1" name="sms-1" type="checkbox" value="sms-1">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="sms-1">
-                          SMS
-                        </label>
-                      </div>
-                      <div class="nhsuk-checkboxes__item">
-                        <input class="nhsuk-checkboxes__input" id="patient-check-in-1" name="patient-check-in-1" type="checkbox" value="patient-check-in-1">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="patient-check-in-1">
-                          Patient Check-In
-                        </label>
-                      </div>
-                      <div class="nhsuk-checkboxes__item">
-                        <input class="nhsuk-checkboxes__input" id="patient-feedback-2" name="patient-feedback-2" type="checkbox" value="patient-feedback-2">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="patient-feedback-2">
-                          Patient Feedback
-                        </label>
-                      </div>
-                      <div class="nhsuk-checkboxes__item">
-                        <input class="nhsuk-checkboxes__input" id="subject-access-requests-1" name="subject-access-requests-1" type="checkbox" value="subject-access-requests-1">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="subject-access-requests-1">
-                          Subject Access Requests
-                        </label>
-                      </div>
-                      <div class="nhsuk-checkboxes__item">
-                        <input class="nhsuk-checkboxes__input" id="panic-alert-1" name="panic-alert-1" type="checkbox" value="panic-alert-1">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="panic-alert-1">
-                          Panic Alert
-                        </label>
-                      </div>
-                      <div class="nhsuk-checkboxes__item">
-                        <input class="nhsuk-checkboxes__input" id="patient-signposting-1" name="patient-signposting-1" type="checkbox" value="patient-signposting-1">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="patient-signposting-1">
-                          Patient Signposting
-                        </label>
-                      </div>
-                      <div class="nhsuk-checkboxes__item">
-                        <input class="nhsuk-checkboxes__input" id="long-term-patient-care-1" name="long-term-patient-care-1" type="checkbox" value="long-term-patient-care-1">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="long-term-patient-care-1">
-                          Long-term patient care
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </fieldset>
-              </div>
-            </div>
-          </details>
-        </div>
-
-        <div class="nhsuk-grid-column-one-third">
           <details class="nhsuk-details" open>
             <summary class="nhsuk-details__summary">
               <span class="nhsuk-details__summary-text">
@@ -717,7 +323,7 @@ Supplied defined Capabilities<!-- Use this page as the index for your project --
                     </div>
 
                     <div class="productivity">
-                      <p><b>Supplied defined Capabilities</b></p>
+                      <p><b>Supplier defined Capabilities</b></p>
                       <div class="nhsuk-checkboxes__item">
                         <input class="nhsuk-checkboxes__input" id="pathology-patient-test-results-1" name="pathology-patient-test-results-1" type="checkbox" value="text message">
                         <label class="nhsuk-label nhsuk-checkboxes__label" for="pathology-patient-test-results-1">
@@ -743,12 +349,6 @@ Supplied defined Capabilities<!-- Use this page as the index for your project --
                         </label>
                       </div>
                       <div class="nhsuk-checkboxes__item">
-                        <input class="nhsuk-checkboxes__input" id="patient-led-care-1" name="patient-led-care-1" type="checkbox" value="patient-led-care">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="patient-led-care-1">
-                          Patient led care
-                        </label>
-                      </div>
-                      <div class="nhsuk-checkboxes__item">
                         <input class="nhsuk-checkboxes__input" id="long-term-patient-care-2" name="long-term-patient-care-2" type="checkbox" value="long-term-patient-care-2">
                         <label class="nhsuk-label nhsuk-checkboxes__label" for="long-term-patient-care-2">
                           Long-term patient care
@@ -764,6 +364,400 @@ Supplied defined Capabilities<!-- Use this page as the index for your project --
         </div>
 
         <div class="nhsuk-grid-column-one-third">
+          <details class="nhsuk-details" open>
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Mobile/Remote Working
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+
+              <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" aria-describedby="nationality-hint">
+                  <legend class="nhsuk-fieldset__legend">
+                    <b>Capabilities related to mobile or remote working.</b>
+                  </legend>
+
+                  <span class="nhsuk-hint" id="nationality-hint">
+                    Select all options that are relevant to you.
+                  </span>
+
+                  <div class="nhsuk-checkboxes">
+                    <div class="productivity">
+                      <p><b>Supplier defined Capabilities</b></p>
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="remote-clinician-scheduling-1" name="remote-clinician-scheduling-1" type="checkbox" value="triage-1">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="remote-clinician-scheduling-1">
+                          Remote Clinician Scheduling
+                        </label>
+                      </div>
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="remote-mobile-working-1" name="remote-mobile-working-1" type="checkbox" value="remote-mobile-working-1">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="remote-mobile-working-1">
+                          Remote/Mobile Working
+                        </label>
+                      </div>
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="sms-2" name="sms-2" type="checkbox" value="sms-2">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="sms-2">
+                          SMS
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+
+            </div>
+          </details>
+
+          <details class="nhsuk-details" open>
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Cross-organisation practice managements
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" aria-describedby="nationality-hint">
+                  <legend class="nhsuk-fieldset__legend">
+                    <b>Capabilities related to cross-organisation practice managements.</b>
+                  </legend>
+
+                  <span class="nhsuk-hint" id="nationality-hint">
+                    Select all options that are relevant to you.
+                  </span>
+
+                  <div class="nhsuk-checkboxes">
+
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="appointment-booking-1" name="appointment-booking-1" type="checkbox" value="appointment-booking-1">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="appointment-booking-1">
+                        Cross-organisation appointment booking
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="workflow-tools" name="workflow-tools" type="checkbox" value="workflow-tools">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="workflow-tools">
+                        Cross-organisation workflow tools
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="workforce-management" name="workforce-management" type="checkbox" value="workforce-management">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="workforce-management">
+                        Cross-organisation workforce management
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input digital-diagnostics" id="digital-diagnostics-1" name="digital-diagnostics-1" type="checkbox" value="digital-diagnostics-1">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="digital-diagnostics-1">
+                        Digital diagnostics
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="unified-care-records-1" name="unified-care-records-1" type="checkbox" value="unified-care-records-1">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="unified-care-records-1">
+                        Unified care records
+                      </label>
+                    </div>
+
+                    <div class="productivity">
+                      <p><b>Supplier defined Capabilities</b></p>
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="patient-record-sharing-1" name="patient-record-sharing-1" type="checkbox" value="patient-record-sharing-1">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="patient-record-sharing-1">
+                          Patient Record Sharing
+                        </label>
+                      </div>
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="cross-organisation-recalls-1" name="cross-organisation-recalls-1" type="checkbox" value="cross-organisation-recalls-1">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="cross-organisation-recalls-1">
+                          Cross-organisation Recalls
+                        </label>
+                      </div>
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="cross-organisation-prescribing-1" name="cross-organisation-prescribing-1" type="checkbox" value="cross-organisation-prescribing-1">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="cross-organisation-prescribing-1">
+                          Cross-organisation Prescribing
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+
+            </div>
+          </details>
+
+          <details class="nhsuk-details" open>
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Practice management
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" aria-describedby="nationality-hint">
+                  <legend class="nhsuk-fieldset__legend">
+                    <b>Capabilities related to practice management.</b>
+                  </legend>
+
+                  <span class="nhsuk-hint" id="nationality-hint">
+                    Select all options that are relevant to you.
+                  </span>
+
+                  <div class="nhsuk-checkboxes">
+
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="appointments-management-citizen-2" name="appointments-management-citizen-2" type="checkbox" value="appointments-management-citizen-2">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="appointments-management-citizen-2">
+                        Appointments management - Citizen
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="appointments-management-gp-2" name="appointments-management-gp-2" type="checkbox" value="appointments-management-gp-2">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="appointments-management-gp-2">
+                        Appointments management - GP
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="care-homes" name="care-homes" type="checkbox" value="care-homes">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="care-homes">
+                        Care homes
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="caseload-management" name="caseload-management" type="checkbox" value="caseload-management">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="caseload-management">
+                        Caseload management
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="clinical-decision-support" name="clinical-decision-support" type="checkbox" value="clinical-decision-support">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="clinical-decision-support">
+                        Clinical decision support
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="domiciliary-care" name="domiciliary-care" type="checkbox" value="domiciliary-care">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="domiciliary-care">
+                        Domiciliary care
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="referral-management-1" name="referral-management-1" type="checkbox" value="referral-management-1">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="referral-management-1">
+                        Referral management
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="recording-consultation-1" name="recording-consultation-1" type="checkbox" value="recording-consultation-1">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="recording-consultation-1">
+                        Recording consultation
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="resource-management-1" name="resource-management-1" type="checkbox" value="resource-management-1">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="resource-management-1">
+                        Resource management
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="workflow" name="workflow" type="checkbox" value="workflow">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="workflow">
+                        Workflow
+                      </label>
+                    </div>
+
+                    <div class="productivity">
+                      <p><b>Supplier defined Capabilities</b></p>
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="billing-1" name="billing-1" type="checkbox" value="billing-1">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="billing-1">
+                          Billing
+                        </label>
+                      </div>
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="qof-1" name="qof-1" type="checkbox" value="qof-1">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="qof-1">
+                          QOF
+                        </label>
+                      </div>
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="sms-1" name="sms-1" type="checkbox" value="sms-1">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="sms-1">
+                          SMS
+                        </label>
+                      </div>
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="patient-check-in-1" name="patient-check-in-1" type="checkbox" value="patient-check-in-1">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="patient-check-in-1">
+                          Patient Check-In
+                        </label>
+                      </div>
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="patient-feedback-2" name="patient-feedback-2" type="checkbox" value="patient-feedback-2">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="patient-feedback-2">
+                          Patient Feedback
+                        </label>
+                      </div>
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="subject-access-requests-1" name="subject-access-requests-1" type="checkbox" value="subject-access-requests-1">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="subject-access-requests-1">
+                          Subject Access Requests
+                        </label>
+                      </div>
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="panic-alert-1" name="panic-alert-1" type="checkbox" value="panic-alert-1">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="panic-alert-1">
+                          Panic Alert
+                        </label>
+                      </div>
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="patient-signposting-1" name="patient-signposting-1" type="checkbox" value="patient-signposting-1">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="patient-signposting-1">
+                          Patient Signposting
+                        </label>
+                      </div>
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="long-term-patient-care-1" name="long-term-patient-care-1" type="checkbox" value="long-term-patient-care-1">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="long-term-patient-care-1">
+                          Long-term patient care
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </details>
+        </div>
+
+        <div class="nhsuk-grid-column-one-third">
+          <details class="nhsuk-details" open>
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Document & artefact management
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+
+              <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" aria-describedby="nationality-hint">
+                  <legend class="nhsuk-fieldset__legend">
+                    <b>Capabilities related to document or artefact management.</b>
+                  </legend>
+
+                  <span class="nhsuk-hint" id="nationality-hint">
+                    Select all options that are relevant to you.
+                  </span>
+
+                  <div class="nhsuk-checkboxes">
+
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="document-management" name="document-management" type="checkbox" value="document-management">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="document-management">
+                        Document management
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="scanning" name="scanning" type="checkbox" value="scanning">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="scanning">
+                        Scanning
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="unstructured-data-extraction" name="unstructured-data-extraction" type="checkbox" value="unstructured-data-extraction">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="unstructured-data-extraction">
+                        Unstructured data extraction
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+
+            </div>
+          </details>
+
+          <details class="nhsuk-details" open>
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Medicines management
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+
+              <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" aria-describedby="nationality-hint">
+                  <legend class="nhsuk-fieldset__legend">
+                    <b>Capabilities related to medicines management</b>
+                  </legend>
+
+                  <span class="nhsuk-hint" id="nationality-hint">
+                    Select all options that are relevant to you.
+                  </span>
+
+                  <div class="nhsuk-checkboxes">
+
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="dispensing" name="dispensing" type="checkbox" value="dispensing">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="dispensing">
+                        Dispensing
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="medicines-optimisation" name="medicines-optimisation" type="checkbox" value="medicines-optimisation">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="medicines-optimisation">
+                        Medicines optimisation
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="medicines-verification" name="medicines-verification" type="checkbox" value="medicines-verification">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="medicines-verification">
+                        Medicines verification
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="prescribing" name="prescribing" type="checkbox" value="prescribing">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="prescribing">
+                        Prescribing
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="prescription-ordering-1" name="prescription-ordering-1" type="checkbox" value="prescription-ordering-1">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="prescription-ordering-1">
+                        Prescription ordering - Citizen
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="social-prescribing-3" name="social-prescribing-3" type="checkbox" value="social-prescribing-3">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="social-prescribing-3">
+                        Social prescribing
+                      </label>
+                    </div>
+
+                    <div class="productivity">
+                      <p><b>Supplier defined Capabilities</b></p>
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="cross-organisation-prescribing-2" name="cross-organisation-prescribing-2" type="checkbox" value="cross-organisation-prescribing-2">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="cross-organisation-prescribing-2">
+                          Cross-organisation Prescribing
+                        </label>
+                      </div>
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="medication-review-1" name="medication-review-1" type="checkbox" value="medication-review-1">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="medication-review-1">
+                          Medication review
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+
+            </div>
+          </details>
+
           <details class="nhsuk-details" open>
             <summary class="nhsuk-details__summary">
               <span class="nhsuk-details__summary-text">
@@ -792,7 +786,7 @@ Supplied defined Capabilities<!-- Use this page as the index for your project --
                     <div class="nhsuk-checkboxes__item">
                       <input class="nhsuk-checkboxes__input" id="communicate-with-practise" name="communicate-with-practise" type="checkbox" value="communicate-with-practise">
                       <label class="nhsuk-label nhsuk-checkboxes__label" for="communicate-with-practise">
-                        Communicate with practise
+                        Communicate with practice
                       </label>
                     </div>
                     <div class="nhsuk-checkboxes__item">
@@ -833,7 +827,7 @@ Supplied defined Capabilities<!-- Use this page as the index for your project --
                     </div>
 
                     <div class="productivity">
-                      <p><b>Supplied defined Capabilities</b></p>
+                      <p><b>Supplier defined Capabilities</b></p>
                       <div class="nhsuk-checkboxes__item">
                         <input class="nhsuk-checkboxes__input" id="triage-1" name="triage-1" type="checkbox" value="triage-1">
                         <label class="nhsuk-label nhsuk-checkboxes__label" for="triage-1">
@@ -889,7 +883,16 @@ Supplied defined Capabilities<!-- Use this page as the index for your project --
             </div>
           </details>
         </div>
+      </div>
 
+
+      <div class="nhsuk-grid-column-full view-results">
+        <svg role="presentation" focusable="false" class="app-back-to-top__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17">
+          <path fill="#005eb8" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+        </svg>
+        <a href="#header-navigation">
+           Back to top
+        </a>
       </div>
     </div>
   </div>
