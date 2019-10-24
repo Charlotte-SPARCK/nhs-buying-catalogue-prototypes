@@ -8,14 +8,12 @@
 {%- for attribute, value in params.attributes %} {{ attribute }}="{{ value }}"{% endfor %}>
   <div class="nhsuk-width-container-fluid nhsuk-header__container">
     <div class="nhsuk-header__logo">
-      <a class="nhsuk-header__link{% if params.service %} nhsuk-header__link--service {% endif %}" href="{% if params.homeHref %}{{ params.homeHref }}{% else %}/{% endif %}" aria-label="{% if params.ariaLabel %}{{ params.ariaLabel }}{% else %}NHS homepage{% endif %}">
         <img src="../images/nhsd-logo.png" xlink:href=""/>
         {%- if params.service %}
         <span class="nhsuk-header__service-name">
           {{ params.service.name }}
         </span>
         {%- endif %}
-      </a>
     </div>
 
     {%- if showNav == "false" and showSearch == "false"%}
